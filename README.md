@@ -94,11 +94,35 @@ The server runs over stdio and waits for MCP requests.
 3. **Save the Configuration**:
    - Cursor will now detect your MCP server.
 
+Image support for the 3 steps:
+
+![MCP Screenshot](assets/MCPScreenshot.png)
+
 ### 6. Chat with the MCP Agent in Cursor
 
 - **Switch to Agent Mode**:
   - Instead of standard chat, activate Agent mode in Cursor.
 - When you chat, Cursor will use your MCP tool (world_mini_app_query_tool) to fetch World MiniApp documentation as needed.
+
+1. **Remember to use Claude Sonnet**
+
+   - specially the model "claude-3.7-sonnet-thinking"
+
+2. **Get API Key from Anthropic**:
+
+   - Go to [https://console.anthropic.com/](https://console.anthropic.com/)
+   - Create a Profile
+   - Get an API Key putting credit, 10 USD is a good amount to test and use for build your miniApp (remembers Claude 3.7 has more token usege)
+
+3. **Open Cursor Settings**:
+
+   - In Cursor, go to Settings and click the Models tab.
+   - Select the Claude model
+   - Put your Anthtopic API Key
+
+Image support for the 3 steps:
+
+![Models Screenshot](assets/ModelsScreenshot.png)
 
 ## (Optional) Test with MCP Inspector
 
