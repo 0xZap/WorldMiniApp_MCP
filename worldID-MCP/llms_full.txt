@@ -1,0 +1,959 @@
+DOCUMENT 1
+SOURCE: https://docs.world.org/world-id/concepts
+CONTENT:
+Core Concepts | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsProof of PersonhoodVocabularyTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalIntroductionCore Concepts
+World ID is built for easy integration, but here are a few core concepts that are helpful to understand before you start.
+Proof of Personhood
+"Proof of Personhood" is distinct from many existing identity systems. It is a way to prove that a person is unique, without revealing any personal information. World ID is not KYC, and it does not disclose your identity or previous actions to anyone.
+World ID supports multiple "Verification Levels" to prove that a person is a unique human. These levels provide different degrees of humanness assurance, accessibility, and protection against fraud.
+Verification LevelHumanness LevelDescriptionDeviceMediumUnique mobile device check.OrbStrongBiometric verification, uniqueness through iris (details).Orb+Very StrongOrb verification, plus authentication which verifies the person using World ID is the legitimate holder.
+Vocabulary
+Some terms are used throughout the World ID documentation. Here are a few of the most important ones:
+
+World ID: A user's self-custodial identity, as well as the name of the protocol.
+Zero-Knowledge Proof (ZKP): A cryptographic method to prove that a statement is true without revealing any information about the statement itself. World ID uses ZKPs to prove that a user is verified without revealing the user's identity.
+Nullifier Hash: A component of the World ID ZKP; a unique identifier for a combination of a user, app_id, and action. It is used to prevent sybil attacks and ensure a user is only able to perform an action once.
+Signal: A component of the World ID ZKP; data attached to the proof that cannot be tampered with. An example may be a user's choice for a governance proposal.
+PreviousWhat is World ID?NextTry it Out© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 2
+SOURCE: https://docs.world.org/world-id/quick-start/templates
+CONTENT:
+Template Repositories | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalQuick StartTemplate Repositories
+If you're looking for the fastest way to bootstrap an app using World ID, we have multiple template repositories available for you to use. To integrate World ID into an existing app, proceed to Installation.
+World ID Cloud TemplateUse this Template
+This template repository is a simple example of how to use World ID and our Developer Portal API. Once you've created a new repository from this template, set your app_id and action in the .env file and run the following command to get started:
+Usagepnpm i && pnpm dev
+CopyCopied!
+Sign In with World ID TemplateUse this Template
+This template repository is a simple example of how to use Sign In with World ID using NextAuth. Once you've created a new repository from this template, set your NEXTAUTH_URL, WLD_CLIENT_ID and WLD_CLIENT_SECRET in the .env file and run the following command to get started:
+Usagepnpm i && pnpm dev
+CopyCopied!
+World ID On-Chain TemplateUse this Template
+This template repository is a simple example of how to use World ID in an on-chain application.
+Developers should be familiar with Foundry to use this template.IntroductionTry it OutNextInstallation© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 3
+SOURCE: https://docs.world.org/world-id/quick-start/installation
+CONTENT:
+Installing IDKit | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationIDKit InstallationDeveloper PortalConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalQuick StartInstalling IDKit
+IDKit is our official library for integrating World ID into your application. This section will guide you through creating your application in the Worldcoin Developer Portal and installing IDKit.
+IDKit Installation
+To install IDKit, use your package manager of choice:
+For other languages, see supported libraries.
+Install IDKitnpmyarnpnpmnpm install @worldcoin/idkit
+CopyCopied!
+The Quick Start guide will use Next.js.
+Developer Portal
+Sign in to the Worldcoin Developer Portal. The Developer Portal will prompt you to create an application, and configure it as a Staging app for Cloud verification:
+
+The Developer Portal will then prompt you to create an Action. Give it a name, and note the action identifier:
+
+Finally, navigate to App Profile and note the application ID:
+
+Proceed to Configuration to configure IDKit in your application.PreviousTemplate RepositoriesNextConfiguration© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 4
+SOURCE: https://docs.world.org/world-id/quick-start/configuration
+CONTENT:
+Configuring IDKit | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationIDKitWidgethandleVerifyBackend VerificationonSuccessTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalQuick StartConfiguring IDKit
+IDKit is a single React component, and we'll be writing two callback functions: handleVerify and onSuccess.
+IDKitWidget
+First, add the IDKitWidget component to your site. The values for the app_id and action props were obtained from the Developer Portal in Installation. We'll define the handleVerify and onSuccess callbacks next.
+/verify.tsx'use client' // for Next.js app router
+import { IDKitWidget, VerificationLevel, ISuccessResult } from '@worldcoin/idkit'
+
+// ...
+
+<IDKitWidget
+	app_id="your app id" // obtained from the Developer Portal
+	action="your action id" // obtained from the Developer Portal
+	onSuccess={onSuccess} // callback when the modal is closed
+	handleVerify={handleVerify} // callback when the proof is received
+	verification_level={VerificationLevel.Orb}
+>
+	{({ open }) => 
+        // This is the button that will open the IDKit modal
+        <button onClick={open}>Verify with World ID</button>
+    }
+</IDKitWidget>
+CopyCopied!
+handleVerify
+The handleVerify callback is called when the user's proof is received. This will send the proof to your backend for verification:
+/verify.tsxconst handleVerify = async (proof: ISuccessResult) => {
+    const res = await fetch("/api/verify", { // route to your backend will depend on implementation
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(proof),
+    })
+    if (!res.ok) {
+        throw new Error("Verification failed."); // IDKit will display the error message to the user in the modal
+    }
+};
+CopyCopied!
+Backend Verification
+The handleVerify callback sends the proof to your backend for verification. The backend handler should verify the proof with the Developer Portal API:
+The call to the Developer Portal API must be made from your backend, not from the frontend.
+/api/verify.tsimport { type IVerifyResponse, verifyCloudProof } from '@worldcoin/idkit'
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+	const proof = req.body
+    const app_id = process.env.APP_ID
+    const action = process.env.ACTION_ID
+	const verifyRes = (await verifyCloudProof(proof, app_id, action)) as IVerifyResponse
+
+    if (verifyRes.success) {
+        // This is where you should perform backend actions if the verification succeeds
+        // Such as, setting a user as "verified" in a database
+        res.status(200).send(verifyRes);
+    } else {
+        // This is where you should handle errors from the World ID /verify endpoint. 
+        // Usually these errors are due to a user having already verified.
+        res.status(400).send(verifyRes);
+    }
+};
+CopyCopied!
+onSuccess
+The onSuccess callback is called when the user closes the modal. This is where you can perform any necessary actions, such as redirecting the user to a new page.
+/verify.tsxconst onSuccess = () => {
+    // This is where you should perform any actions after the modal is closed
+    // Such as redirecting the user to a new page
+    window.location.href = "/success";
+};
+CopyCopied!PreviousInstallationNextTesting© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 5
+SOURCE: https://docs.world.org/world-id/id/cloud
+CONTENT:
+Verify with World ID | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationCreating actionsInstalling IDKitUsageResponseVerifying ProofsPost-VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalIncognito ActionsVerify with World ID
+IDKit is required in your app's frontend for verifying with World ID, and the zero-knowledge proof received from the user will be verified via the Developer Portal API in your backend.
+Creating actions
+An "action" is the term we use to describe a user interaction or operation that needs to be protected by World ID verification.
+Create an action for your app in the Developer Portal. You must provide the following values:
+
+Action Name: The stringified action to be taken by the user.
+Description: This is shown to your user in the World app as they sign with their World ID. Make sure to fully describe the exact action the user is taking.
+Max Verifications: The number of times a user can take this action. A value of 0 indicates that unlimited verifications can take place.
+
+An action scopes uniqueness for users, which means users will always generate the same ID (nullifier hash) when
+performing the same action. Cloud actions natively handle sybil-resistance with a limit set in the Developer
+Portal.
+Installing IDKit
+The JS package can be included in your project either as a module (which supports tree shaking to reduce bundle size) or you can add the script directly to your website.
+Install IDKitnpmyarnpnpmnpm install @worldcoin/idkit
+CopyCopied!
+Usage
+Import and render IDKit. You'll want to do this on the screen where the user executes the protected action (e.g. before they click "Claim airdrop" or "Vote on proposal").
+import { IDKitWidget, VerificationLevel } from '@worldcoin/idkit'
+
+<IDKitWidget
+	app_id="app_GBkZ1KlVUdFTjeMXKlVUdFT" // obtained from the Developer Portal
+	action="vote_1" // this is your action id from the Developer Portal
+	onSuccess={onSuccess} // callback when the modal is closed
+	handleVerify={handleVerify} // optional callback when the proof is received
+	verification_level={VerificationLevel.Device}
+>
+	{({ open }) => <button onClick={open}>Verify with World ID</button>}
+</IDKitWidget>
+CopyCopied!
+More configuration options can be found in the IDKit reference.
+When a user clicks the button, the IDKit modal will open and prompt them to scan a QR code and verify with World ID. Once this proof is received, the optional handleVerify callback is called immediately and the onSuccess callback will be called when the modal is closed.
+One of these callbacks should begin the process of verifying the proof.
+
+Response
+Upon successful completion of the World ID flow, you will receive a response object. This response object of type ISuccessResult has the following attributes. Normally, you will forward these parameters to your backend for verification.
+ISuccessResult{
+	"merkle_root": "0x1f38b57f3bdf96f05ea62fa68814871bf0ca8ce4dbe073d8497d5a6b0a53e5e0",
+	"nullifier_hash": "0x0339861e70a9bdb6b01a88c7534a3332db915d3d06511b79a5724221a6958fbe",
+	"proof": "0x063942fd7ea1616f17787d2e3374c1826ebcd2d41d2394...",
+	"verification_level": "orb"
+}
+CopyCopied!
+Namemerkle_rootTypestringDescriptionThis is the hash pointer to the root of the Merkle tree that proves membership of the user's identity in the
+list of identities verified by the Orb.Namenullifier_hashTypestringDescriptionThe unique identifier for this combination of user, app, and action.NameproofTypestringDescriptionThe Zero-knowledge proof of the verification.Nameverification_levelType"orb" | "device"DescriptionEither orb or device. Returns the verification_level used to generate the proof.
+Verifying Proofs
+This section describes how to verify proofs via the Developer Portal API.
+You should pass the proof to your backend when verifying proofs via the API. Users can manipulate information in the
+frontend, so the proof must be verified in a trusted environment.
+Your backend should receive the ISuccessResult object returned by IDKit, as well as the signal that was input into IDKit, and send it to the Developer Portal API for verification using the verifyCloudProof helper.
+The action ID should be accessible in your backend as an environment variable.
+After performing your own backend actions based on the result, you then pass the success or error messages back to your frontend.
+pages/api/verify.tsimport { type IVerifyResponse, verifyCloudProof } from '@worldcoin/idkit'
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+	const { proof, signal } = req.body
+    const app_id = process.env.APP_ID
+    const action = process.env.ACTION_ID
+	const verifyRes = (await verifyCloudProof(proof, app_id, action, signal)) as IVerifyResponse
+
+    if (verifyRes.success) {
+        // This is where you should perform backend actions if the verification succeeds
+        // Such as, setting a user as "verified" in a database
+        res.status(200).send(verifyRes);
+    } else {
+        // This is where you should handle errors from the World ID /verify endpoint. 
+        // Usually these errors are due to a user having already verified.
+        res.status(400).send(verifyRes);
+    }
+};
+CopyCopied!
+Post-Verification
+If handleVerify does not throw an error, the user will see a success state and the onSuccess callback will be called when the modal is closed. The onSuccess callback should redirect a user to a success page, or perform any other actions you want to take after a user has been verified.
+pages/index.tsxconst onSuccess = (result: ISuccessResult) => {
+	// This is where you should perform frontend actions once a user has been verified
+	window.alert(
+		`Successfully verified with World ID!
+    Your nullifier hash is: ` + result.nullifier_hash
+	)
+}
+CopyCopied!
+For more information on configuration, see the IDKit and Cloud API reference
+pages.Quick StartTestingNextLibraries© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 6
+SOURCE: https://docs.world.org/world-id/id/on-chain
+CONTENT:
+Verifying Proofs On-Chain | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationIDKit ConfigurationContract AddresseshashToField Helper FunctionConstructorverifyProofCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalIncognito ActionsVerifying Proofs On-Chain
+World ID proofs can be fully verified on-chain. After all, the source of truth for the decentralized protocol is on-chain. To verify a World ID proof, your smart contract will embed a call to the verifyProof method of the World ID contract, and then execute the rest of its logic as usual.
+The smart contract starter kit and the frontend & on-chain monorepo template are great resources to help you get started with World ID.
+Using one of these repositories is strongly recommended to get started with World ID on-chain.
+The following examples demonstrate the most common use case: verifying proofs from only Orb-verified users, for a single action, with a user's wallet address as the signal, while also enabling sybil-resistance.
+This setup is recommended for most users, as it is the most gas-efficient. For more information on use cases that require more complex setups (such as multiple actions or other types of signals), see the Advanced On-Chain Verification page.
+At the core of the World ID Protocol is the use of Semaphore. Semaphore is a zk-SNARK based privacy protocol that allows for the creation of anonymous credential systems developed by the Ethereum Foundation.
+Read more about The Protocol and Semaphore.
+IDKit Configuration
+When verifying proofs on-chain, there are a few changes you have to make to your IDKit configuration. You must ensure that the app created in the Developer Portal is configured as an on-chain app, and you should only accept Orb credentials in IDKit, as World ID Device is not currently supported on-chain.
+import { IDKitWidget } from '@worldcoin/idkit'
+
+const { address } = useAddress() // get the user's wallet address
+
+<IDKitWidget
+    app_id="app_GBkZ1KlVUdFTjeMXKlVUdFT" // must be an app set to on-chain in Developer Portal
+    action="claim_nft"
+    signal={address} // proof will only verify if the signal is unchanged, this prevents tampering
+    onSuccess={onSuccess} // use onSuccess to call your smart contract
+    // no use for handleVerify, so it is removed
+    // use default verification_level (orb-only), as device credentials are not supported on-chain
+>
+    {({ open }) => <button onClick={open}>Verify with World ID</button>}
+</IDKitWidget>
+CopyCopied!
+Contract Addresses
+The World ID Router contract is what you should use to verify proofs. It is deployed on multiple chains, and you can find the addresses for each chain in our contracts Address Book.
+hashToField Helper Function
+Our contracts use a custom hash function that returns a uint256 that is guaranteed to be in the field of the elliptic curve we use. This is necessary to ensure that the uint256 returned by the hash function can be used in our zero-knowledge proofs.
+library ByteHasher {
+	/// @dev Creates a keccak256 hash of a bytestring.
+	/// @param value The bytestring to hash
+	/// @return The hash of the specified value
+	/// @dev `>> 8` makes sure that the result is included in our field
+	function hashToField(bytes memory value) internal pure returns (uint256) {
+		return uint256(keccak256(abi.encodePacked(value))) >> 8;
+	}
+}
+CopyCopied!
+To use this function, simply import the ByteHasher library and call hashToField on your bytestring.
+import { ByteHasher } from './helpers/ByteHasher.sol';
+
+contract HelloWorld {
+	using ByteHasher for bytes;
+	// {...}
+	abi.encodePacked('hello world').hashToField(); // returns the keccak256 hash of 'hello world' as a uint256
+	// {...}
+CopyCopied!
+Constructor
+The externalNullifier is the unique identifier of the action performed in Semaphore, and its keccak256 hash (named externalNullifierHash) is what is passed to the World ID Router contract. It is a combination of the app ID and the action.
+You should typically set it in the constructor to save gas (as is done in this example), as it will not change if all users are performing the same action.
+We additionally set the groupId to 1, which limits this example to Orb-verified users only. World ID Device is currently not supported on-chain.
+/// @dev This allows us to use our hashToField function on bytes
+using ByteHasher for bytes;
+
+/// @notice Thrown when attempting to reuse a nullifier
+error InvalidNullifier();
+
+/// @dev The address of the World ID Router contract that will be used for verifying proofs
+IWorldID internal immutable worldId;
+
+/// @dev The keccak256 hash of the externalNullifier (unique identifier of the action performed), combination of appId and action
+uint256 internal immutable externalNullifierHash;
+
+/// @dev The World ID group ID (1 for Orb-verified)
+uint256 internal immutable groupId = 1;
+
+/// @dev Whether a nullifier hash has been used already. Used to guarantee an action is only performed once by a single person
+mapping(uint256 => bool) internal nullifierHashes;
+
+/// @param _worldId The address of the WorldIDRouter that will verify the proofs
+/// @param _appId The World ID App ID (from Developer Portal)
+/// @param _actionId The World ID Action (from Developer Portal)
+constructor(
+    IWorldID _worldId,
+    string memory _appId,
+    string memory _action
+) {
+    worldId = _worldId;
+    externalNullifierHash = abi
+        .encodePacked(abi.encodePacked(_appId).hashToField(), _action)
+        .hashToField();
+}
+CopyCopied!
+verifyProof
+The verifyProof method reverts if the proof is invalid, meaning you can just call it as part of your smart contract's logic and execute the rest of your logic after as usual.
+Note that calling the verifyProof function by itself does not provide sybil-resistance, or prevent proof reuse -- it
+just verifies that the proof is valid.However, this example does implement sybil-resistance by checking that the nullifierHash has not been verified before.
+The verifyProof method takes the arguments below.
+
+root - The World ID root to verify against. This is obtained from the IDKit widget, and should be passed as-is.
+groupId - This must be 1 for Orb-verified users. World ID Device is currently not supported on-chain.
+signalHash - The keccak256 hash of the signal to verify.
+nullifierHash - Anonymous user ID for this action. This is obtained from the IDKit widget, and should just be passed as-is.
+externalNullifierHash - The externalNullifierHash, which identifies which app and action the user is verifying for.
+proof - The proof to verify. This is obtained from the IDKit widget.
+
+/// @param signal An arbitrary input from the user that cannot be tampered with. In this case, it is the user's wallet address.
+/// @param root The root (returned by the IDKit widget).
+/// @param nullifierHash The nullifier hash for this proof, preventing double signaling (returned by the IDKit widget).
+/// @param proof The zero-knowledge proof that demonstrates the claimer is registered with World ID (returned by the IDKit widget).
+function verifyAndExecute(
+    address signal,
+    uint256 root,
+    uint256 nullifierHash,
+    uint256[8] calldata proof
+) public {
+    // First, we make sure this person hasn't done this before
+    if (nullifierHashes[nullifierHash]) revert InvalidNullifier();
+
+    // We now verify the provided proof is valid and the user is verified by World ID
+    worldId.verifyProof(
+        root,
+        groupId, // set to "1" in the constructor
+        abi.encodePacked(signal).hashToField(),
+        nullifierHash,
+        externalNullifierHash,
+        proof
+    );
+
+    // We now record the user has done this, so they can't do it again (sybil-resistance)
+    nullifierHashes[nullifierHash] = true;
+
+    // Finally, execute your logic here, knowing the user is verified
+}
+CopyCopied!
+All arguments are of type uint256, with the exception of proof, which is of type uint256[8]. Depending on how you're calling your smart contract, you might be required to unpack it into a uint256[8] before passing it to the verifyProof method. To unpack it, use the following code:viemethers.jsimport { decodeAbiParameters } from 'viem'
+
+const unpackedProof = decodeAbiParameters([{ type: 'uint256[8]' }], proof)[0]
+CopyCopied!PreviousLibrariesNextCommon Pitfalls© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 7
+SOURCE: https://docs.world.org/world-id/id/pitfalls
+CONTENT:
+Incognito Actions Common Pitfalls | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsNot Verifying ProofsImproper Signal (Proof fails verification)Compilation/Runtime ErrorsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalIncognito ActionsIncognito Actions Common Pitfalls
+
+Not Verifying Proofs
+When using Incognito Actions, it's important to always verify the proof received from IDKit. This proof is a claim that the user has been verified by World ID, and verifying that proof with our API or smart contracts is the only way to ensure that the claim is true.
+Improper Signal (Proof fails verification)
+If you specify a signal as an input to IDKit, ensure you include the same signal when verifying the proof with our API or smart contracts. Otherwise, the proof will not verify.
+Compilation/Runtime Errors
+IDKit must be run client-side. Ensure that your frontend framework isn't attempting to render IDKit server-side.PreviousOn-Chain VerificationTechnical ReferenceIDKit Reference© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 8
+SOURCE: https://docs.world.org/world-id/reference/idkit
+CONTENT:
+IDKit | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceIDKit (React)IDKit StandaloneAdvanced configurationAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceIDKit
+IDKit is open source and accepts contributions! Head over to GitHub and
+submit a pull request.
+There are three packages available in the IDKit Monorepo: @worldcoin/idkit, @worldcoin/idkit-standalone, and @worldcoin/idkit-core. The @worldcoin/idkit package is the main package that should be used with the React JS framework. The @worldcoin/idkit-standalone package is a standalone package that can be used in vanilla JavaScript applications. The @worldcoin/idkit-core package is a core functionality package that is used by the other two packages, and should be used only when creating a new IDKit package.
+IDKit (React)
+The @worldcoin/idkit package is the main package that should be used with the React framework or any other framework that supports React components, such as Next.JS.
+Components
+IDKitWidget
+The IDKitWidget component is the main component that renders the World ID widget. It should be mounted in your React app and passed the relevant parameters. Accepts a function as a child that receives an open function to open the widget.
+import { IDKitWidget } from '@worldcoin/idkit'
+
+<IDKitWidget
+	app_id="app_GBkZ1KlVUdFTjeMXKlVUdFT" // obtained from the Developer Portal
+	action="vote_1" // this is your action name from the Developer Portal
+	signal="user_value" // any arbitrary value the user is committing to, e.g. a vote
+	onSuccess={onSuccess}
+	verification_level="device" // minimum verification level accepted, defaults to "orb"
+>
+	{({ open }) => <button onClick={open}>Verify with World ID</button>}
+</IDKitWidget>
+CopyCopied!
+Parameters
+The following parameters can be passed as props to the IDKitWidget component:
+Nameapp_idTypestringRequiredREQUIREDDescriptionUnique identifier for the app verifying the action. This should be the App ID obtained from the Developer
+Portal.NameactionTypestringRequiredREQUIREDDescriptionIdentifier for the action the user is performing. This should be the action name set in the Developer Portal.NameonSuccessTypefunction(ISuccessResult)RequiredREQUIREDDescriptionFunction to trigger when verification is successful and the modal is closed. Should receive a single parameter of type ISuccessResult
+which contains the proof details.NamehandleVerifyTypefunction(ISuccessResult)DescriptionCalled after the proof is returned from the user's identity wallet (e.g. World App), but before showing the success screen. Should receive a single parameter of type ISuccessResult
+which contains the proof details. Throwing an error in this screen will show the user a custom error.handleVerify should be used for API proof verifications to create the best user experience. This will show a pending state while the proof is verified and present any errors thrown in a user-readable fashion.NameonErrorTypefunction(IErrorState)DescriptionCalled when IDKit is closed after an error. Should receive a single parameter of type IErrorState which contains the error details.Nameverification_levelTypestring: orbDescriptionThe minimum verification level accepted. Can be orb or device. Defaults
+to orb. TypeScript apps can use the VerificationLevel enum.NamesignalTypestring: ""DescriptionThe signal to be included in the zero-knowledge proof. Typically used for on-chain actions, read more in the On-chain section.Namebridge_urlTypestring: "https://bridge.worldcoin.org"DescriptionThe URL of the Wallet Bridge to use for establishing a connection between IDKit and the user's World ID Wallet. Defaults to the bridge service hosted by Worldcoin.
+Only change this if you are running your own bridge service. Read more in Protocol Internals.
+World App will temporarily prevent users from connecting to a Wallet Bridge that is not hosted by Worldcoin or Tools for Humanity while security reviews are ongoing, so we recommend using the default value by leaving the bridge_url parameter undefined.NameautoCloseTypeboolean: trueDescriptionWhether to automatically close the widget after completion. Defaults to true.NameadvancedTypeJSONDescriptionA JSON object containing advanced configuration options that may be unstable or subject to change. See Advanced Configuration for more details.
+Hooks
+useIDKit
+The useIDKit hook allows you to programmatically open the IDKit widget without mounting any buttons on screen. Note that you still need to mount the component for this to work.
+import { IDKitWidget, useIDKit } from '@worldcoin/idkit'
+
+const { open, setOpen } = useIDKit()
+
+useEffect(() => {
+	setOpen(true)
+}, [])
+
+return (
+	<div>
+		<IDKitWidget app_id="..." action="..." />
+	</div>
+)
+CopyCopied!
+Functions
+verifyCloudProof
+The verifyCloudProof function is used to verify a proof returned from the user's identity wallet (e.g. World App) against the Developer Portal API. This function is useful for verifying proofs on the server side.
+NameproofTypeISuccessResultRequiredREQUIREDDescriptionThe proof object returned from IDKit.Nameapp_idTypeapp_${string}RequiredREQUIREDDescriptionThe app_id obtained from the Developer Portal.NameactionTypestringRequiredREQUIREDDescriptionThe action id from the Developer Portal.NamesignalTypestring: ""DescriptionThe signal as input to IDKit.NameendpointTypeURL | string: https://developer.worldcoin.org/api/v2/verify/${app_id}DescriptionThe endpoint to send the proof to for verification. Defaults to the Worldcoin Developer Portal.
+verifyCloudProofexport default async function handler(req: NextApiRequest, res: NextApiResponse) {
+	const { proof, action, signal } = req.body
+    const app_id = process.env.APP_ID
+	const response = (await verifyCloudProof(proof, app_id, action, signal)) as IVerifyResponse
+	res.status(response.success ? 200 : 400).json(response)
+}
+CopyCopied!
+Types
+ISuccessResult
+Namemerkle_rootTypestringDescriptionThis is the hash pointer to the root of the Merkle tree that proves membership of the user's identity in the
+list of identities verified by the Orb. ABI encoded.Namenullifier_hashTypestringDescriptionEssentially the user's unique identifier for your app (and specific action if using Incognito Actions). ABI
+encoded.NameproofTypestringDescriptionThe Zero-knowledge proof of the verification. ABI encoded.Nameverification_levelType"orb" | "device"DescriptionEither orb or device. Returns the verification level used to generate the proof.Namecredential_typeType"orb" | "device"DeprecatedDEPRECATEDDescriptionEither orb or device. Will always return the strongest credential with which a user has been verified.This property is deprecated and will be removed in a future release. Use verification_level instead.
+ISuccessResult{
+	"merkle_root": "0x1f38b57f3bdf96f05ea62fa68814871bf0ca8ce4dbe073d8497d5a6b0a53e5e0",
+	"nullifier_hash": "0x0339861e70a9bdb6b01a88c7534a3332db915d3d06511b79a5724221a6958fbe",
+	"proof": "0x063942fd7ea1616f17787d2e3374c1826ebcd2d41d2394...",
+	"verification_level": "orb"
+}
+CopyCopied!
+IErrorState
+NamecodeTypestringDescriptionThe error code.NamedetailTypestringDescriptionA human-readable description of the error.
+IErrorState{
+	"code": "already_signed",
+	"detail": "User has previously signed and submitted proof for this action."
+}
+CopyCopied!
+IVerifyResult
+NamesuccessTypebooleanDescriptionIf the proof verification succeeded.NamecodeTypestring | undefinedDescriptionThe error code.NamedetailTypestring | undefinedDescriptionA human-readable description of the error.NameattributeTypestring | null | undefinedDescriptionThe attribute causing the error.
+IVerifyResult{
+    "success": false,
+	"code": "invalid_proof",
+	"detail": "The provided proof is invalid and it cannot be verified. Please check all inputs and try again.",
+    "attribute": null,
+}
+CopyCopied!
+Error Handling
+An error in IDKit will generally be returned as the input to the onError callback. IDKit will display an error to the user and call the onError callback with an IErrorState object when the modal is closed.
+View the Errors Reference for assistance when troubleshooting.
+IDKit Standalone
+The @worldcoin/idkit-standalone package is intended for vanilla JS applications. It is a standalone package that acts as a wrapper around the @worldcoin/idkit package.
+Methods
+The .init() and .update() methods take the same parameters as the React package's IDKitWidget component. See above for more details.
+.init()
+The .init() method is the main initialization method used for vanilla JS apps. It should be called to start up IDKit and configure the widget.
+
+import { IDKit } from '@worldcoin/idkit-standalone'
+
+const onSuccess = (result) => {
+	// handle success
+}
+
+IDKit.init({
+	app_id: 'app_lshSNnaJfdt6Sohu6YAA',
+	action: 'my_action',
+	onSuccess: onSuccess,
+})
+CopyCopied!
+
+.update()
+The .update() method reinitializes the widget with new parameters. It can only be called after the .init() method.
+
+IDKit.update({
+	app_id: 'app_lshSNnaJfdt6Sohu6YAA',
+	action: 'my_new_action',
+	onSuccess: onSuccess,
+})
+CopyCopied!
+
+.open()
+The .open() method is used to open the widget. It can only be called after the .init() method, typically in response to a button click.
+This method returns a Promise object that will resolve when the onSuccess callback is called, or reject when the onError callback is called.
+IDKit.open()
+CopyCopied!
+Advanced configuration
+This section outlines advanced configuration options that may be unstable or subject to change. These options are passed as a JSON object to the advanced prop of the IDKitWidget component.
+Self-Hosted Applications
+Self-hosted applications bypass the Worldcoin Developer Portal entirely. The proof returned can not be verified by the Developer Portal API. Instead, you must verify the proof on-chain or with a custom prover service.
+When using self-hosted mode, no app_id is required, and any value passed to IDKit will be ignored. The action you set must have sufficient uniqueness to avoid collisions with other applications. We recommend using a prefix that includes your application name, e.g. your_app_name_vote_1.
+import { IDKitWidget } from '@worldcoin/idkit'
+
+<IDKitWidget
+	// no app_id is set for self-hosted applications
+	action="your_app_name_vote_1" // this is your action, set to whatever you'd like
+	signal="user_value"
+	onSuccess={onSuccess}
+	verification_level="orb" // only orb verifications are supported for self-hosted applications
+	advanced={
+		self_hosted, // enable the self-hosted mode
+	}
+>
+	{({ open }) => <button onClick={open}>Verify with World ID</button>}
+</IDKitWidget>
+CopyCopied!Incognito ActionsCommon PitfallsNextAPI Reference© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 9
+SOURCE: https://docs.world.org/world-id/reference/api
+CONTENT:
+API Reference | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceVerify ProofPOSTGet Action MetadataGETGet JWK KeysGETAuthenticated EndpointsSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceAPI Reference
+The Worldcoin Developer Portal offers an API to enable easy verification of World IDs and relevant credentials.
+Base URL
+https://developer.worldcoin.org
+CopyCopied!
+All requests to the Developer Portal API must include a Content-Type: application/json header, a User-Agent
+header, and a valid JSON body.
+Verify ProofPOST/api/v2/verify/{app_id}
+Enables you to verify a World ID proof for a Cloud action. To ensure sybil-resistance, by default, a single person can only verify once for every action. The number of allowed verifications for a single user can be configured in the Developer Portal.This endpoint is now on version 2. The previous version at /api/v1/verify/{app_id} will be unavailable after
+June 30, 2024.Request BodyNamenullifier_hashTypestringRequiredREQUIREDDescriptionThe unique user identifier (called the nullifier hash in the ZKP), as provided by IDKit. See IDKit
+response for details.NameproofTypestringRequiredREQUIREDDescriptionThe zero-knowledge proof, as provided by IDKit. See IDKit response for
+details.Namemerkle_rootTypestringRequiredREQUIREDDescriptionPart of the ZKP, the hash of the Merkle root that proves membership to the set of credentials. As provided by
+IDKit. See IDKit response for details.Nameverification_levelTypestringRequiredREQUIREDDescriptionThe verification level, as provided by IDKit. See IDKit response for details.NameactionTypestringRequiredREQUIREDDescriptionSame action identifier as passed to IDKit.Namesignal_hashTypestring: hashToField('').digestDescriptionThe hash of the signal that was used to generate the proof. Defaults to the hash of an empty string.Possible Responses
+200 OK - The proof was successfully verified.
+400 Bad Request - The proof was invalid or the user has already verified for this action.
+RequestcURLJavaScriptPOST/api/v2/verify/{app_id}curl -X POST "/api/v2/verify/{app_id}" \
+    -H "Content-Type: application/json" \
+    -d '{
+        "nullifier_hash": "0x2bf8406809dcefb1486dadc96c0a897db9bab002053054cf64272db512c6fbd8",
+        "merkle_root": "0x2264a66d162d7893e12ea8e3c072c51e785bc085ad655f64c10c1a61e00f0bc2",
+        "proof": "0x1aa8b8f3b2d2de5ff452c0e1a83e29d6bf46fb83ef35dc5957121ff3d3698a1119090fb...",
+        "verification_level": "orb",
+        "action": "my_action",
+        "signal_hash": "0x00c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a4"
+    }'
+CopyCopied!Response200 OK400 Invalid Proof400 Invalid Merkle Root400 Invalid Credential Type400 User Exceeded Maximum Verifications400 User Already Verified{
+	"success": true,
+	"action": "my_action",
+	"nullifier_hash": "0x2bf8406809dcefb1486dadc96c0a897db9bab002053054cf64272db512c6fbd8",
+	"created_at": "2023-02-18T11:20:39.530041+00:00"
+}
+CopyCopied!
+Get Action MetadataGET/api/v1/precheck/{app_id}
+Enables fetching information about a particular app to determine eligibility for verification. This endpoint is also used by the World ID Kiosk, Sign in with World ID, and World App to show metadata about the action being verified. This endpoint will only return information for active actions.  Primarily intended for internal use.
+Request Body
+NameactionTypestring: ""RequiredREQUIREDDescriptionThe action to check. This is the same action that was passed to IDKit. Defaults to an empty string for Sign in
+with World ID.Namenullifier_hashTypestring: ""DescriptionThe ZKP's nullifier hash, as provided by IDKit. See IDKit response for
+details. Defaults to an empty string.Nameexternal_nullifierTypestringDeprecatedDEPRECATEDDescriptionThe ZKP's external nullifier. This parameter is deprecated and will be removed in a future release, and should
+no longer be used. Instead, pass the action parameter.RequestcURLJavaScriptGET/api/v1/precheck/{app_id}curl -X POST "/api/v1/precheck/{app_id}" \
+     -H "Content-Type: application/json" \
+     -d '{
+             "action": "my_custom_action",
+             "nullifier_hash": "0x2bf8406809dcefb1486dadc96c0a897db9bab002053054cf64272db512c6fbd8",
+             "external_nullifier": "0x00949dd9a8c5b600304d010ce3a3cf012352070ae4b77504e17af77ee894cda"
+         }'
+CopyCopied!
+Response
+Name__typenameTypestring: appDescriptionAlways returns app.NameidTypestringDescriptionThe app_id from the Developer Portal.NameengineType"cloud" | "on-chain"DescriptionWhether the app is configured for use with Cloud or On-Chain proof verifications.Nameis_stagingTypebooleanDescriptionWhether the app is a staging app. If true, the Worldcoin Simulator must be
+used to verify.Nameis_verifiedTypestringDescriptionWhether the app has been verified by Worldcoin.NamenameTypestringDescriptionThe app's name as configured in the Developer Portal.Nameverified_app_logoTypestringDescriptionThe URL of the app's logo. Only returned if the app has been verified, otherwise returns an empty string.Nameis_sign_inTypebooleanDescriptionWhether the action request is for Sign in with World ID.Namecan_user_verifyType"yes" | "no" | "on-chain" | "undetermined"DescriptionIf the user is eligible to verify for this action.
+
+"yes": The user has not reached the maximum number of verifications for this action based on the nullifier_hash provided. Always returned when is_sign_in is true.
+
+"no": The user has reached the maximum number of verifications for this action based on the nullifier_hash provided.
+
+"undetermined": A nullifier_hash was not provided, so the user's eligibility cannot be determined.
+
+"on-chain": The app is configured for On-Chain verifications, so the user's eligibility cannot be determined. Verification eligibility is determined solely by the application's smart contract.
+
+NameactionTypeJSONDescriptionInformation about the action being verified.
+
+name: The action's human-readable name as configured in the Developer Portal.
+
+action: The action identifier as configured in the Developer Portal. Typically a slugified version of the action's name.
+
+description: The action's description as configured in the Developer Portal.
+
+max_verifications: The maximum number of verifications allowed for this action. Will be 0 if the action is configured for unlimited verifications.
+
+max_accounts_per_user: The maximum number of accounts allowed per user for Sign in with World ID. Will always be 1.
+
+external_nullifier: The action's external nullifier. Intended for internal use only.
+
+status: Will return active if the action is active, otherwise will return inactive.
+
+__typename: Always returns action.
+
+Response200 OK400 Required400 Action Inactive404 Not Found405 Method Not Allowed{
+	"id": "app_staging_4cfd049031b0da1e8b62084b09a9f430",
+	"is_staging": true,
+	"is_verified": false,
+	"name": "Default App",
+	"verified_app_logo": "",
+	"engine": "cloud",
+	"__typename": "app",
+	"sign_in_with_world_id": true,
+	"can_user_verify": "yes",
+	"action": {
+		"external_nullifier": "0x00949dd9a8c5b600304d010ce3a3cf012352070ae4b77504e17af77ee894cda",
+		"name": "My action",
+		"action": "my_custom_action",
+		"description": "My action",
+		"max_verifications": 0,
+		"max_accounts_per_user": 1,
+		"__typename": "action"
+	}
+}
+CopyCopied!
+Get JWK KeysGET/api/v1/jwks
+This endpoint lets you retrieve the JWKs (public keys) used to verify the signature on JSON web tokens that authenticate a verification request from the Developer Portal. This verification method is only used if you are using the Hosted page user interface.cURLJavaScriptcurl /api/v1/jwks
+CopyCopied!Response{
+	"keys": [
+		{
+			"e": "AQAB",
+			"n": "09ETz2k4_9IbDBYK_Tcr6DzbDdJPeqIgvoeUvXNVjNU8mYzFbhdqh8jRH80FwtuoFqyw5oyuG9ILHxfGaG_SeutPWSxBsqulXhxTnTAx2i8HtF0i2toMuvsEtiAjQ3hD4_w2xInBVOO98WAGcNA_UgWAG2DlWpe2km_V5bv3iKteCsSTZtzT3RjEO6FeOlVr8rmx9EGwWITdPIvrEXm_3REFqvDOnQvLu2-Au8m1V3U_6404m4RV_wlWGPnhHfG57VTkkqjgrnFKGUDniG-VMJs-WFX4VIQRvy2z1A5nQsmYpobK_clGyV0D0i5P1A_lmWGDEXBLSjEW9zH_o0d2DQ",
+			"kty": "RSA",
+			"kid": "jwk_8934bcc47ec5b86dd490cc2a46f18a5e"
+		}
+	]
+}
+CopyCopied!
+Authenticated Endpoints
+You can generate API Keys on the My Team page of the Developer Portal.
+
+API keys are intended for use by third-party applications and for server-to-server communication. They are long-lived and can be revoked at any time.
+API keys are scoped to a team and have full permissions for any actions as any user of the Developer Portal.
+Once you have an API key, use it as the value of the Authorization header in your requests. For example:
+
+Authorization: Bearer $API_KEY
+CopyCopied!
+GraphQLPOST/v1/graphql
+Interaction with the Developer Portal API is mostly done through a GraphQL endpoint, which enables retrieving information and interacting with any of the API objects. You can read more about queries and mutations for GraphQL to help you construct your query.RequestcURLJavaScriptPOST/api/v1/graphqlcurl -X POST "/v1/graphql" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer $WORLD_ID_TOKEN" \
+     -d '{
+           "query": "YOUR_GRAPHQL_QUERY_HERE"
+         }'
+CopyCopied!Example QueriesListing AppsListing nullifiers for actionquery MyApps {
+	app {
+		id
+		name
+	}
+}
+CopyCopied!PreviousIDKit ReferenceNextSign In Reference© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 10
+SOURCE: https://docs.world.org/world-id/reference/sign-in
+CONTENT:
+Sign in with World ID Reference | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceOpenID Connect discoveryGETAuthorizeGETExchange CodePOSTOAuth2IntrospectPOSTGet User InfoPOSTSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceSign in with World ID Reference
+Sign in with World ID uses a different base API endpoint than the Developer Portal.
+Base domain
+https://id.worldcoin.org
+CopyCopied!
+This page primarily describes options that are OIDC-compliant. We additionally support using access tokens as described in the OAuth2 standards. No actions can be taken on behalf of a user with OAuth2 access tokens, but you may retrieve the same information about a user as would be contained in an id_token. See below for details.
+OpenID Connect discoveryGET/.well-known/openid-configuration
+Fetches the OpenID Connect discovery document.Common Errors
+method_not_allowed: HTTP method is not allowed. Only GET and OPTIONS may be used
+RequestGET/.well-known/openid-configurationcurl https://id.worldcoin.org/.well-known/openid-configuration
+CopyCopied!Response{
+    "issuer": "https://id.worldcoin.org",
+    "authorization_endpoint": "https://id.worldcoin.org/authorize",
+    "token_endpoint": "https://id.worldcoin.org/token",
+    "userinfo_endpoint": "https://id.worldcoin.org/userinfo",
+    "jwks_uri": "https://id.worldcoin.org/jwks",
+    "scopes_supported": ["openid", "email", "profile"],
+    "response_types_supported": ["code", "id_token", "id_token token", "code id_token"],
+    "grant_types_supported": ["authorization_code", "implicit"],
+    "subject_types_supported": ["pairwise"],
+    "id_token_signing_alg_values_supported": ["RSA"]
+}
+CopyCopied!
+AuthorizeGET/authorize
+Redirect your users to this page to begin the sign-in flow.Required attributesAll attributes are formatted as URL query parameters.Nameresponse_typeTypestringDescriptionMust be code for authorization code flow, id_token for implicit flow, or a space-separated combination of code, id_token, and token for hybrid flow. We generally recommend using the authorization code or implicit flows.NamescopeTypestringDescriptionSpace-separated list of the requested OIDC scopes. Must include openid, and may optionally include email and profile.Nameclient_idTypestringDescriptionThe Client ID of your app. Get this from the Developer Portal.Nameredirect_uriTypestringDescriptionURL the user will be redirected to after authentication. Must match one of your app's configured redirect_uris.Optional attributesNamestateTypestringDescriptionAn opaque value used to maintain state between the request and the callback.NamenonceTypestringDescriptionRequired when using the implicit flow. Used to prevent replay attacks. Should be randomly generated for each sign-in, and checked to ensure it's unchanged after the callback.Nameresponse_modeTypestringDescriptionDetermines how the authorization code, ID token, and/or access token are returned. Must be one of query, fragment, or form_post. query is only supported for the authorization code flow. Defaults to query for authorization code flow, and fragment for all others.Common Errors
+required: A necessary attribute was not set. Required attributes are: response_type scope client_id redirect_uri
+invalid_redirect_uri: The provided redirect URI is invalid. Ensure you've set the correct redirect_uri in the Developer Portal.
+RequestGET/authorizehttps://id.worldcoin.org/authorize?redirect_uri=https%3A%2F%2Fdocs.worldcoin.org%2Fworld-id%2Ftry-callback&response_type=code&scope=openid+profile+email&client_id=app_ce4cb73cb75fc3b73b71ffb4de178410
+CopyCopied!ResponseAuthorization CodeID Tokenhttps://example.app/api/auth/callback/worldcoin?code=e777d780f437330bbd79535b
+CopyCopied!
+Exchange CodePOST/token
+Exchanges an authorization code for an id_token for the given user.Required attributesNamecodeTypestringDescriptionThe authorization code to exchange.Namegrant_typeTypestringDescriptionThe type of grant to exchange. Must be authorization_code.Nameredirect_uriTypestringDescriptionThe same redirect URI used in the /authorize request.Common Errors
+method_not_allowed: HTTP method is not allowed. Only POST and OPTIONS may be used
+invalid_content_type: The provided content type is invalid, only application/x-www-form-urlencoded is supported
+unauthenticated: The provided authorization token is invalid, try checking your credentials
+invalid_grant_type: The provided grant type is invalid, only authorization_code is supported
+required: A necessary attribute was not set. Required attributes are: code
+invalid_grant: The authorization code was invalid, and may be expired. Try generating a new code via /authorize
+RequestcURLJavaScriptPOST/tokencurl -X POST https://id.worldcoin.org/token \
+     -H "Authorization: Basic YXBwXzU1MGU4MjkwODJmYzU1OGUxMTJlMDYyMGMxYzdhNT..." \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "code=23e5edda0f731dfdddace390&grant_type=authorization_code&redirect_uri=https%3A%2F%2Fdocs.worldcoin.org%2Fapi%2Fauth"
+CopyCopied!Response{
+	"access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Imp3a1.ey8yZmVi.ZjY3MDc3N2UyY2NlNzY5YzUxOG...",
+	"token_type": "Bearer",
+	"expires_in": 3600,
+	"scope": "openid",
+	"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Imp3a1.ey8yZmVi.ZjY3MDc3N2UyY2NlNzY5YzUxOG..."
+}
+CopyCopied!
+OAuth2
+If you selected token as one of your response_types for the /authorize endpoint, you'll receive an OAuth2 access token. Typically an access token would allow you to perform certain actions on a user's behalf, but there are no actions to perform for a user in this case.
+You can retrieve the same information about a user with an access token as you'd receive in an ID token. While we support this functionality for broader compatibility, we generally recommend using the authorization code or implicit flows, rather than the hybrid flow.
+The endpoints below are only used with an OAuth2 access token.
+IntrospectPOST/introspect
+Validates the given access token is active for the user.For introspect, Basic
+Authentication is
+used. The Authorization header contains the word "Basic ", followed by a base64 encoding of the
+"client_id:client_secret" values. You obtain your client_id (also called app_id) and client_secret from the Developer Portal.Required attributesNametokenTypestringDescriptionThe access token to validate.Common Errors
+method_not_allowed: HTTP method is not allowed. Only POST may be used
+invalid_content_type: The provided content type is invalid, only application/x-www-form-urlencoded is supported
+required: A necessary attribute was not set. Required attributes are: token
+unauthenticated: The authorization header is missing, please pass the Bearer authorization token
+invalid_token: The authorization token was invalid, and may be expired. Try generating a new token via /token
+RequestcURLJavaScriptPOST/introspectcurl -X POST https://id.worldcoin.org/introspect \
+  -H "Authorization: Basic YXBwXzU1MGU4MjkwODJmYzU1OGUxMTJlMDYyMGMxYzdhNT..." \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  --data-urlencode "token=eyJhbGciOiJSUzI1NiIsImtpZCI6Imp3a18yZmViZjY3MDc3N2UyY2NlNzY5YzUxOGM3MDNkNTNjMStN..."
+CopyCopied!Response{
+	"active": true,
+	"client_id": "app_staging_7550e829082fc558e112e0620c1c7a59",
+	"exp": 1678330528,
+	"sub": "0x2ae86d6d747702b3b2c81811cd2b39875e8fa6b780ee4a207bdc203a7860b535"
+}
+CopyCopied!
+Get User InfoPOST/userinfo
+Retrieves all user information, based on the approved scopes, with the given access token.For userinfo, Bearer
+Authentication is
+used. The Authorization header contains the word "Bearer ", followed by the access token returned from the
+/token endpoint.Common Errors
+method_not_allowed: HTTP method is not allowed. Only GET, POST, and OPTIONS may be used
+unauthenticated: The authorization header is missing, please pass the Bearer authorization token
+invalid_token: The authorization token was invalid, and may be expired. Try generating a new token via /token
+RequestcURLJavaScriptPOST/userinfocurl -X POST https://id.worldcoin.org/userinfo \
+-H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZ.eyCI6I.mp3a18yZmViZjY3MDc3N2UyY2NlN..."
+CopyCopied!Response{
+	"sub": "0x2ae86d6d747702b3b2c81811cd2b39875e8fa6b780ee4a207bdc203a7860b535",
+	"https://id.worldcoin.org/beta": { // deprecated, will be removed in the future
+		"likely_human": "strong",
+		"credential_type": "orb"
+	},
+  "https://id.worldcoin.org/v1": {
+    "verification_level": "orb", // "orb" or "device"
+  },
+  // if `email` scope is included:
+	"email": "0x2ae86d6d747702b3b2c81811cd2b39875e8fa6b780ee4a207bdc203a7860b535@id.worldcoin.org", 
+  // if `profile` scope is included:
+	"name": "World ID User",
+	"given_name": "World ID",
+	"family_name": "User"
+}
+CopyCopied!PreviousAPI ReferenceNextSmart Contracts© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 11
+SOURCE: https://docs.world.org/world-id/reference/contracts
+CONTENT:
+Smart Contracts | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsSupported ChainsArchitectureUsageAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceSmart Contracts
+All of our smart contracts are available on GitHub:
+
+World ID Smart Contracts
+State Bridge Smart Contracts
+
+If you're interested in using World ID and verifying proofs on-chain, see our On-Chain Verification
+guide.
+Supported Chains
+ChainTestnetRoleIdentity AvailabilityEthereumSepoliaCanonical~60 minutes after verificationOptimismOptimism SepoliaBridged~5 Minutes after EthereumPolygonN/ABridged~40 Minutes after EthereumBase (Testnet Only)Base SepoliaBridged~5 Minutes after Ethereum Sepolia
+Find our smart contract address book here.
+Architecture
+This section offers a high-level overview of the various smart contracts that make up World ID. This structure (including state bridging) is replicated on testnets -- currently Sepolia, Optimism Sepolia, and Base Sepolia.
+Identity Managers: WorldIdIdentityManager
+Identity Managers are only deployed on Ethereum. The Identity Manager contracts are responsible for managing the Semaphore instance. Worldcoin's signup sequencers call the Identity Manager contracts to add or remove identities from the merkle tree.
+State Bridges: OpStateBridge/PolygonStateBridge
+One State Bridge contract is deployed on Ethereum for each bridged chain. It publishes the root of the merkle tree to its configured chain's World ID contract, allowing proofs to be verified on that chain.
+Bridged World ID: OpWorldId/PolygonWorldId
+One World ID contract is deployed on each bridged chain, with an associated State Bridge contract on Ethereum. It is responsible for receiving merkle roots from its State Bridge contract, and verifying World ID proofs against those roots.
+You can deploy your own State Bridge contract on Ethereum and Bridged World ID contract to any chain to bridge World ID to that chain permissionlessly.
+World ID Router: WorldIdRouter
+This is the contract you should interact with.
+The World ID Router will route your call to the correct Identity Manager contract (Ethereum) or World ID contract (L2 Chains) based on the groupId argument. This contract is proxied, so you will not need to update your code if the underlying contracts are upgraded.
+Only Orb credentials are supported on-chain, so the groupId must be 1.
+Usage
+The verifyProof method of the World ID Router is used to verify proofs on-chain.
+Arguments
+NamerootTypeuint256RequiredREQUIREDDescriptionThe World ID root to verify against.NamegroupIdTypeuint256RequiredREQUIREDDescriptionDetermines which Credential Type to verify against. As only Orb credentials are supported on-chain, this must be 1.Orb-Only groupIduint256 internal immutable groupId = 1;
+CopyCopied!NamesignalHashTypeuint256RequiredREQUIREDDescriptionThe keccak256 hash of the signal to verify.signalHashabi.encodePacked(signal).hashToField();
+CopyCopied!NamenullifierHashTypeuint256RequiredREQUIREDDescriptionThe root of the merkle tree to verify against. This is obtained from the IDKit widget as a hex string nullifier_hash, and must be converted to a uint256 before passing it to the verifyProof method.NameexternalNullifierHashTypeuint256RequiredREQUIREDDescriptionThe keccak256 hash of the externalNullifier to verify. The externalNullifier is computed from the app_id and action.externalNullifierHashexternalNullifier = abi.encodePacked(abi.encodePacked(appId).hashToField(), action)
+externalNullifierHash = externalNullifier.hashToField();
+CopyCopied!Read more about the External Nullifier in Protocol Internals.NameproofTypeuint256[8]RequiredREQUIREDDescriptionThe zero-knowledge proof to verify. This is obtained from the IDKit widget as a hex string proof, and must be converted to a uint256[8] before passing it to the verifyProof method.Unpacking Proofviemethers.jsimport { decodeAbiParameters } from 'viem'
+
+const unpackedProof = decodeAbiParameters([{ type: 'uint256[8]' }], proof)[0]
+CopyCopied!
+Sybil resistance
+While the World ID protocol makes it very easy to make your contracts sybil resistant, this takes a little more than just calling the verifyProof function. To make your contract sybil-resistant, you'll need to do the following:
+
+Store the nullifierHash of each user that has successfully verified a proof.
+When a user attempts to verify a proof, check that the nullifierHash is not already in the list of used nullifierHashes.
+
+Here's an example function doing the above. You can also use the World ID starter kits to get started with sybil resistance.
+/// @param root The root (returned by the IDKit widget).
+/// @param groupId The group ID 
+/// @param signal An arbitrary input from the user, usually the user's wallet address
+/// @param nullifierHash The nullifier hash for this proof, preventing double signaling (returned by the IDKit widget).
+/// @param proof The zero-knowledge proof that demonstrates the claimer is registered with World ID (returned by the IDKit widget).
+function verifyAndExecute(
+    address signal,
+    uint256 root,
+    uint256 nullifierHash,
+    uint256[8] calldata proof
+) public {
+    // First make sure this person hasn't done this before
+    if (nullifierHashes[nullifierHash]) revert InvalidNullifier();
+
+    // Now verify the provided proof is valid and the user is verified by World ID
+    worldId.verifyProof(
+        root,
+        groupId,
+        abi.encodePacked(signal).hashToField(),
+        nullifierHash,
+		externalNullifierHash,
+        proof
+    );
+
+    // Record the user has done this, so they can't do it again (proof of uniqueness)
+    nullifierHashes[nullifierHash] = true;
+
+    // Finally, execute your logic here, for example issue a token, NFT, etc...
+}
+CopyCopied!PreviousSign In ReferenceNextAddress Book© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 12
+SOURCE: https://docs.world.org/world-id/reference/address-book
+CONTENT:
+Address Book | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceAddress Book
+Here you can find the address and associated ENS name (if available) for all of the World ID contracts. For verifying proofs, the only contract you need to interact with is the WorldIdRouter contract, which will properly route the call to the correct contract based on the groupId argument.
+Only the Orb verification level is supported on-chain, so your groupId should always be 1.
+EthereumWorld ChainOptimismPolygonBase (Sepolia)ContractEthereum MainnetEthereum Sepolia TestnetWorld ID Routerid.worldcoin.eth0x469449f251692e0779667583026b5a1e99512157Identity Manager0xf7134CE138832c1456F2a91D64621eE90c2bddEa0xb2ead588f14e69266d1b87936b75325181377076PreviousSmart ContractsNextErrors© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 13
+SOURCE: https://docs.world.org/world-id/reference/errors
+CONTENT:
+Errors | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsIDKitDeveloper Portal APIWorld ID 2.0 Migration GuideFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceErrors
+This page acts as a reference for the error codes returned by IDKit, the Developer Portal API, and the Wallet Bridge.
+IDKit
+These error codes are returned in the onError callback. The source described if the error originates from within IDKit or the Wallet Bridge response.
+CodeSourceDescriptionHow to fix?failed_by_host_appIDKitAn error was thrown in the handleVerify callback.Assess the error thrown in your handleVerify callback and resolve the issue.connection_failedIDKitCould not establish a connection to World App.Ask the user to check their internet connection on both devices running your application and World App.
+Additionally, make sure the user has the latest version of World App.verification_rejectedWallet BridgeUser rejected the World ID request in World App.If this was a mistake, ask the user to go through the flow again.max_verifications_reachedWallet BridgeThis person has already verified for this particular action the maximum number of times allowed.Nothing to do. User cannot verify for this action again.credential_unavailableWallet BridgeThis user does not have the requested credential.The user must verify at the Orb or verify their unique device in World App to receive the credential required.malformed_requestWallet BridgeThe request payload couldn't be decrypted or did not conform to the standard.Ensure IDKit is configured properly and all parameters are valid. See above for configuration details.invalid_networkWallet BridgeThe application is configured for a different environment than the verifying user's client.Ensure you use the Worldcoin Simulator for Staging applications and World App for Production applications.inclusion_proof_failedWallet BridgeThe sequencer returned an unexpected error when retrieving the inclusion proof.Ask the user to try again. This may be due to a temporary network issue, or a bug with World App or the Signup Sequencer.inclusion_proof_pendingWallet BridgeThe user might have the requested credential, but it is not available on-chain yet. It might be available for API verification.Ask the user to verify again in approximately one hour.metadata_failedWallet BridgeUnable to load metadata for the app from the Developer Portal.Ensure your app_id is configured correctly in IDKit and exactly matches the app_id from the Developer Portal.unexpected_responseIDKitThere was a problem with the response obtained from the WLD app.Check the JS console for further details, though in most cases these will require contacting us to
+report the bug.generic_errorWallet Bridge or IDKitAn unhandled exception occurred.Check the JS console for further details, though in most cases these will require contacting us to
+report the bug.
+Developer Portal API
+These error codes are returned in the error property of the response body.
+CodeDescriptionHow to fix?requiredThe attribute named in the attribute property is required, but was not included in the request.Provide the required attribute in your API request.invalid_formatThe attribute named in the attribute property was provided, but was in an unexpected format.See the error message for the proper format.unauthenticatedThe credentials (if provided) were invalid.Provide the required credentials in your API request and ensure they are correct.permission_deniedThe credentials provided were valid, but you do not have the required permissions.Contact your Developer Portal team's owner to be granted permissions, or the Worldcoin team if you are unable to resolve the issue.max_verifications_reachedThis person has already verified for this particular action the maximum number of times allowed.Nothing to do. User cannot verify for this action again.invalid_proofThe provided proof is invalid and it cannot be verified.Ensure your app_id, action, signal, and verification_level are unchanged between the proof request and proof verification.invalid_merkle_rootThe merkle root provided is not recognized.Ask the user to generate a new proof, the existing proof may be stale.invalid_networkThe application is configured for a different environment than the verifying user's client.Ensure you use the Worldcoin Simulator for Staging applications and World App for Production applications.invalid_engineThe application is configured for on-chain verification and cannot be verified via API.Either verify the proof on-chain or create a new application configured for Cloud verifications.metadata_failedUnable to load metadata for the app from the Developer Portal.Ensure your app_id is configured correctly in IDKit and exactly matches the app_id from the Developer Portal.action_inactiveThe requested action is disabled in the Developer Portal.Enable the action or create a new action.verification_errorThe Developer Portal faced an internal error verifying the proof.Contact the Worldcoin team.internal_errorThe Developer Portal faced an internal error verifying the proof.Contact the Worldcoin team.unexpected_responseThere was a problem with the response obtained from the WLD app.Check the JS console for further details, though in most cases these will require contacting us to
+report the bug.generic_errorAn unhandled exception occurred.Check the JS console for further details, though in most cases these will require contacting us to
+report the bug.PreviousAddress BookNextWorld ID 2.0 Migration Guide© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
+DOCUMENT 14
+SOURCE: https://docs.world.org/world-id/reference/world-id-2-migration-guide
+CONTENT:
+World ID 2.0 Migration Guide | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat is World ID?Core ConceptsTry it OutQuick StartTemplate RepositoriesInstallationConfigurationTestingIncognito ActionsCloud VerificationLibrariesOn-Chain VerificationCommon PitfallsTechnical ReferenceIDKit ReferenceAPI ReferenceSign In ReferenceSmart ContractsAddress BookErrorsWorld ID 2.0 Migration GuideBreaking ChangesNew FeaturesDeprecated FunctionalityOther ChangesFurther ReadingOIDC ExplainerProtocol InternalsZero-Knowledge ProofsWorld ID ResetDeveloper PortalTechnical ReferenceWorld ID 2.0 Migration Guide
+This guide will help you migrate your application to use World ID 2.0, including upgrading from the beta version of IDKit (v0.5.1 or earlier) to the new release of IDKit (v1.1.0 or later).
+We recommend you read the World ID 2.0 Announcement to understand the new features and changes.
+The Breaking Changes section outlines changes that must be addressed in order to successfully migrate your application to IDKit v1.
+The New Features and Deprecated Functionality sections outline changes that do not require immediate action.
+Breaking Changes
+IDKit v1 introduces a number of breaking changes that must be addressed in order to successfully migrate.
+The minimum versions of World App compatible with IDKit v1 are 2.5.0.1 on Android and 2.5.1 on iOS.
+If your users experience issues after migrating your application to IDKit v1, please ensure they are using the latest version of World App.
+World ID Device
+The phone credential has been replaced by World ID Device. This credential is used to verify a user's unique device rather than a phone number. This allows for a more secure and private verification flow.
+Read more about World ID Device and important considerations for your application in the Verification Levels documentation.
+Migrate from credential_types to verification_level
+The credential_types parameter has been replaced with the verification_level parameter. This parameter is used to specify the minimum level of verification required for a user to complete the World ID verification flow. This change also includes replacing phone with device for users who have not been verified at the Orb.
+Instead of passing an array of accepted credential types, you now pass the minimum verification level to accept.
+Verification LevelAccept Device or OrbAccept only Orbimport { IDKitWidget, VerificationLevel } from '@worldcoin/idkit'
+
+<IDKitWidget
+	app_id="app_GBkZ1KlVUdFTjeMXKlVUdFT"
+	action="vote_1"
+	onSuccess={onSuccess}
+	handleVerify={handleVerify}
+	verification_level={VerificationLevel.Device} // or "device"
+>
+	{({ open }) => <button onClick={open}>Verify with World ID</button>}
+</IDKitWidget>
+CopyCopied!
+New Package for Vanilla JavaScript
+If your application uses vanilla JavaScript, you will need to install the new @worldcoin/idkit-standalone package instead of @worldcoin/idkit.
+This package acts as a wrapper around the @worldcoin/idkit package for applications that do not use React.
+See the IDKit Standalone reference documentation for integration details.
+New Features
+This section outlines new features introduced in IDKit v1 and other developer tools. These features are optional, and you can safely upgrade to IDKit v1 without making any changes described in this section.
+Wallet Bridge
+The Wallet Bridge is a lightweight, open-source, and secure message passing service that allows IDKit to request and receive a zero-knowledge proof from a user's identity wallet, such as World App. This replaces WalletConnect, which was previously used for this functionality.
+The Wallet Bridge enables increased performance both in terms of speed and stability.
+You can view the Protocol Internals page or Wallet Bridge GitHub repository to learn more about how the Wallet Bridge works.Usage information can be found in the IDKit Reference Documentation.
+World ID Reset
+World ID Reset is a new feature that allows users to reset their World ID in case their World ID is lost or stolen.
+Read more about World ID Reset and important considerations for your application in the World ID Reset documentation.
+onError Callback
+The new onError callback allows you to gracefully handle errors that occur during the World ID verification flow. This optional callback is called when the IDKit Widget is closed from an error state.
+Read more about the onError callback in the IDKit reference documentation.
+Self-Hosted Applications
+Self-hosted applications are more clearly supported in IDKit v1. These applications completely bypass the Worldcoin Developer Portal, allowing for permissionless use of the World ID protocol with IDKit.
+Read more about self-hosted applications in the IDKit Reference.
+idkit-core Package
+The @worldcoin/idkit-core package is a new package that contains the core functionality of IDKit, primarily interactions with the Wallet Bridge. This package is used by the @worldcoin/idkit and @worldcoin/idkit-standalone packages.
+Intended only for use within another IDKit package, and not intended to be used directly by applications.
+idkit-js Monorepo
+The GitHub repository for IDKit has been updated to a monorepo, which contains the source code for the @worldcoin/idkit-core, @worldcoin/idkit, and @worldcoin/idkit-standalone packages.
+This refactor allows for easier maintenance and development of IDKit, and allows for much simpler creation of new IDKit packages for various frontend frameworks.
+Want support for a new frontend framework? Let us know by opening an issue or build it and submit a pull request!
+Use Email Address to Sign In to the Developer Portal
+The Worldcoin Developer Portal now supports signing in with an email address in addition to Sign In with Worldcoin.
+Deprecated Functionality
+This section outlines deprecated functionality in IDKit v1. These features have been removed or will be removed in the near future.
+Telemetry
+All telemetry has been removed from the IDKit package. The enableTelemetry parameter should be removed.
+IDKit Theme
+The theme parameter has been removed from IDKit. Dark mode will be re-enabled in a future release.
+WalletConnect
+WalletConnect was previously used to pass messages between IDKit and a user's identity wallet. This has been replaced with the new Wallet Bridge, which is a lightweight, open-source, and secure message passing service.
+If you previously set walletConnectProjectId in IDKit's parameters, you should remove it.
+More information about the new Wallet Bridge can be found above.
+SignInWithWorldID Component
+The SignInWithWorldID and SignInButton components have been removed from IDKit. All applications that wish to use Sign In with Worldcoin should do so through our OIDC Provider.
+Other Changes
+World ID 2.0 includes other changes that are noted here.
+Terminology
+The following terminology changes have been made:
+
+'Sign In with Worldcoin' has been updated to 'Sign In with World ID'
+'Anonymous Actions' has been updated to 'Incognito Actions'
+PreviousErrorsFurther ReadingOIDC Explainer© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
