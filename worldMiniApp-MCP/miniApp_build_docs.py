@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 import re
 import tiktoken
@@ -26,7 +24,7 @@ def count_tokens(text, model="cl100k_base"):
     encoder = tiktoken.get_encoding(model)
     return len(encoder.encode(text))
 
-def load_langgraph_docs():
+def load_worldcoin_docs():
     urls = [
         "https://docs.world.org/mini-apps",
         "https://docs.world.org/mini-apps/quick-start/installing",
@@ -109,7 +107,7 @@ def create_vectorstore(split_docs):
 
 if __name__ == "__main__":
     # 1) Load raw docs
-    raw_docs = load_langgraph_docs()
+    raw_docs = load_worldcoin_docs()
     # 2) Save them to a single text file
     save_llms_full(raw_docs)
     # 3) Split them into chunks
