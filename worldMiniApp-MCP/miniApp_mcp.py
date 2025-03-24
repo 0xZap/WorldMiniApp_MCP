@@ -42,8 +42,8 @@ def get_all_world_mini_app_docs() -> str:
     try:
         with open(doc_path, "r") as file:
             return file.read()
-    except Exception as exc:
-        return f"Error reading docs: {exc}"
+    except Exception as e:
+        return f"Error reading docs: {e!s}"
 
 if __name__ == "__main__":
     # Run an MCP server over stdio
