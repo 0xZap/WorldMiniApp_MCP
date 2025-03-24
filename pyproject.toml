@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "worldui-mcp"
+version = "0.1.0"
+description = "WorldUI FastMCP server"
+authors = ["Bryan bryan@0xzap.com"]
+readme = "README.md"
+packages = [
+    { include = "worldUI-MCP" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastmcp = "^0.4.1"
+langchain-openai = "^0.3.10"
+langchain-community = "^0.3.20"
+scikit-learn = "^1.6.1"
+uvicorn = "^0.34.0"
+starlette = "^0.46.1"
+
+[tool.poetry.scripts]
+# (optional) If you want a CLI command like `poetry run worldui`
+# worldui = "worldUI-MCP.worldUI_mcp:main"

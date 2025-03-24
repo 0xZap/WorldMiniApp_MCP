@@ -1,6 +1,0 @@
-fastmcp==0.4.3
-langchain-openai==0.1.0
-langchain_community==0.0.7
-scikit-learn==1.2.2
-uvicorn==0.22.0
-starlette==0.27.0

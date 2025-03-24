@@ -1,24 +1,30 @@
-# Use a lightweight Python base image
 FROM python:3.10-slim
 
-# Stop Python from buffering output (useful for debugging/logging)
+# So Python logs aren't buffered
 ENV PYTHONUNBUFFERED=1
-
-# Create a directory in the container for our code
 WORKDIR /app
 
-# Copy in only requirements first (to leverage Docker build cache)
-COPY requirements.txt /app/
+# Install system dependencies if needed (e.g. for scikit-learn)
+RUN apt-get update && apt-get install -y curl build-essential
+
+# Copy in pyproject.toml & poetry.lock first
+COPY pyproject.toml poetry.lock* /app/
+
+# Install Poetry
+RUN pip install --upgrade pip
+RUN pip install poetry
+
+# Make Poetry install into global environment instead of .venv
+RUN poetry config virtualenvs.create false
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN poetry install --no-root --no-interaction --no-ansi
 
-# Now copy the rest of the code
+# Now copy the rest of your code
 COPY . /app/
 
-# Expose port 8080 (typical for GCP Cloud Run, though not strictly required)
+# Expose port 8080 for Cloud Run
 EXPOSE 8080
 
-# By default, Cloud Run sets PORT=8080, so our code uses os.environ.get("PORT", "8000").
-# Launch the Python script
+# Run your script (assuming worldUI_mcp.py has a main function)
 CMD ["python", "worldUI-MCP/worldUI_mcp.py"]
