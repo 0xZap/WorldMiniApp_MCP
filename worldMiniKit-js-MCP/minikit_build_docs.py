@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import SKLearnVectorStore
+from langchain.docstore.document import Document
 
 load_dotenv()
 
@@ -26,20 +27,18 @@ def load_text_from_md(path: str) -> str:
             return file.read()
 
 def load_worldkit_js_docs():
-    docs = load_text_from_md("/worldkit.md")
-    return docs
+    docs = load_text_from_md("worldkit.md")
+    return [Document(page_content=docs, metadata={"source": "worldkit.md"})]
 
 def save_llms_full(docs):
     """Concatenate docs into a single text file called llms_full.txt."""
     out_path = "llms_full.txt"
     with open(out_path, "w") as f:
-        for i, doc in enumerate(docs):
-            src = doc.metadata.get("source", "unknown")
-            f.write(f"DOCUMENT {i+1}\n")
-            f.write(f"SOURCE: {src}\n")
-            f.write("CONTENT:\n")
-            f.write(doc.page_content)
-            f.write("\n\n" + "="*80 + "\n\n")
+        f.write("DOCUMENT\n")
+        f.write("SOURCE: unknown\n")
+        f.write("CONTENT:\n")
+        f.write(docs[0].page_content)
+        f.write("\n\n" + "="*80 + "\n\n")
     print(f"Wrote all docs to {out_path}")
 
 def split_docs(docs):

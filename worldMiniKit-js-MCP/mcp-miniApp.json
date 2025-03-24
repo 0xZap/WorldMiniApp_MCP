@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "world-minikit-js-mcp": {
+      "command": "your-absolute-path-to-repo-folder/WorldMCP/.venv/bin/python",
+      "args": [
+        "your-absolute-path-to-repo-folder/WorldMCP/worldMiniKit-js-MCP/minikit_mcp.py"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "your-openai-api-key-here"
+      }
+    }
+  }
+}
