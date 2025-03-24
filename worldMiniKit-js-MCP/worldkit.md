@@ -1,0 +1,7795 @@
+================================================
+File: README.md
+================================================
+# minikit-js
+
+## 🚀 Getting Started
+
+MiniKit is currently available on npm. To install, run:
+`pnpm i @worldcoin/minikit-js`
+
+or use the CDN:
+`https://cdn.jsdelivr.net/npm/@worldcoin/minikit-js@[version]/+esm`
+
+For comprehensive setup instructions and usage examples, visit our [developer documentation](https://docs.world.org/mini-apps).
+
+## 🛠 ️Developing Locally
+
+To run the example mini app locally:
+
+```
+pnpm i
+cd demo/with-next
+pnpm dev
+```
+
+This will launch a demo mini app with all essential commands implemented, allowing you to explore and test the features.
+
+
+
+================================================
+File: CHANGELOG.md
+================================================
+# Changelog
+
+## [1.4.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.3.0...minikit-js-v1.4.0) (2024-12-03)
+
+
+### Features
+
+* isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+
+## [1.3.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.2.0...minikit-js-v1.3.0) (2024-11-26)
+
+
+### Features
+
+* add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+* Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+* share contacts command ([#104](https://github.com/worldcoin/minikit-js/issues/104)) ([bae6d76](https://github.com/worldcoin/minikit-js/commit/bae6d76735be04cd19637f38f3f833ae164c452f))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+* app id text ([#10](https://github.com/worldcoin/minikit-js/issues/10)) ([8a1aff5](https://github.com/worldcoin/minikit-js/commit/8a1aff5b93b078a1582a06e655f27bd20da096ef))
+* CJS node 16 compatiblity ([#73](https://github.com/worldcoin/minikit-js/issues/73)) ([ccf3b6c](https://github.com/worldcoin/minikit-js/commit/ccf3b6c1283dbb97f3033e20fcc05bb59cc6ef8b))
+* pnpm version ([#112](https://github.com/worldcoin/minikit-js/issues/112)) ([5c38fd7](https://github.com/worldcoin/minikit-js/commit/5c38fd7d979b9626d86db3b1b6fb0ceb8a73e233))
+* Switch to viem ([#64](https://github.com/worldcoin/minikit-js/issues/64)) ([6dc47cc](https://github.com/worldcoin/minikit-js/commit/6dc47cc741abfea6a185c6e42ebc405d4fc28468))
+* test release please fix ([#94](https://github.com/worldcoin/minikit-js/issues/94)) ([bf6b007](https://github.com/worldcoin/minikit-js/commit/bf6b007e02c867ec09c853e07b9edb1ecba0d129))
+* ui ([#29](https://github.com/worldcoin/minikit-js/issues/29)) ([5d90fbd](https://github.com/worldcoin/minikit-js/commit/5d90fbdd75237e3d849eee52cc2aab97e38b2353))
+* Update not before ([#30](https://github.com/worldcoin/minikit-js/issues/30)) ([0a5cbd3](https://github.com/worldcoin/minikit-js/commit/0a5cbd39e4e3a8ef0f75c8a24d6dff790e0316fe))
+* use default `GITHUB_TOKEN` for release ([#109](https://github.com/worldcoin/minikit-js/issues/109)) ([c13b828](https://github.com/worldcoin/minikit-js/commit/c13b828420d2949ca6b7d384ff2dca1ca8871214))
+* username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+* wallet auth paylod typing ([#58](https://github.com/worldcoin/minikit-js/issues/58)) ([73f93ab](https://github.com/worldcoin/minikit-js/commit/73f93abcc14ff2f112d7c1ab12973ab34f711fb8))
+
+## [1.2.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.1.1...minikit-js-v1.2.0) (2024-11-01)
+
+
+### Features
+
+* add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+* Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+* app id text ([#10](https://github.com/worldcoin/minikit-js/issues/10)) ([8a1aff5](https://github.com/worldcoin/minikit-js/commit/8a1aff5b93b078a1582a06e655f27bd20da096ef))
+* CJS node 16 compatiblity ([#73](https://github.com/worldcoin/minikit-js/issues/73)) ([ccf3b6c](https://github.com/worldcoin/minikit-js/commit/ccf3b6c1283dbb97f3033e20fcc05bb59cc6ef8b))
+* Switch to viem ([#64](https://github.com/worldcoin/minikit-js/issues/64)) ([6dc47cc](https://github.com/worldcoin/minikit-js/commit/6dc47cc741abfea6a185c6e42ebc405d4fc28468))
+* test release please fix ([#94](https://github.com/worldcoin/minikit-js/issues/94)) ([bf6b007](https://github.com/worldcoin/minikit-js/commit/bf6b007e02c867ec09c853e07b9edb1ecba0d129))
+* ui ([#29](https://github.com/worldcoin/minikit-js/issues/29)) ([5d90fbd](https://github.com/worldcoin/minikit-js/commit/5d90fbdd75237e3d849eee52cc2aab97e38b2353))
+* Update not before ([#30](https://github.com/worldcoin/minikit-js/issues/30)) ([0a5cbd3](https://github.com/worldcoin/minikit-js/commit/0a5cbd39e4e3a8ef0f75c8a24d6dff790e0316fe))
+* use default `GITHUB_TOKEN` for release ([#109](https://github.com/worldcoin/minikit-js/issues/109)) ([c13b828](https://github.com/worldcoin/minikit-js/commit/c13b828420d2949ca6b7d384ff2dca1ca8871214))
+* username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+* wallet auth paylod typing ([#58](https://github.com/worldcoin/minikit-js/issues/58)) ([73f93ab](https://github.com/worldcoin/minikit-js/commit/73f93abcc14ff2f112d7c1ab12973ab34f711fb8))
+
+
+
+================================================
+File: CONTRIBUTING.md
+================================================
+Contributions to this repository are welcomed! If you're looking to contribute, simply open a PR or issue in this repository.
+
+
+
+================================================
+File: cspell.json
+================================================
+{
+  "version": "0.2",
+  "enabled": true,
+  "language": "en-US",
+  "allowCompoundWords": true,
+  "dictionaries": ["typescript", "node", "npm", "html"],
+  "enabledLanguageIds": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "markdown",
+    "yaml",
+    "json"
+  ],
+  "words": ["idkit", "merkle", "OIDC", "SIWE", "USDCE", "viem"]
+}
+
+
+
+================================================
+File: pnpm-workspace.yaml
+================================================
+packages:
+  - 'demo/*'
+  - 'packages/*'
+
+
+
+================================================
+File: release-please-config.json
+================================================
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    "packages/core": {
+      "component": "minikit-js",
+      "skip-github-release": false
+    },
+    "packages/react": {
+      "component": "minikit-react",
+      "skip-github-release": false
+    }
+  },
+  "plugins": [
+    {
+      "merge": false,
+      "type": "node-workspace"
+    },
+    {
+      "components": ["minikit-react", "minikit-js"],
+      "groupName": "minikit-packages",
+      "type": "linked-versions"
+    }
+  ],
+  "release-type": "node"
+}
+
+
+
+================================================
+File: tsconfig.json
+================================================
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "build",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["es6", "dom", "es2016", "es2017", "es2021"],
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["."]
+    }
+  },
+  "include": ["packages/**/*", "demo/**/*"],
+  "exclude": ["node_modules/**", "build"],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["../node_modules", "build"]
+  }
+}
+
+
+
+================================================
+File: turbo.json
+================================================
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "type-check": {
+      "dependsOn": ["^check-types"]
+    }
+  }
+}
+
+
+
+================================================
+File: .prettierignore
+================================================
+build/**
+.turbo/**
+CHANGELOG.md
+pnpm-lock.yaml
+node_modules/**
+.vscode/**
+**/.next/**
+**/.turbo/**
+packages/core/package.json 
+.github/**
+
+
+
+================================================
+File: .prettierrc
+================================================
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "plugins": ["prettier-plugin-organize-imports"]
+}
+
+
+
+================================================
+File: .release-please-manifest.json
+================================================
+{
+  ".": "1.6.2",
+  "packages/core": "1.8.0",
+  "packages/react": "1.8.0"
+}
+
+
+
+================================================
+File: demo/with-next/README.md
+================================================
+This is a demo application to try out minikit. Since this connects to the World App. You will need a corresponding test build of an android app to receive and send events.
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+### Usage
+
+1. Recommended usage to test is to use the corresponding android folder, ask Andy for permission
+2. `pnpm dev`
+3. `ngrok 3000`
+4. Set the Ngrok url to the ngrok generated url
+
+
+
+================================================
+File: demo/with-next/auth-config.ts
+================================================
+import { NextAuthOptions } from 'next-auth';
+
+// For more information on each option (and a full list of options) go to
+// https://next-auth.js.org/configuration/options
+export const authOptions: NextAuthOptions = {
+  // https://next-auth.js.org/configuration/providers/oauth
+  providers: [
+    {
+      id: 'worldcoin',
+      name: 'Worldcoin',
+      type: 'oauth',
+      wellKnown:
+        process.env.NEXT_DEPLOYMENT_ENVIRONMENT === 'staging'
+          ? 'https://staging.id.worldcoin.org/.well-known/openid-configuration'
+          : 'https://id.worldcoin.org/.well-known/openid-configuration',
+      authorization: { params: { scope: 'openid' } },
+      clientId: process.env.WLD_CLIENT_ID,
+      clientSecret: process.env.WLD_CLIENT_SECRET,
+      idToken: true,
+      checks: ['state', 'nonce', 'pkce'],
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.sub,
+          verificationLevel:
+            profile['https://id.worldcoin.org/v1'].verification_level,
+        };
+      },
+    },
+  ],
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = 'admin';
+      return token;
+    },
+  },
+  debug: true,
+};
+
+
+
+================================================
+File: demo/with-next/global.d.ts
+================================================
+interface Window {
+  webkit?: {
+    messageHandlers?: {
+      minikit?: {
+        postMessage?: (payload: Record<string, any>) => void;
+      };
+    };
+  };
+
+  Android?: {
+    postMessage?: (payload: string) => void;
+  };
+
+  MiniKit?: import('@worldcoin/minikit-js').MiniKit;
+
+  WorldApp?: {
+    world_app_version: number;
+    device_os: 'ios' | 'android';
+
+    supported_commands: Array<{
+      name: import('@worldcoin/minikit-js').Command;
+      supported_versions: Array<number>;
+    }>;
+  };
+}
+
+
+
+================================================
+File: demo/with-next/next.config.mjs
+================================================
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['static.usernames.app-backend.toolsforhumanity.com'],
+  },
+};
+
+export default nextConfig;
+
+
+
+================================================
+File: demo/with-next/package.json
+================================================
+{
+  "name": "my-next-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@safe-global/protocol-kit": "^5.0.3",
+    "@uniswap/permit2-sdk": "^1.3.0",
+    "@wagmi/core": "^2.16.3",
+    "@worldcoin/minikit-js": "workspace:*",
+    "@worldcoin/minikit-react": "workspace:*",
+    "clsx": "^2.1.1",
+    "eruda": "^3.4.1",
+    "next": "14.2.10",
+    "next-auth": "^4.24.7",
+    "permit2-sdk": "link:@uniswap/v3-sdk/permit2-sdk",
+    "prettier-plugin-sort-imports-desc": "^1.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "viem": "2.23.5",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
+
+
+
+================================================
+File: demo/with-next/postcss.config.mjs
+================================================
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  plugins: {
+    tailwindcss: {},
+  },
+};
+
+export default config;
+
+
+
+================================================
+File: demo/with-next/tailwind.config.ts
+================================================
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
+
+
+
+================================================
+File: demo/with-next/tsconfig.json
+================================================
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "next"],
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "typeRoots": ["node_modules/@types"],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", ".next", ".turbo"]
+}
+
+
+
+================================================
+File: demo/with-next/.eslintrc.json
+================================================
+{
+  "extends": "next/core-web-vitals"
+}
+
+
+
+================================================
+File: demo/with-next/.gitignore
+================================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+
+
+================================================
+File: demo/with-next/abi/Andy.json
+================================================
+[
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              { "internalType": "address", "name": "token", "type": "address" },
+              { "internalType": "uint256", "name": "amount", "type": "uint256" }
+            ],
+            "internalType": "struct ISignatureTransfer.TokenPermissions",
+            "name": "permitted",
+            "type": "tuple"
+          },
+          { "internalType": "uint256", "name": "nonce", "type": "uint256" },
+          { "internalType": "uint256", "name": "deadline", "type": "uint256" }
+        ],
+        "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+        "name": "permitTransferFrom",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          { "internalType": "address", "name": "to", "type": "address" },
+          {
+            "internalType": "uint256",
+            "name": "requestedAmount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+        "name": "transferDetails",
+        "type": "tuple"
+      },
+      { "internalType": "bytes", "name": "signature", "type": "bytes" }
+    ],
+    "name": "buyNFTWithPermit2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+
+
+
+================================================
+File: demo/with-next/abi/DEX.json
+================================================
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      { "name": "_permit2", "type": "address", "internalType": "address" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "permit2",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract ISignatureTransfer"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "signatureTransfer",
+    "inputs": [
+      {
+        "name": "permitTransferFrom",
+        "type": "tuple",
+        "internalType": "struct ISignatureTransfer.PermitTransferFrom",
+        "components": [
+          {
+            "name": "permitted",
+            "type": "tuple",
+            "internalType": "struct ISignatureTransfer.TokenPermissions",
+            "components": [
+              {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+              },
+              {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          { "name": "nonce", "type": "uint256", "internalType": "uint256" },
+          { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+        ]
+      },
+      {
+        "name": "transferDetails",
+        "type": "tuple",
+        "internalType": "struct ISignatureTransfer.SignatureTransferDetails",
+        "components": [
+          { "name": "to", "type": "address", "internalType": "address" },
+          {
+            "name": "requestedAmount",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      { "name": "signature", "type": "bytes", "internalType": "bytes" }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]
+
+
+
+================================================
+File: demo/with-next/abi/Forward.json
+================================================
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "pay",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "Paid",
+    "type": "event"
+  }
+]
+
+
+
+================================================
+File: demo/with-next/abi/orb.json
+================================================
+[
+  {
+    "type": "function",
+    "name": "mint",
+    "inputs": [
+      {
+        "name": "signal",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "root",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "nullifierHash",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "proof",
+        "type": "uint256[8]",
+        "internalType": "uint256[8]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]
+
+
+
+================================================
+File: demo/with-next/app/globals.css
+================================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+================================================
+File: demo/with-next/app/layout.tsx
+================================================
+import SessionProvider from '@/components/SessionProvider';
+import type { Metadata } from 'next';
+import { getServerSession } from 'next-auth';
+import dynamic from 'next/dynamic';
+import { Inter } from 'next/font/google';
+import { MiniKitProvider } from '../components/MiniKitProvider';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Create Next App',
+  description: 'Generated by create next app',
+};
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const session = await getServerSession();
+  const ErudaProvider = dynamic(
+    () =>
+      import('../components/ClientContent/Eruda').then((c) => c.ErudaProvider),
+    {
+      ssr: false,
+    },
+  );
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <ErudaProvider>
+          <MiniKitProvider>
+            <SessionProvider session={session}>{children}</SessionProvider>
+          </MiniKitProvider>
+        </ErudaProvider>
+      </body>
+    </html>
+  );
+}
+
+
+
+================================================
+File: demo/with-next/app/page.tsx
+================================================
+import { ClientContent } from '@/components/ClientContent';
+
+const Home = async () => {
+  console.log('Server Rendering Works!');
+  return (
+    <div className="bg-white text-black min-h-full p-5">
+      <ClientContent />
+      <p>From the Server Side!</p>
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+================================================
+File: demo/with-next/app/api/auth/[...nextauth]/route.ts
+================================================
+import { authOptions } from '@/auth-config';
+import NextAuth from 'next-auth';
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
+
+
+
+================================================
+File: demo/with-next/app/api/nonce/route.ts
+================================================
+import { randomUUID } from 'crypto';
+import { NextRequest } from 'next/server';
+
+export async function GET() {
+  console.log('GET request received');
+  return new Response(JSON.stringify({ nonce: randomUUID() }));
+}
+
+export async function POST(request: NextRequest) {
+  console.log('POST request received');
+  const body = await request.json();
+  console.log('body', body);
+  const localNonce = body.localNonce;
+
+  return new Response(
+    JSON.stringify({ nonce: randomUUID(), localNonce: localNonce }),
+  );
+}
+
+
+
+================================================
+File: demo/with-next/app/api/verify-siwe/route.ts
+================================================
+import {
+  MiniAppWalletAuthSuccessPayload,
+  verifySiweMessage,
+} from '@worldcoin/minikit-js';
+import { NextRequest } from 'next/server';
+import * as yup from 'yup';
+
+const schema = yup.object({
+  siweResponsePayload: yup.object({
+    status: yup.string().optional(),
+    message: yup.string().required(),
+    signature: yup.string().required(),
+    address: yup.string().required(),
+  }),
+  nonce: yup.string().required(),
+});
+
+export const POST = async (req: NextRequest) => {
+  try {
+    console.log(req.body);
+    const body = await req.json();
+
+    const validData = await schema.validate(body);
+    if (!validData) {
+      throw new Error('Invalid data');
+    }
+
+    const { siweResponsePayload, nonce } = validData;
+    const validMessage = await verifySiweMessage(
+      siweResponsePayload as MiniAppWalletAuthSuccessPayload,
+      nonce,
+    );
+
+    return new Response(
+      JSON.stringify({ status: 'success', isValid: validMessage.isValid }),
+      {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+  } catch (error: any) {
+    // Handle errors in validation or processing
+    return new Response(
+      JSON.stringify({
+        status: 'error',
+        isValid: false,
+        message: error.message,
+      }),
+      {
+        status: 400,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+  }
+};
+
+
+
+================================================
+File: demo/with-next/components/config.ts
+================================================
+import { createConfig, http } from '@wagmi/core';
+import { mainnet, optimism, sepolia } from '@wagmi/core/chains';
+
+export const config = createConfig({
+  chains: [mainnet, sepolia, optimism],
+  transports: {
+    [mainnet.id]: http(),
+    [sepolia.id]: http(),
+    [optimism.id]: http(),
+  },
+});
+
+
+
+================================================
+File: demo/with-next/components/MiniKitProvider.tsx
+================================================
+'use client';
+
+import { MiniKit } from '@worldcoin/minikit-js';
+import { ReactNode, useEffect } from 'react';
+
+const appId = 'your-app-id';
+
+export const MiniKitProvider = ({ children }: { children: ReactNode }) => {
+  useEffect(() => {
+    MiniKit.install(appId);
+  }, []);
+
+  return <>{children}</>;
+};
+
+
+
+================================================
+File: demo/with-next/components/SessionProvider.tsx
+================================================
+'use client';
+import { SessionProvider } from 'next-auth/react';
+export default SessionProvider;
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Camera.tsx
+================================================
+import { ChangeEvent, useCallback, useState } from 'react';
+
+export const CameraComponent = () => {
+  const [isMicOn, setIsMicOn] = useState(false);
+  const [stream, setStream] = useState<MediaStream | null>(null);
+
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>, source: string) => {
+      const files = event.target.files;
+      if (!files) {
+        return;
+      }
+    },
+    [],
+  );
+
+  const playSound = useCallback(() => {
+    const audio = new Audio('/money.mp3');
+    audio.play();
+  }, []);
+
+  const handleMicAccess = useCallback(async () => {
+    if (isMicOn) {
+      // Stop microphone access
+      if (stream) {
+        stream.getTracks().forEach((track) => track.stop());
+        setStream(null);
+      }
+      setIsMicOn(false);
+    } else {
+      // Start microphone access
+      try {
+        const newStream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+        setStream(newStream);
+        setIsMicOn(true);
+      } catch (error) {
+        console.error('Error accessing microphone:', error);
+      }
+    }
+  }, [isMicOn, stream]);
+
+  return (
+    <div className="gap-y-2 grid">
+      <p className="font-bold text-lg">Permissions</p>
+      <label
+        className={
+          'items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10'
+        }
+      >
+        <input
+          type="file"
+          accept="image/*"
+          className="hidden"
+          capture="user"
+          onChange={(event) => handleChange(event, 'camera')}
+        />
+        <div className="grid justify-items-center gap-y-2 bg-green-500 p-4 rounded-lg text-white">
+          Open Camera
+        </div>
+      </label>
+      <button className="grid justify-items-center gap-y-2 bg-green-500 p-4 rounded-lg text-white">
+        Open Universal Link
+      </button>
+      <label
+        className={
+          ' items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10'
+        }
+      >
+        <input
+          type="file"
+          accept="video/*"
+          className="hidden"
+          capture="user"
+          onChange={(event) => handleChange(event, 'camera')}
+        />
+        <div className="grid justify-items-center gap-y-2 bg-green-500 p-4 rounded-lg text-white">
+          Open Video
+        </div>
+      </label>
+      <label className=" items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10">
+        <input
+          type="file"
+          accept="image/*"
+          className="hidden"
+          multiple
+          onChange={(event) => handleChange(event, 'gallery')}
+        />
+        <div className="grid justify-items-center bg-green-500 p-4 rounded-lg text-white">
+          Open Gallery
+        </div>
+      </label>
+      <label className="items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10">
+        <button
+          className="grid justify-items-center bg-green-500 p-4 rounded-lg text-white w-full"
+          onClick={handleMicAccess}
+        >
+          {isMicOn ? 'Stop microphone' : 'Activate microphone'}
+        </button>
+      </label>
+      <label className="items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10">
+        <button
+          className="grid justify-items-center bg-green-500 p-4 rounded-lg text-white w-full"
+          onClick={playSound}
+        >
+          Play Sound
+        </button>
+      </label>
+      <label className="items-center justify-center rounded-lg bg-2f2b43/5 hover:bg-2f2b43/10">
+        <button
+          className="grid justify-items-center bg-blue-500 p-4 rounded-lg text-white w-full mt-4"
+          onClick={() => {
+            navigator.geolocation.getCurrentPosition(
+              (position) =>
+                alert(
+                  `Location: ${position.coords.latitude}, ${position.coords.longitude}`,
+                ),
+              (error) => alert(`Error: ${error.message}`),
+            );
+          }}
+        >
+          Get Location
+        </button>
+      </label>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/CheckRequests.tsx
+================================================
+// This component has a button that when clicked, will send a request to the /api/nonce route
+// It will then display the nonce in the component
+
+import { useState } from 'react';
+export default function CheckRequests() {
+  const [nonce, setNonce] = useState<string | null>(null);
+  const [localNonce, setLocalNonce] = useState<string | null>(null);
+  const [response, setResponse] = useState<string | null>(null);
+  const handleClick = async () => {
+    const response = await fetch('/api/nonce');
+
+    if (response.ok) {
+      const data = await response.json();
+      setNonce(data.nonce);
+      setLocalNonce(null);
+      setResponse(data);
+    }
+  };
+
+  const handlePostClick = async () => {
+    const localNonce = Math.random().toString(36).substring(2, 15);
+    const response = await fetch('/api/nonce', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ localNonce: localNonce }),
+    });
+    const data = await response.json();
+    setNonce(data.nonce);
+    setLocalNonce(localNonce);
+    setResponse(data);
+  };
+
+  return (
+    <div className="grid gap-y-2">
+      <h2 className="text-2xl font-bold">Check Requests</h2>
+      <p className="text-sm text-gray-500">
+        Each time you click the button it should change the nonce. The nonce
+        should be different for GET and POST requests. Local Nonce is the nonce
+        that is generated on the client side and returned so you can check that
+        requests are not being cached
+      </p>
+      <div className="grid gap-x-2 grid-cols-2">
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={handleClick}
+        >
+          Check Nonce GET
+        </button>
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={handlePostClick}
+        >
+          Check Nonce POST
+        </button>
+      </div>
+      <div className="bg-gray-300 min-h-[100px] p-2">
+        <p>Local Nonce: {localNonce}</p>
+        <p>Response: {JSON.stringify(response)}</p>
+      </div>
+    </div>
+  );
+}
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/ExternalLinks.tsx
+================================================
+import Link from 'next/link';
+
+export const ExternalLinks = () => {
+  return (
+    <>
+      <p className="text-xl font-bold">Test External Links</p>
+      <div className="grid md:grid-cols-2 gap-4">
+        <Link
+          href="https://worldcoin.org/world-chain"
+          className="bg-green-500 text-white text-center rounded-lg p-3"
+        >
+          Valid Associated Domain (Link)
+        </Link>
+        <Link
+          href="worldapp://mini-app?app_id=app_staging_e387587d26a286fb5bea1d436ba0b2a3&path=features"
+          className="bg-green-500 text-white text-center rounded-lg p-3"
+        >
+          worldapp:// deep link
+        </Link>
+        <button
+          onClick={() => {
+            window.open(
+              'https://world.org/mini-app?app_id=app_staging_e387587d26a286fb5bea1d436ba0b2a3&path=features',
+              '_blank',
+            );
+          }}
+          className="text-white bg-green-500 hover:bg-blue-300 transition p-4 leading-[1] rounded-lg"
+        >
+          Internal Deep Link Test
+        </button>
+        <Link
+          href="https://docs.worldcoin.org"
+          className="bg-green-500 text-white text-center rounded-lg p-3"
+        >
+          Valid Subdomain (Link)
+        </Link>
+        <button
+          onClick={() => window.open('https://docs.worldcoin.org')}
+          className="text-white bg-green-500 transition p-4 leading-[1] rounded-lg"
+        >
+          Valid Subdomain (Button)
+        </button>
+        <Link
+          href="https://worldcoin-developer-portal.eu.auth0.com/u/login/identifier"
+          className="bg-green-500 text-white text-center rounded-lg p-3"
+        >
+          Valid double Subdomain (Link)
+        </Link>
+        <button
+          onClick={() =>
+            window.open(
+              'https://worldcoin-developer-portal.eu.auth0.com/u/login/identifier',
+            )
+          }
+          className="text-white bg-green-500 transition p-4 leading-[1] rounded-lg"
+        >
+          Valid double subdomain (Button)
+        </button>
+
+        <button
+          onClick={() => navigator.share({ url: 'https://google.com' })}
+          className="text-white bg-green-500 transition p-4 leading-[1] rounded-lg"
+        >
+          Open Share Page
+        </button>
+        <button
+          onClick={() => window.open('https://google.com', '_blank')}
+          className="text-white bg-red-500 transition p-4 leading-[1] rounded-lg"
+        >
+          Invalid External Link (Button)
+        </button>
+        <Link
+          href="https://google.com"
+          className="bg-red-500 text-white text-center rounded-lg p-3"
+        >
+          Invalid External Link (Link)
+        </Link>
+      </div>
+    </>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/GetPermissions.tsx
+================================================
+import {
+  GetPermissionsErrorCodes,
+  MiniKit,
+  ResponseEvent,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const getPermissionsSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().equals(['success']).required(),
+  version: yup.number().required(),
+  permissions: yup.object().required(),
+  timestamp: yup.string().required(),
+});
+
+const getPermissionsErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<GetPermissionsErrorCodes>()
+    .oneOf(Object.values(GetPermissionsErrorCodes))
+    .required(),
+  details: yup.string().required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+export const GetPermissions = () => {
+  const [getPermissionsAppPayload, setGetPermissionsAppPayload] = useState<
+    string | undefined
+  >();
+
+  const [
+    getPermissionsPayloadValidationMessage,
+    setGetPermissionsPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [sentGetPermissionsPayload, setSentGetPermissionsPayload] =
+    useState<Record<string, any> | null>(null);
+
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(ResponseEvent.MiniAppGetPermissions, async (payload) => {
+      console.log('MiniAppGetPermissions, SUBSCRIBE PAYLOAD', payload);
+      setGetPermissionsAppPayload(JSON.stringify(payload, null, 2));
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          getPermissionsErrorPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setGetPermissionsPayloadValidationMessage('Payload is valid');
+        } else {
+          setGetPermissionsPayloadValidationMessage(errorMessage);
+        }
+      } else {
+        const errorMessage = await validateSchema(
+          getPermissionsSuccessPayloadSchema,
+          payload,
+        );
+
+        // This checks if the response format is correct
+        if (!errorMessage) {
+          setGetPermissionsPayloadValidationMessage('Payload is valid');
+        } else {
+          setGetPermissionsPayloadValidationMessage(errorMessage);
+        }
+      }
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppGetPermissions);
+    };
+  }, [tempInstallFix]);
+
+  const onGetPermissions = useCallback(async () => {
+    const payload = MiniKit.commands.getPermissions();
+    setSentGetPermissionsPayload({
+      payload,
+    });
+    console.log('payload', payload);
+    setTempInstallFix((prev) => prev + 1);
+  }, []);
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Get Permissions</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(sentGetPermissionsPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid gap-4 grid-cols-2">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onGetPermissions()}
+          >
+            Get Permissions
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>Message from &quot;{ResponseEvent.MiniAppGetPermissions}&quot; </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {getPermissionsAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Response Validation:</p>
+          <p className="bg-gray-300 p-2">
+            {getPermissionsPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/index.tsx
+================================================
+'use client';
+
+import {
+  GetSearchedUsernameResult,
+  UsernameSearch,
+} from '@worldcoin/minikit-react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { useState } from 'react';
+import { CameraComponent } from './Camera';
+import CheckRequests from './CheckRequests';
+import { ExternalLinks } from './ExternalLinks';
+import { GetPermissions } from './GetPermissions';
+import { Nav } from './Nav';
+import { Pay } from './Pay';
+import { RequestPermission } from './RequestPermissions';
+import { SendHapticFeedback } from './SendHaptic';
+import { ShareContacts } from './ShareContacts';
+import { SignMessage } from './SignMessage';
+import { SignTypedData } from './SignTypedMessage';
+import { SendTransaction } from './Transaction';
+import { User } from './User';
+import { VerifyAction } from './VerifyAction';
+import { WalletAuth } from './WalletAuth';
+const VersionsNoSSR = dynamic(
+  () => import('./Versions').then((comp) => comp.Versions),
+  { ssr: false },
+);
+
+export const ClientContent = () => {
+  const [searchValue, setSearchValue] = useState('');
+  const [searchResults, setSearchResults] =
+    useState<GetSearchedUsernameResult>();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  };
+
+  return (
+    <div className="p-2 lg:p-8 grid content-start min-h-[100dvh] gap-y-2">
+      <Nav />
+      <hr />
+
+      <div className="grid gap-y-4 content-start">
+        <User />
+        <hr />
+
+        <UsernameSearch
+          value={searchValue}
+          handleChange={handleChange}
+          setSearchedUsernames={setSearchResults}
+          className="p-2 border rounded"
+          inputProps={{
+            placeholder: 'Search usernames...',
+          }}
+        />
+
+        {/* Display search results */}
+        {searchResults && (
+          <div className="mt-4">
+            {searchResults.status === 200 ? (
+              <ul>
+                {searchResults.data?.map((user) => (
+                  <li
+                    key={user.address}
+                    className="grid grid-cols-[auto_1fr] gap-x-2 items-center"
+                  >
+                    {user.profile_picture_url && (
+                      <Image
+                        src={user.profile_picture_url}
+                        alt={user.username}
+                        width={32}
+                        height={32}
+                        className="w-10 h-10 rounded-full"
+                      />
+                    )}
+                    {user.username} - {user.address}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>Error: {searchResults.error}</p>
+            )}
+          </div>
+        )}
+
+        <div className="grid gap-y-8">
+          test 2
+          <VersionsNoSSR />
+          <hr />
+          <VerifyAction />
+          <hr />
+          <Pay />
+          <hr />
+          <WalletAuth />
+          <hr />
+          <SendTransaction />
+          <hr />
+          <SignMessage />
+          <hr />
+          <SignTypedData />
+          <hr />
+          <ShareContacts />
+          <hr />
+          <RequestPermission />
+          <hr />
+          <GetPermissions />
+          <hr />
+          <CheckRequests />
+          <hr />
+          <SendHapticFeedback />
+          <hr />
+          <input className="text-xs border-black border-2" />
+          <ExternalLinks />
+          <hr />
+          <CameraComponent />
+          <hr />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Nav.tsx
+================================================
+import { signIn, signOut, useSession } from 'next-auth/react';
+import { useMemo } from 'react';
+
+export const Nav = () => {
+  const { data: session } = useSession();
+  const user = useMemo(() => session?.user, [session]);
+
+  return (
+    <header className="flex justify-between">
+      <h1 className="text-2xl font-bold">MiniKit V1</h1>
+
+      <button
+        onClick={user?.name ? () => signOut() : () => signIn('worldcoin')}
+        className="text-white bg-blue-500 hover:bg-blue-300 transition p-4 leading-[1]"
+      >
+        {user?.name ? 'Sign Out' : 'Sign In'}
+      </button>
+    </header>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Pay.tsx
+================================================
+import {
+  MiniKit,
+  PayCommandInput,
+  PaymentErrorCodes,
+  ResponseEvent,
+  Tokens,
+  tokenToDecimals,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const paymentSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+  transaction_status: yup.string<'submitted'>().oneOf(['submitted']),
+  transaction_id: yup.string().required(),
+  reference: yup.string().required(),
+  from: yup.string().optional(),
+  chain: yup.string().required(),
+  timestamp: yup.string().required(),
+});
+
+const paymentErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<PaymentErrorCodes>()
+    .oneOf(Object.values(PaymentErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+});
+
+export const Pay = () => {
+  const [paymentAppPayload, setPaymentAppPayload] = useState<
+    string | undefined
+  >();
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+  const [paymentPayloadValidationMessage, setPaymentPayloadValidationMessage] =
+    useState<string | null>();
+
+  const [sentPayPayload, setSentPayPayload] = useState<Record<
+    string,
+    any
+  > | null>(null);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(ResponseEvent.MiniAppPayment, async (payload) => {
+      console.log('MiniAppPayment, SUBSCRIBE PAYLOAD', payload);
+
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          paymentErrorPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setPaymentPayloadValidationMessage('Payload is valid');
+        } else {
+          setPaymentPayloadValidationMessage(errorMessage);
+        }
+      } else {
+        const errorMessage = await validateSchema(
+          paymentSuccessPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setPaymentPayloadValidationMessage('Payload is valid');
+        } else {
+          setPaymentPayloadValidationMessage(errorMessage);
+        }
+      }
+
+      setPaymentAppPayload(JSON.stringify(payload, null, 2));
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppPayment);
+    };
+  }, [tempInstallFix]);
+
+  const onPayClick = useCallback(
+    async (amount: number, address: string, token?: Tokens) => {
+      const wldAmount = tokenToDecimals(amount, Tokens.WLD);
+      const usdcAmount = tokenToDecimals(amount, Tokens.USDCE);
+
+      const tokenPayload = [
+        {
+          symbol: Tokens.WLD,
+          token_amount: wldAmount.toString(),
+        },
+        {
+          symbol: Tokens.USDCE,
+          token_amount: usdcAmount.toString(),
+        },
+      ];
+
+      const payPayload: PayCommandInput = {
+        to: address,
+        tokens: token
+          ? [
+              {
+                symbol: token,
+                token_amount:
+                  token === Tokens.WLD
+                    ? wldAmount.toString()
+                    : usdcAmount.toString(),
+              },
+            ]
+          : tokenPayload,
+        description: 'Test example payment for minikit on Worldchain',
+        reference: new Date().toISOString(),
+      };
+
+      const payload = MiniKit.commands.pay(payPayload);
+      setTempInstallFix((prev) => prev + 1);
+      setSentPayPayload({
+        payload,
+      });
+    },
+    [],
+  );
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Pay</h2>
+
+        <div>
+          <p>Sent payload: Spec is still WIP</p>
+
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(sentPayPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-x-4">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() =>
+              onPayClick(0.1, '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045')
+            }
+          >
+            Pay (USDCE + WLD)
+          </button>
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() =>
+              onPayClick(
+                0.1,
+                '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+                Tokens.WLD,
+              )
+            }
+          >
+            Pay Single (WLD)
+          </button>
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() =>
+              onPayClick(
+                0.1,
+                '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+                Tokens.USDCE,
+              )
+            }
+          >
+            Pay Single (USDC)
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>Message from &quot;{ResponseEvent.MiniAppPayment}&quot; </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {paymentAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Validation message:</p>
+          <p className="bg-gray-300 p-2">
+            {paymentPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/RequestPermissions.tsx
+================================================
+import {
+  MiniKit,
+  Permission,
+  RequestPermissionErrorCodes,
+  RequestPermissionPayload,
+  ResponseEvent,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const requestPermissionSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().equals(['success']).required(),
+  version: yup.number().required(),
+  permission: yup.string<Permission>().oneOf(Object.values(Permission)),
+  timestamp: yup.string().required(),
+});
+
+const requestPermissionErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<RequestPermissionErrorCodes>()
+    .oneOf(Object.values(RequestPermissionErrorCodes))
+    .required(),
+  description: yup.string().required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+export const RequestPermission = () => {
+  const [requestPermissionAppPayload, setRequestPermissionAppPayload] =
+    useState<string | undefined>();
+
+  const [
+    requestPermissionPayloadValidationMessage,
+    setRequestPermissionPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [sentRequestPermissionPayload, setSentRequestPermissionPayload] =
+    useState<Record<string, any> | null>(null);
+
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(
+      ResponseEvent.MiniAppRequestPermission,
+      async (payload) => {
+        console.log('MiniAppRequestPermission, SUBSCRIBE PAYLOAD', payload);
+        setRequestPermissionAppPayload(JSON.stringify(payload, null, 2));
+        if (payload.status === 'error') {
+          const errorMessage = await validateSchema(
+            requestPermissionErrorPayloadSchema,
+            payload,
+          );
+
+          if (!errorMessage) {
+            setRequestPermissionPayloadValidationMessage('Payload is valid');
+          } else {
+            setRequestPermissionPayloadValidationMessage(errorMessage);
+          }
+        } else {
+          const errorMessage = await validateSchema(
+            requestPermissionSuccessPayloadSchema,
+            payload,
+          );
+
+          // This checks if the response format is correct
+          if (!errorMessage) {
+            setRequestPermissionPayloadValidationMessage('Payload is valid');
+          } else {
+            setRequestPermissionPayloadValidationMessage(errorMessage);
+          }
+        }
+      },
+    );
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppRequestPermission);
+    };
+  }, [tempInstallFix]);
+
+  const onRequestPermission = useCallback(async (permission: Permission) => {
+    const requestPermissionPayload: RequestPermissionPayload = {
+      permission,
+    };
+
+    const payload = MiniKit.commands.requestPermission(
+      requestPermissionPayload,
+    );
+    setSentRequestPermissionPayload({
+      payload,
+    });
+    console.log('payload', payload);
+    setTempInstallFix((prev) => prev + 1);
+  }, []);
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Request Permission</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(sentRequestPermissionPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid gap-4 grid-cols-2">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onRequestPermission(Permission.Notifications)}
+          >
+            Request Notifications
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>
+          Message from &quot;{ResponseEvent.MiniAppRequestPermission}&quot;{' '}
+        </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {requestPermissionAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Response Validation:</p>
+          <p className="bg-gray-300 p-2">
+            {requestPermissionPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/SendHaptic.tsx
+================================================
+import {
+  MiniAppSendHapticFeedbackPayload,
+  MiniKit,
+  ResponseEvent,
+  SendHapticFeedbackErrorCodes,
+  SendHapticFeedbackInput,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const sendHapticFeedbackSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+});
+
+const sendHapticFeedbackErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<SendHapticFeedbackErrorCodes>()
+    .oneOf(Object.values(SendHapticFeedbackErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+const allPossibleHaptics: SendHapticFeedbackInput[] = [
+  { hapticsType: 'impact', style: 'heavy' },
+  { hapticsType: 'impact', style: 'light' },
+  { hapticsType: 'impact', style: 'medium' },
+  { hapticsType: 'notification', style: 'error' },
+  { hapticsType: 'notification', style: 'success' },
+  { hapticsType: 'notification', style: 'warning' },
+  { hapticsType: 'selection-changed' },
+];
+
+export const SendHapticFeedback = () => {
+  const [sentHapticFeedbackPayload, setSentHapticFeedbackPayload] =
+    useState<Record<string, any> | null>(null);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(
+      ResponseEvent.MiniAppSendHapticFeedback,
+      async (payload: MiniAppSendHapticFeedbackPayload) => {
+        console.log('MiniAppSendHapticFeedback, SUBSCRIBE PAYLOAD', payload);
+
+        if (payload.status === 'error') {
+          const validationErrorMessage = await validateSchema(
+            sendHapticFeedbackErrorPayloadSchema,
+            payload,
+          );
+
+          if (!validationErrorMessage) {
+            console.log('Payload is valid');
+          } else {
+            console.error(validationErrorMessage);
+          }
+        } else {
+          const validationErrorMessage = await validateSchema(
+            sendHapticFeedbackSuccessPayloadSchema,
+            payload,
+          );
+
+          // This checks if the response format is correct
+          if (!validationErrorMessage) {
+            console.log('Payload is valid');
+          } else {
+            console.error(validationErrorMessage);
+          }
+        }
+      },
+    );
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppSignTypedData);
+    };
+  }, []);
+
+  const onSendHapticFeedback = useCallback(
+    async (input: SendHapticFeedbackInput) => {
+      const payload = MiniKit.commands.sendHapticFeedback(input);
+
+      setSentHapticFeedbackPayload({
+        payload,
+      });
+    },
+    [],
+  );
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Sign Typed Data</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces max-h-[250px] overflow-y-scroll ">
+              {JSON.stringify(sentHapticFeedbackPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-x-3">
+          {allPossibleHaptics.map((haptic, i) => (
+            <button
+              key={i}
+              className="bg-black text-white rounded-lg p-4 w-full"
+              onClick={() => onSendHapticFeedback(haptic)}
+            >
+              {`Send ${haptic.hapticsType}-${haptic?.style}`}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/ShareContacts.tsx
+================================================
+import {
+  Contact,
+  MiniKit,
+  ResponseEvent,
+  ShareContactsErrorCodes,
+  ShareContactsPayload,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const shareContactsSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().equals(['success']).required(),
+  version: yup.number().required(),
+  contacts: yup.array().of(yup.object<Contact>().required()),
+});
+
+const shareContactsErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<ShareContactsErrorCodes>()
+    .oneOf(Object.values(ShareContactsErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+export const ShareContacts = () => {
+  const [shareContactsAppPayload, setShareContactsAppPayload] = useState<
+    string | undefined
+  >();
+
+  const [
+    shareContactsPayloadValidationMessage,
+    setShareContactsPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [sentShareContactsPayload, setSentShareContactsPayload] =
+    useState<Record<string, any> | null>(null);
+
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(ResponseEvent.MiniAppShareContacts, async (payload) => {
+      console.log('MiniAppShareContacts, SUBSCRIBE PAYLOAD', payload);
+      setShareContactsAppPayload(JSON.stringify(payload, null, 2));
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          shareContactsErrorPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setShareContactsPayloadValidationMessage('Payload is valid');
+        } else {
+          setShareContactsPayloadValidationMessage(errorMessage);
+        }
+      } else {
+        const errorMessage = await validateSchema(
+          shareContactsSuccessPayloadSchema,
+          payload,
+        );
+
+        // This checks if the response format is correct
+        if (!errorMessage) {
+          setShareContactsPayloadValidationMessage('Payload is valid');
+        } else {
+          setShareContactsPayloadValidationMessage(errorMessage);
+        }
+      }
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppShareContacts);
+    };
+  }, [tempInstallFix]);
+
+  const onShareContacts = useCallback(
+    async (isMultiSelectEnabled: boolean = false, inviteMessage?: string) => {
+      const shareContactsPayload: ShareContactsPayload = {
+        isMultiSelectEnabled,
+        inviteMessage,
+      };
+
+      const payload = MiniKit.commands.shareContacts(shareContactsPayload);
+      setSentShareContactsPayload({
+        payload,
+      });
+      console.log('payload', payload);
+      setTempInstallFix((prev) => prev + 1);
+    },
+    [],
+  );
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Share Contacts</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(sentShareContactsPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid gap-4 grid-cols-2">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onShareContacts(true)}
+          >
+            Share Contacts (Multi enabled)
+          </button>
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onShareContacts(false)}
+          >
+            Share Contacts (multi disabled)
+          </button>
+        </div>
+        <div className="grid gap-4 grid-cols-2">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onShareContacts(false, 'hello join worldcoin!')}
+          >
+            Share Contacts Invite Message
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>Message from &quot;{ResponseEvent.MiniAppShareContacts}&quot; </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {shareContactsAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Response Validation:</p>
+          <p className="bg-gray-300 p-2">
+            {shareContactsPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/SignMessage.tsx
+================================================
+import Safe, { hashSafeMessage } from '@safe-global/protocol-kit';
+import {
+  MiniKit,
+  ResponseEvent,
+  SignMessageErrorCodes,
+  SignMessageInput,
+} from '@worldcoin/minikit-js';
+import { useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const signMessageSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+  signature: yup.string().required(),
+  address: yup.string().required(),
+});
+
+const signMessageErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<SignMessageErrorCodes>()
+    .oneOf(Object.values(SignMessageErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+export const SignMessage = () => {
+  const [signMessageAppPayload, setSignMessageAppPayload] = useState<
+    string | undefined
+  >();
+
+  const [
+    signMessagePayloadValidationMessage,
+    setSignMessagePayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [
+    signMessagePayloadVerificationMessage,
+    setSignMessagePayloadVerificationMessage,
+  ] = useState<string | null>();
+
+  const [sentSignMessagePayload, setSentSignMessagePayload] = useState<Record<
+    string,
+    any
+  > | null>(null);
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+  const [messageToSign, setMessageToSign] = useState('hello world');
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(ResponseEvent.MiniAppSignMessage, async (payload) => {
+      console.log('MiniAppSignMessage, SUBSCRIBE PAYLOAD', payload);
+      setSignMessageAppPayload(JSON.stringify(payload, null, 2));
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          signMessageErrorPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setSignMessagePayloadValidationMessage('Payload is valid');
+        } else {
+          setSignMessagePayloadValidationMessage(errorMessage);
+        }
+      } else {
+        const errorMessage = await validateSchema(
+          signMessageSuccessPayloadSchema,
+          payload,
+        );
+
+        // This checks if the response format is correct
+        if (!errorMessage) {
+          setSignMessagePayloadValidationMessage('Payload is valid');
+        } else {
+          setSignMessagePayloadValidationMessage(errorMessage);
+        }
+
+        const messageHash = hashSafeMessage(messageToSign);
+
+        const isValid = await (
+          await Safe.init({
+            provider: 'https://worldchain-mainnet.g.alchemy.com/public',
+            safeAddress: payload.address,
+          })
+        ).isValidSignature(messageHash, payload.signature);
+
+        // Checks functionally if the signature is correct
+        if (isValid) {
+          setSignMessagePayloadVerificationMessage('Signature is valid');
+        } else {
+          setSignMessagePayloadVerificationMessage('Signature is invalid');
+        }
+      }
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppSignMessage);
+    };
+  }, [messageToSign, tempInstallFix]);
+
+  const onSignMessage = async (message: string) => {
+    const signMessagePayload: SignMessageInput = {
+      message,
+    };
+
+    setMessageToSign(message);
+    const payload = MiniKit.commands.signMessage(signMessagePayload);
+    setSentSignMessagePayload({
+      payload,
+    });
+    setTempInstallFix((prev) => prev + 1);
+  };
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Sign Message</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(sentSignMessagePayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid gap-y-2">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onSignMessage('hello world')}
+          >
+            Sign Message
+          </button>
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={async () => {
+              await onSignMessage('world-chat-authentication:test');
+            }}
+          >
+            Fail Message
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>Message from &quot;{ResponseEvent.MiniAppSignMessage}&quot; </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {signMessageAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Response Validation:</p>
+          <p className="bg-gray-300 p-2">
+            {signMessagePayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+        <div>
+          <p>Check does signature verify:</p>
+          <p className="bg-gray-300 p-2">
+            {signMessagePayloadVerificationMessage ?? 'No verification'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/SignTypedMessage.tsx
+================================================
+import Safe, { hashSafeMessage } from '@safe-global/protocol-kit';
+import {
+  MiniAppSignTypedDataPayload,
+  MiniKit,
+  ResponseEvent,
+  SignTypedDataErrorCodes,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const signTypedDataSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+  signature: yup.string().required(),
+  address: yup.string().required(),
+});
+
+const signTypedDataErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<SignTypedDataErrorCodes>()
+    .oneOf(Object.values(SignTypedDataErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+  version: yup.number().required(),
+});
+
+const signTypedDataPayload = {
+  types: {
+    EIP712Domain: [
+      {
+        type: 'uint256',
+        name: 'chainId',
+      },
+      {
+        type: 'address',
+        name: 'verifyingContract',
+      },
+    ],
+    SafeTx: [
+      {
+        type: 'address',
+        name: 'to',
+      },
+      {
+        type: 'uint256',
+        name: 'value',
+      },
+      {
+        type: 'bytes',
+        name: 'data',
+      },
+      {
+        type: 'uint8',
+        name: 'operation',
+      },
+      {
+        type: 'uint256',
+        name: 'safeTxGas',
+      },
+      {
+        type: 'uint256',
+        name: 'baseGas',
+      },
+      {
+        type: 'uint256',
+        name: 'gasPrice',
+      },
+      {
+        type: 'address',
+        name: 'gasToken',
+      },
+      {
+        type: 'address',
+        name: 'refundReceiver',
+      },
+      {
+        type: 'uint256',
+        name: 'nonce',
+      },
+    ],
+  },
+  domain: {
+    verifyingContract: '0xd809de3086Ea4f53ed3979CEad25e1Ff72b564a3',
+    chainId: 480,
+  },
+  primaryType: 'SafeTx',
+  message: {
+    to: '0x163f8c2467924be0ae7b5347228cabf260318753',
+    value: '0',
+    data: '0xa9059cbb000000000000000000000000deaddeaddeaddeaddeaddeaddeaddeaddead00010000000000000000000000000000000000000000000000010001000001000001',
+    operation: 0,
+    baseGas: '0',
+    gasPrice: '0',
+    gasToken: '0x0000000000000000000000000000000000000000',
+    refundReceiver: '0x0000000000000000000000000000000000000000',
+    nonce: 0,
+    safeTxGas: '0',
+  },
+};
+
+const stateChangesPayload = {
+  types: {
+    EIP712Domain: [
+      { type: 'uint256', name: 'chainId' },
+      { type: 'address', name: 'verifyingContract' },
+    ],
+    SafeTx: [
+      { type: 'address', name: 'to' },
+      { type: 'uint256', name: 'value' },
+      { type: 'bytes', name: 'data' },
+      { type: 'uint8', name: 'operation' },
+      { type: 'uint256', name: 'safeTxGas' },
+      { type: 'uint256', name: 'baseGas' },
+      { type: 'uint256', name: 'gasPrice' },
+      { type: 'address', name: 'gasToken' },
+      { type: 'address', name: 'refundReceiver' },
+      { type: 'uint256', name: 'nonce' },
+    ],
+  },
+  domain: {
+    verifyingContract: '0xd809de3086Ea4f53ed3979CEad25e1Ff72b564a3',
+    chainId: 480,
+  },
+  primaryType: 'SafeTx',
+  message: {
+    to: '0xd809de3086Ea4f53ed3979CEad25e1Ff72b564a3',
+    value: 0,
+    data: '0x0d582f13000000000000000000000000d8da6bf26964af9d7eed9e03e53415d37aa960450000000000000000000000000000000000000000000000000000000000000002',
+    operation: 0,
+    safeTxGas: 0,
+    baseGas: 0,
+    gasPrice: 0,
+    gasToken: '0x0000000000000000000000000000000000000000',
+    refundReceiver: '0x0000000000000000000000000000000000000000',
+    nonce: 0,
+  },
+};
+
+export const SignTypedData = () => {
+  const [signTypedDataAppPayload, setSignTypedDataAppPayload] = useState<
+    string | undefined
+  >();
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+
+  const [
+    signTypedDataPayloadValidationMessage,
+    setSignTypedDataPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [
+    signTypedDataPayloadVerificationMessage,
+    setSignTypedDataPayloadVerificationMessage,
+  ] = useState<string | null>();
+
+  const [sentSignTypedDataPayload, setSentSignTypedDataPayload] =
+    useState<Record<string, any> | null>(null);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(
+      ResponseEvent.MiniAppSignTypedData,
+      async (payload: MiniAppSignTypedDataPayload) => {
+        console.log('MiniAppSignTypedData, SUBSCRIBE PAYLOAD', payload);
+        setSignTypedDataAppPayload(JSON.stringify(payload, null, 2));
+
+        if (payload.status === 'error') {
+          const errorMessage = await validateSchema(
+            signTypedDataErrorPayloadSchema,
+            payload,
+          );
+
+          if (!errorMessage) {
+            setSignTypedDataPayloadValidationMessage('Payload is valid');
+          } else {
+            setSignTypedDataPayloadValidationMessage(errorMessage);
+          }
+        } else {
+          const errorMessage = await validateSchema(
+            signTypedDataSuccessPayloadSchema,
+            payload,
+          );
+
+          // This checks if the response format is correct
+          if (!errorMessage) {
+            setSignTypedDataPayloadValidationMessage('Payload is valid');
+          } else {
+            setSignTypedDataPayloadValidationMessage(errorMessage);
+          }
+
+          const messageHash = hashSafeMessage(signTypedDataPayload);
+
+          const isValid = await (
+            await Safe.init({
+              provider:
+                'https://opt-mainnet.g.alchemy.com/v2/Ha76ahWcm6iDVBU7GNr5n-ONLgzWnkWc',
+              safeAddress: payload.address,
+            })
+          ).isValidSignature(messageHash, payload.signature);
+
+          // Checks functionally if the signature is correct
+          if (isValid) {
+            setSignTypedDataPayloadVerificationMessage('Signature is valid');
+          } else {
+            setSignTypedDataPayloadVerificationMessage(
+              'Signature is invalid (We are verifying on optimism, if you are using worldchain message andy',
+            );
+          }
+        }
+      },
+    );
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppSignTypedData);
+    };
+  }, [tempInstallFix]);
+
+  const onSignTypedData = useCallback(async (stateChanges?: boolean) => {
+    const payload = MiniKit.commands.signTypedData(
+      stateChanges ? stateChangesPayload : signTypedDataPayload,
+    );
+
+    setSentSignTypedDataPayload({
+      payload,
+    });
+    setTempInstallFix((prev) => prev + 1);
+  }, []);
+
+  return (
+    <div>
+      <div className="grid gap-y-2">
+        <h2 className="text-2xl font-bold">Sign Typed Data</h2>
+
+        <div>
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces max-h-[250px] overflow-y-scroll ">
+              {JSON.stringify(sentSignTypedDataPayload, null, 2)}
+            </pre>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-x-3">
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onSignTypedData()}
+          >
+            Sign Typed Data
+          </button>
+          <button
+            className="bg-black text-white rounded-lg p-4 w-full"
+            onClick={() => onSignTypedData(true)}
+          >
+            Sign Typed Data State Changes
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="w-full grid gap-y-2">
+        <p>Message from &quot;{ResponseEvent.MiniAppSignTypedData}&quot; </p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {signTypedDataAppPayload ?? JSON.stringify(null)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-2">
+          <p>Validation message:</p>
+          <p className="bg-gray-300 p-2">
+            {signTypedDataPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+        <div>
+          <p>Check does signature verify:</p>
+          <p className="bg-gray-300 p-2">
+            {signTypedDataPayloadVerificationMessage ?? 'No verification'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Transaction.tsx
+================================================
+import {
+  MiniAppSendTransactionPayload,
+  MiniKit,
+  ResponseEvent,
+  SendTransactionErrorCodes,
+  Tokens,
+  tokenToDecimals,
+  VerificationLevel,
+} from '@worldcoin/minikit-js';
+import { useWaitForTransactionReceipt } from '@worldcoin/minikit-react';
+import { useEffect, useState } from 'react';
+import {
+  createPublicClient,
+  decodeAbiParameters,
+  http,
+  parseAbiParameters,
+} from 'viem';
+import { worldchain } from 'viem/chains';
+import * as yup from 'yup';
+import ANDYABI from '../../abi/Andy.json';
+import DEXABI from '../../abi/DEX.json';
+import ForwardABI from '../../abi/Forward.json';
+import ORBABI from '../../abi/orb.json';
+import { validateSchema } from './helpers/validate-schema';
+
+const sendTransactionSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+  transaction_status: yup.string<'submitted'>().oneOf(['submitted']),
+  transaction_id: yup.string().required(),
+  from: yup.string().optional(),
+  chain: yup.string().required(),
+  timestamp: yup.string().required(),
+});
+
+const sendTransactionErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<SendTransactionErrorCodes>()
+    .oneOf(Object.values(SendTransactionErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+});
+
+const testTokens = {
+  optimism: {
+    USDC: '0x0b2c639c533813f4aa9d7837caf62653d097ff85',
+    USDCE: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',
+  },
+  worldchain: {
+    USDCE: '0x79A02482A880bCE3F13e09Da970dC34db4CD24d1',
+  },
+};
+
+export const SendTransaction = () => {
+  const [transactionData, setTransactionData] = useState<Record<
+    string,
+    any
+  > | null>(null);
+  const [receivedSendTransactionPayload, setReceivedSendTransactionPayload] =
+    useState<Record<string, any> | null>(null);
+  const [tempInstallFix, setTempInstallFix] = useState(0);
+  const [
+    sendTransactionPayloadValidationMessage,
+    setSendTransactionPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [transactionId, setTransactionId] = useState<string>('');
+
+  const client = createPublicClient({
+    chain: worldchain,
+    transport: http('https://worldchain-mainnet.g.alchemy.com/public'),
+  });
+
+  const {
+    isLoading: isConfirming,
+    isSuccess: isConfirmed,
+    error,
+    isError,
+  } = useWaitForTransactionReceipt({
+    client: client,
+    appConfig: {
+      app_id: process.env.NEXT_PUBLIC_STAGING_VERIFY_APP_ID || '',
+    },
+    transactionId: transactionId,
+    pollingInterval: 2000,
+  });
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(
+      ResponseEvent.MiniAppSendTransaction,
+      async (payload: MiniAppSendTransactionPayload) => {
+        console.log('MiniAppSendTransaction, SUBSCRIBE PAYLOAD', payload);
+
+        if (payload.status === 'error') {
+          const errorMessage = await validateSchema(
+            sendTransactionErrorPayloadSchema,
+            payload,
+          );
+
+          if (!errorMessage) {
+            setSendTransactionPayloadValidationMessage('Payload is valid');
+          } else {
+            setSendTransactionPayloadValidationMessage(errorMessage);
+          }
+        } else {
+          const errorMessage = await validateSchema(
+            sendTransactionSuccessPayloadSchema,
+            payload,
+          );
+
+          if (!errorMessage) {
+            setSendTransactionPayloadValidationMessage('Payload is valid');
+          } else {
+            setSendTransactionPayloadValidationMessage(errorMessage);
+          }
+
+          // const responseJson = await response.json();
+
+          // setSendTransactionVerificationMessage(
+          //   responseJson.isValid
+          //     ? "Valid! Successful Transaction"
+          //     : `Failed: ${responseJson.message}`
+          // );
+          setTransactionId(payload.transaction_id);
+        }
+
+        setReceivedSendTransactionPayload(payload);
+      },
+    );
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppSendTransaction);
+    };
+  }, [tempInstallFix]);
+
+  const onSendTransactionClick = () => {
+    const deadline = Math.floor(
+      (Date.now() + 30 * 60 * 1000) / 1000,
+    ).toString();
+
+    // transfers can also be at most 1 hour in the future.
+    const permitTransfer = {
+      permitted: {
+        token: testTokens.worldchain.USDCE,
+        amount: '100000',
+      },
+      nonce: Date.now().toString(),
+      deadline,
+    };
+
+    const permitTransferArgsForm = [
+      [permitTransfer.permitted.token, permitTransfer.permitted.amount],
+      permitTransfer.nonce,
+      permitTransfer.deadline,
+    ];
+
+    const transferDetails = {
+      to: '0x126f7998Eb44Dd2d097A8AB2eBcb28dEA1646AC8',
+      requestedAmount: '100000',
+    };
+
+    const transferDetailsArgsForm = [
+      transferDetails.to,
+      transferDetails.requestedAmount,
+    ];
+
+    const payload = MiniKit.commands.sendTransaction({
+      transaction: [
+        {
+          address: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+          abi: DEXABI,
+          functionName: 'signatureTransfer',
+          args: [
+            permitTransferArgsForm,
+            transferDetailsArgsForm,
+            'PERMIT2_SIGNATURE_PLACEHOLDER_0',
+          ],
+        },
+      ],
+      permit2: [
+        {
+          ...permitTransfer,
+          spender: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+        },
+      ],
+    });
+    setTempInstallFix((prev) => prev + 1);
+    setTransactionData(payload);
+  };
+
+  const onSendOrbTransactionClick = () => {
+    const deadline = Math.floor(
+      (Date.now() + 30 * 60 * 1000) / 1000,
+    ).toString();
+
+    const address = '0xf3f92a60e6004f3982f0fde0d43602fc0a30a0db';
+    const permitTransfer = {
+      permitted: {
+        token: testTokens.worldchain.USDCE,
+        amount: '1000000',
+      },
+      nonce: Date.now().toString(),
+      deadline,
+    };
+
+    console.log(
+      decodeAbiParameters(
+        parseAbiParameters('uint256[8]'),
+        '0x0ee140e3516f1ca89a95ac6960af057157447001e0009196d9617e5794d1394d04713410762300e0c8e5238f5faa1adde5a07da079aa4a5b9bf3fdafe61374131149c5f57bb5c9209fc34f04bf558f929d271a7c9511c4a9207a5bdc851f000b1c16b42ec819f6dbc70d041ddf34aed6b7104750c59094edd9ae3f043ae9e3290e173a4f750b8de4498fccbf3e769a04e122f92f60c5ca5a156b6ca73d9cb1571148d2ffd954a3feedc9a398fa197e7a6a64a2ee712e2b5ac43892ea9ec816c6083d1aea790eefba30eff83ce233c6472ad4f48417bde2d2b38c1494de22efed1cec8897a4ef913334967ffbf94102d95b70ae6d6578c66fdbf64c55418b5ac3' as `0x${string}`,
+      )[0],
+    );
+
+    const permitTransferArgsForm = [
+      [permitTransfer.permitted.token, permitTransfer.permitted.amount],
+      permitTransfer.nonce,
+      permitTransfer.deadline,
+    ];
+
+    const transferDetails = {
+      to: '0x640487Ce2c45bD05D03b65783c15aa1ac694cDb6',
+      requestedAmount: '1000000',
+    };
+
+    const transferDetailsArgsForm = [
+      transferDetails.to,
+      transferDetails.requestedAmount,
+    ];
+
+    const payload = MiniKit.commands.sendTransaction({
+      transaction: [
+        {
+          address: '0xF3F92A60e6004f3982F0FdE0d43602fC0a30a0dB',
+          abi: ORBABI,
+          functionName: 'mint',
+          args: [
+            address,
+            '0x7548694f0144d414a064e50b83655679567706d5570055a63058c2a3e77e763',
+            '0x1a07348bdd01a39b3e4d6b0e50539b56639f1b173dfb1ec845251f319d33817a',
+            decodeAbiParameters(
+              parseAbiParameters('uint256[8]'),
+              '0x0f5af932c5ba8960596f1b2f668742d3618092318353318ec5166fe9eaaf44381893a22e5ab311bd9853f4832eb76f6020519b6e13bfa2f3e097d37435261bca066bc6cea60df41dbd0a91f2c6758c95e29c5b430108f0bdacf73f2401f2cdd90bf5f5bfac2ca6eacf15a11c6d1a15aa3da5ebd920771739fd1afbbbc948b6f505408f2293b1a1d719a48d6606af0ab7cbe2d368f8a3b1a464725b5e680a94c204079b1b7ba5508e852b3c7575ac41decb06fe39e335255bd1a5f04268eb560b269b0ee009fac478068465a6c9cf68541317d15180a57c31323569ed83c634df1c880ae470127f807c1ff7a3dc5d815a55fd95a463bf03810c82594e7c6ee02d' as `0x${string}`,
+            )[0].map(String),
+          ],
+        },
+      ],
+    });
+
+    console.log(JSON.stringify(payload, null, 2));
+  };
+
+  const onSendNestedTransactionClick = () => {
+    const deadline = Math.floor(
+      (Date.now() + 30 * 60 * 1000) / 1000,
+    ).toString();
+
+    // transfers can also be at most 1 hour in the future.
+    const permitTransfer = {
+      permitted: {
+        token: testTokens.worldchain.USDCE,
+        amount: '10000',
+      },
+      nonce: Date.now().toString(),
+      deadline,
+    };
+    const permitTransferArgsForm = [
+      [permitTransfer.permitted.token, permitTransfer.permitted.amount],
+      permitTransfer.nonce,
+      permitTransfer.deadline,
+    ];
+
+    const permitTransfer2 = {
+      permitted: {
+        token: testTokens.worldchain.USDCE,
+        amount: '20000',
+      },
+      nonce: deadline,
+      deadline,
+    };
+
+    const permitTransferArgsForm2 = [
+      [permitTransfer2.permitted.token, permitTransfer2.permitted.amount],
+      permitTransfer2.nonce,
+      permitTransfer2.deadline,
+    ];
+
+    const transferDetails = {
+      to: '0x126f7998Eb44Dd2d097A8AB2eBcb28dEA1646AC8',
+      requestedAmount: '10000',
+    };
+
+    const transferDetails2 = {
+      to: '0x126f7998Eb44Dd2d097A8AB2eBcb28dEA1646AC8',
+      requestedAmount: '20000',
+    };
+
+    const transferDetailsArgsForm = [
+      transferDetails.to,
+      transferDetails.requestedAmount,
+    ];
+
+    const transferDetailsArgsForm2 = [
+      transferDetails2.to,
+      transferDetails2.requestedAmount,
+    ];
+
+    const payload = MiniKit.commands.sendTransaction({
+      transaction: [
+        {
+          address: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+          abi: DEXABI,
+          functionName: 'signatureTransfer',
+          args: [
+            permitTransferArgsForm,
+            transferDetailsArgsForm,
+            'PERMIT2_SIGNATURE_PLACEHOLDER_0',
+          ],
+        },
+        {
+          address: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+          abi: DEXABI,
+          functionName: 'signatureTransfer',
+          args: [
+            permitTransferArgsForm2,
+            transferDetailsArgsForm2,
+            'PERMIT2_SIGNATURE_PLACEHOLDER_1',
+          ],
+        },
+      ],
+      permit2: [
+        {
+          ...permitTransfer,
+          spender: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+        },
+        {
+          ...permitTransfer2,
+          spender: '0x78c9b378b47c1700838c599e42edd4ffd1865ccd',
+        },
+      ],
+    });
+    setTempInstallFix((prev) => prev + 1);
+    setTransactionData(payload);
+  };
+
+  const testNFTPurchase = () => {
+    const deadline = Math.floor(
+      (Date.now() + 30 * 60 * 1000) / 1000,
+    ).toString();
+
+    // transfers can also be at most 1 hour in the future.
+    const permitTransfer = {
+      permitted: {
+        token: testTokens.worldchain.USDCE,
+        amount: '1000000',
+      },
+      nonce: Date.now().toString(),
+      deadline,
+    };
+    const permitTransferArgsForm = [
+      [permitTransfer.permitted.token, permitTransfer.permitted.amount],
+      permitTransfer.nonce,
+      permitTransfer.deadline,
+    ];
+
+    const transferDetails = {
+      to: '0x640487Ce2c45bD05D03b65783c15aa1ac694cDb6',
+      requestedAmount: '1000000',
+    };
+
+    const transferDetailsArgsForm = [
+      transferDetails.to,
+      transferDetails.requestedAmount,
+    ];
+
+    const payload = MiniKit.commands.sendTransaction({
+      transaction: [
+        {
+          address: '0x640487Ce2c45bD05D03b65783c15aa1ac694cDb6',
+          abi: ANDYABI,
+          functionName: 'buyNFTWithPermit2',
+          args: [
+            permitTransferArgsForm,
+            transferDetailsArgsForm,
+            'PERMIT2_SIGNATURE_PLACEHOLDER_0',
+          ],
+        },
+      ],
+      permit2: [
+        {
+          ...permitTransfer,
+          spender: '0x640487Ce2c45bD05D03b65783c15aa1ac694cDb6',
+        },
+      ],
+    });
+    setTempInstallFix((prev) => prev + 1);
+    setTransactionData(payload);
+  };
+
+  const doubleAction = async () => {
+    const payload = await MiniKit.commandsAsync.verify({
+      action: process.env.NEXT_PUBLIC_STAGING_VERIFY_ACTION || '',
+      signal: '123',
+      verification_level: VerificationLevel.Device,
+    });
+    const pay = await MiniKit.commandsAsync.pay({
+      to: '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+      tokens: [
+        {
+          symbol: Tokens.WLD,
+          token_amount: tokenToDecimals(0.1, Tokens.WLD).toString(),
+        },
+      ],
+      description: 'Test Chaining',
+      reference: new Date().toISOString(),
+    });
+    // onSendTransactionClick();
+  };
+
+  const doubleActionTransact = async () => {
+    const payload = await MiniKit.commandsAsync.verify({
+      action: process.env.NEXT_PUBLIC_STAGING_VERIFY_ACTION || '',
+      signal: '123',
+      verification_level: VerificationLevel.Device,
+    });
+
+    onSendTransactionClick();
+  };
+
+  const testEthTransaction = async () => {
+    const payload = await MiniKit.commandsAsync.sendTransaction({
+      transaction: [
+        {
+          address: '0x2E7BeBAB990076A10fBb5e8C2Ff16Fc1434387ad',
+          abi: ForwardABI,
+          functionName: 'pay',
+          args: ['0x377da9cab87c04a1d6f19d8b4be9aef8df26fcdd'], // Andy
+          value: '0x9184E72A000', // Send 0.00001 ETH
+        },
+      ],
+    });
+    setTempInstallFix((prev) => prev + 1);
+    setTransactionData(payload.commandPayload);
+    setReceivedSendTransactionPayload(payload.finalPayload);
+  };
+
+  return (
+    <div className="grid gap-y-2">
+      <h2 className="text-2xl font-bold">Transaction</h2>
+      <div className="grid gap-y-1">
+        <p>Raw string:</p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces max-h-[300px] overflow-y-scroll">
+            {transactionData
+              ? JSON.stringify(transactionData, null, 3)
+              : JSON.stringify(null)}
+          </pre>
+        </div>
+      </div>
+      <div className="grid gap-x-2 grid-cols-2">
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={onSendTransactionClick}
+        >
+          Send Transaction (0.1 USDC)
+        </button>
+
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={onSendNestedTransactionClick}
+        >
+          Send Nested Transaction
+        </button>
+      </div>
+      <div className="grid gap-x-2 grid-cols-2">
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={testNFTPurchase}
+        >
+          Purchase NFT Permit2
+        </button>
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={onSendOrbTransactionClick}
+        >
+          Send Orb
+        </button>
+      </div>
+      <div className="grid gap-x-2 grid-cols-2">
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={doubleAction}
+        >
+          Test Chaining Pay
+        </button>
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={doubleActionTransact}
+        >
+          Test Chaining Transact
+        </button>
+      </div>
+
+      <div className="grid gap-x-2 grid-cols-2">
+        <button
+          className="bg-black text-white rounded-lg p-4 w-full"
+          onClick={testEthTransaction}
+        >
+          Test ETH
+        </button>
+      </div>
+
+      <div className="grid gap-y-1">
+        <p>
+          Received from &quot;{ResponseEvent.MiniAppSendTransaction}&quot;:{' '}
+        </p>
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {JSON.stringify(receivedSendTransactionPayload, null, 2)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-1">
+          <p>Validation message:</p>
+          <p className="bg-gray-300 p-2">
+            {sendTransactionPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+
+        <div className="grid gap-y-1">
+          <p>Verification:</p>
+          {/* {sendTransactionVerificationMessage ?? "No verification yet"} */}
+          <div className="grid gap-y-1 bg-gray-300 p-2">
+            {transactionId && <p>Transaction ID: {transactionId}</p>}
+            {isConfirming && <p>Waiting for confirmation...</p>}
+            {isConfirmed && <p>Transaction confirmed.</p>}
+            {isError && <p>{error?.message}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/User.tsx
+================================================
+import { useSession } from 'next-auth/react';
+import { useMemo } from 'react';
+
+export const User = () => {
+  const { data: session } = useSession();
+  const user = useMemo(() => session?.user, [session]);
+
+  return (
+    <div>
+      <h2>Session User:</h2>
+      {user?.name ? (
+        <p className="truncate">
+          User name:{' '}
+          <span className="font-bold max-w-full truncate break-all whitespace-break-spaces">
+            {user?.name}
+          </span>
+        </p>
+      ) : (
+        <span className="font-bold">No user</span>
+      )}
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Versions.tsx
+================================================
+'use client';
+
+import {
+  MiniKit,
+  MiniKitInstallErrorCodes,
+  MiniKitInstallErrorMessage,
+} from '@worldcoin/minikit-js';
+
+const appId = 'your-app-id';
+
+export const Versions = () => {
+  const isValid = () => {
+    if (
+      typeof window === 'undefined' ||
+      typeof window.WorldApp === 'undefined'
+    ) {
+      return { isValid: false, error: 'window.WorldApp is undefined' };
+    }
+
+    try {
+      // @ts-ignore
+      if (MiniKit.commandsValid(window.WorldApp?.supported_commands)) {
+        return { isValid: true };
+      } else {
+        return {
+          isValid: false,
+          error:
+            MiniKitInstallErrorMessage[MiniKitInstallErrorCodes.AppOutOfDate],
+        };
+      }
+    } catch (error) {
+      return {
+        isValid: false,
+        error: 'Something went wrong on version validation',
+      };
+    }
+  };
+
+  const reinstall = () => {
+    MiniKit.install(appId);
+    JSON.stringify(isValid() ?? null, null, 2);
+  };
+  return (
+    <div className="grid gap-y-4">
+      <h2 className="font-bold text-2xl">Versions</h2>
+
+      <div>
+        <p>window.WorldApp:</p>
+        <button onClick={reinstall}>Install</button>
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre
+            suppressHydrationWarning
+            className="break-all whitespace-break-spaces"
+          >
+            {JSON.stringify(window?.WorldApp ?? null, null, 2)}
+          </pre>
+        </div>
+      </div>
+
+      <div>
+        <p>Is versions Valid:</p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {JSON.stringify(isValid() ?? null, null, 2)}
+          </pre>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/WalletAuth.tsx
+================================================
+import {
+  MiniKit,
+  ResponseEvent,
+  WalletAuthErrorCodes,
+} from '@worldcoin/minikit-js';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from './helpers/validate-schema';
+
+const walletAuthSuccessPayloadSchema = yup.object({
+  status: yup.string<'success'>().oneOf(['success']),
+  message: yup.string().required(),
+  signature: yup.string().required(),
+  address: yup.string().required(),
+});
+
+const walletAuthErrorPayloadSchema = yup.object({
+  error_code: yup
+    .string<WalletAuthErrorCodes>()
+    .oneOf(Object.values(WalletAuthErrorCodes))
+    .required(),
+  status: yup.string<'error'>().equals(['error']).required(),
+});
+
+export const WalletAuth = () => {
+  const [message, setMessage] = useState<string | null>(null);
+  const [generationError, setGenerationError] = useState<string | null>(null);
+  const [nonce, setNonce] = useState<string | null>(null);
+  const [receivedWalletAuthPayload, setReceivedWalletAuthPayload] =
+    useState<Record<string, any> | null>(null);
+
+  const [
+    walletAuthPayloadValidationMessage,
+    setWalletAuthPayloadValidationMessage,
+  ] = useState<string | null>();
+
+  const [walletAuthVerificationMessage, setWalletAuthVerificationMessage] =
+    useState<string | null>();
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+    MiniKit.subscribe(ResponseEvent.MiniAppWalletAuth, async (payload) => {
+      console.log('MiniAppWalletAuth, SUBSCRIBE PAYLOAD', payload);
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          walletAuthErrorPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setWalletAuthPayloadValidationMessage('Payload is valid');
+        } else {
+          setWalletAuthPayloadValidationMessage(errorMessage);
+        }
+      } else {
+        const errorMessage = await validateSchema(
+          walletAuthSuccessPayloadSchema,
+          payload,
+        );
+
+        if (!errorMessage) {
+          setWalletAuthPayloadValidationMessage('Payload is valid');
+        } else {
+          setWalletAuthPayloadValidationMessage(errorMessage);
+        }
+
+        // Call the API to verify the message
+        const response = await fetch('/api/verify-siwe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            siweResponsePayload: payload,
+            nonce,
+          }),
+        });
+
+        const responseJson = await response.json();
+
+        setWalletAuthVerificationMessage(
+          responseJson.isValid
+            ? 'Valid! Successfully Signed In'
+            : `Failed: ${responseJson.message}`,
+        );
+      }
+
+      setReceivedWalletAuthPayload(payload);
+      console.log('From object', MiniKit?.walletAddress);
+      //@ts-ignore
+      console.log('From static', window.MiniKit?.walletAddress);
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppWalletAuth);
+    };
+  }, [nonce]);
+
+  const onGenerateMessageClick = useCallback(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+    const nonce = window.crypto.randomUUID();
+    setNonce(nonce);
+    const generateMessageResult = MiniKit.commands.walletAuth({
+      nonce: nonce,
+      requestId: '0',
+      expirationTime: new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+      notBefore: new Date(new Date().getTime() - 24 * 60 * 60 * 1000),
+      statement:
+        'This is my statement and here is a link https://worldcoin.com/apps',
+    });
+
+    if (!generateMessageResult) {
+      return setGenerationError('Failed to generate message');
+    }
+
+    return setMessage(generateMessageResult.siweMessage);
+  }, []);
+
+  return (
+    <div className="grid gap-y-2">
+      <h2 className="text-2xl font-bold">Wallet Auth</h2>
+
+      <div className="grid gap-y-1">
+        <p>Raw string:</p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-pre-line">
+            {(message ? JSON.stringify(message) : generationError) ??
+              JSON.stringify(null)}
+          </pre>
+        </div>
+      </div>
+
+      <div className="grid gap-y-1">
+        <p>Beautified string:</p>
+
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {message ?? generationError ?? JSON.stringify(null)}
+          </pre>
+        </div>
+      </div>
+
+      <button
+        className="bg-black text-white rounded-lg p-4 w-full"
+        onClick={onGenerateMessageClick}
+      >
+        Generate message
+      </button>
+
+      <div className="grid gap-y-1">
+        <p>Received from &quot;{ResponseEvent.MiniAppWalletAuth}&quot;: </p>
+        <div className="bg-gray-300 min-h-[100px] p-2">
+          <pre className="break-all whitespace-break-spaces">
+            {JSON.stringify(receivedWalletAuthPayload, null, 2)}
+          </pre>
+        </div>
+
+        <div className="grid gap-y-1">
+          <p>Validation message:</p>
+          <p className="bg-gray-300 p-2">
+            {walletAuthPayloadValidationMessage ?? 'No validation'}
+          </p>
+        </div>
+
+        <div className="grid gap-y-1">
+          <p>Verification:</p>
+          <p className="bg-gray-300 p-2">
+            {walletAuthVerificationMessage ?? 'No verification yet'}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Eruda/eruda-provider.tsx
+================================================
+'use client';
+
+import eruda from 'eruda';
+import { ReactNode, useEffect } from 'react';
+
+export const Eruda = (props: { children: ReactNode }) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        eruda.init();
+      } catch (error) {
+        console.log('Eruda failed to initialize', error);
+      }
+    }
+  }, []);
+
+  return <>{props.children}</>;
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/Eruda/index.tsx
+================================================
+'use client';
+
+import dynamic from 'next/dynamic';
+import { ReactNode } from 'react';
+
+const Eruda = dynamic(() => import('./eruda-provider').then((c) => c.Eruda), {
+  ssr: false,
+});
+
+export const ErudaProvider = (props: { children: ReactNode }) => {
+  if (process.env.NEXT_PUBLIC_APP_ENV === 'production') {
+    return props.children;
+  }
+  return <Eruda>{props.children}</Eruda>;
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/helpers/validate-schema.ts
+================================================
+import * as yup from 'yup';
+
+export const validateSchema = async (
+  schema: yup.ObjectSchema<any>,
+  payload: any,
+): Promise<string | null> => {
+  let errorMessage: string | null = null;
+
+  try {
+    await schema.validate(payload);
+  } catch (error) {
+    if (!(error instanceof yup.ValidationError)) {
+      errorMessage = 'Unknown error';
+      return errorMessage;
+    }
+
+    errorMessage = error.message;
+  }
+
+  return errorMessage;
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/VerifyAction/index.tsx
+================================================
+import {
+  ISuccessResult,
+  MiniKit,
+  ResponseEvent,
+  VerificationErrorCodes,
+  VerificationLevel,
+  VerifyCommandInput,
+} from '@worldcoin/minikit-js';
+import { clsx } from 'clsx';
+import { useCallback, useEffect, useState } from 'react';
+import * as yup from 'yup';
+import { validateSchema } from '../helpers/validate-schema';
+import { verifyProof } from './verify-cloud-proof';
+
+const verifyActionSuccessPayloadSchema = yup.object({
+  status: yup
+    .string<'success' | 'error'>()
+    .oneOf(['success', 'error'])
+    .required(),
+  proof: yup.string().required(),
+  merkle_root: yup.string().required(),
+  nullifier_hash: yup.string().required(),
+  verification_level: yup
+    .string<VerificationLevel>()
+    .oneOf(Object.values(VerificationLevel))
+    .required(),
+});
+
+const verifyActionErrorPayloadSchema = yup.object({
+  status: yup.string().equals(['error']).required(),
+  error_code: yup
+    .string<VerificationErrorCodes>()
+    .oneOf(Object.values(VerificationErrorCodes))
+    .required(),
+});
+
+export const VerifyAction = () => {
+  const [
+    verifyActionAppPayloadValidationMessage,
+    setVerifyActionAppPayloadValidationMessage,
+  ] = useState<string | null>(null);
+
+  const [verifyActionAppPayload, setVerifyActionAppPayload] = useState<
+    Record<string, any> | undefined
+  >();
+
+  const [sentVerifyPayload, setSentVerifyPayload] = useState<Record<
+    string,
+    any
+  > | null>(null);
+
+  const [devPortalVerifyResponse, setDevPortalVerifyResponse] = useState<Record<
+    string,
+    any
+  > | null>(null);
+
+  const [lastUsedAppId, setLastUsedAppId] = useState<`app_${string}` | null>(
+    null,
+  );
+
+  const [lastUsedAction, setLastUsedAction] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!MiniKit.isInstalled()) {
+      return;
+    }
+
+    MiniKit.subscribe(ResponseEvent.MiniAppVerifyAction, async (payload) => {
+      console.log('MiniAppVerifyAction, SUBSCRIBE PAYLOAD', payload);
+
+      if (payload.status === 'error') {
+        const errorMessage = await validateSchema(
+          verifyActionErrorPayloadSchema,
+          payload,
+        );
+        if (errorMessage) {
+          return setVerifyActionAppPayloadValidationMessage(errorMessage);
+        }
+        setVerifyActionAppPayloadValidationMessage(`Payload is valid!`);
+
+        setVerifyActionAppPayload(payload);
+      }
+
+      const errorMessage = await validateSchema(
+        verifyActionSuccessPayloadSchema,
+        payload,
+      );
+
+      if (errorMessage) {
+        return setVerifyActionAppPayloadValidationMessage(errorMessage);
+      }
+
+      setVerifyActionAppPayloadValidationMessage('Payload is valid');
+      setVerifyActionAppPayload(payload);
+
+      if (!lastUsedAppId || !lastUsedAction) {
+        return console.log('lastUsedAppId or lastUsedAction is not set');
+      }
+
+      const verifyResponse = await verifyProof({
+        payload: payload as ISuccessResult,
+        app_id: lastUsedAppId,
+        action: lastUsedAction,
+        signal: 'test',
+      });
+
+      setDevPortalVerifyResponse(verifyResponse);
+    });
+
+    return () => {
+      MiniKit.unsubscribe(ResponseEvent.MiniAppVerifyAction);
+    };
+  }, [lastUsedAction, lastUsedAppId]);
+
+  const verifyAction = useCallback(
+    (params: {
+      app_id: `app_${string}`;
+      action: string;
+      verification_level?: VerificationLevel;
+      signal?: string;
+    }) => {
+      setLastUsedAppId(params.app_id);
+      setLastUsedAction(params.action);
+
+      // Anchor Reset Fields
+      setSentVerifyPayload(null);
+      setVerifyActionAppPayload(undefined);
+      setVerifyActionAppPayloadValidationMessage(null);
+      setDevPortalVerifyResponse(null);
+
+      const verifyPayload: VerifyCommandInput = {
+        action: params.action,
+        verification_level: params.verification_level,
+        signal: params.signal,
+      };
+
+      const payload = MiniKit.commands.verify(verifyPayload);
+      setSentVerifyPayload(payload);
+    },
+    [],
+  );
+
+  const onProdVerifyClick = useCallback(
+    (verification_level: VerificationLevel) => {
+      verifyAction({
+        app_id: process.env.NEXT_PUBLIC_PROD_VERIFY_APP_ID as `app_${string}`,
+        action: process.env.NEXT_PUBLIC_PROD_VERIFY_ACTION as string,
+        verification_level,
+        signal: 'test',
+      });
+    },
+    [verifyAction],
+  );
+
+  const onStagingVerifyClick = useCallback(
+    (verification_level: VerificationLevel) => {
+      verifyAction({
+        app_id: process.env
+          .NEXT_PUBLIC_STAGING_VERIFY_APP_ID as `app_${string}`,
+        action: process.env.NEXT_PUBLIC_STAGING_VERIFY_ACTION as string,
+        verification_level,
+        signal: 'test',
+      });
+    },
+    [verifyAction],
+  );
+
+  return (
+    <div className="grid gap-y-4">
+      <h2 className="font-bold text-2xl">Verify</h2>
+
+      <p className="border p-1 border-gray-400">
+        <span className="font-bold block">App ID:</span>
+        <span className="text-[12px] break-all">{lastUsedAppId ?? ''}</span>
+      </p>
+
+      <div className="grid gap-y-12">
+        <div className="grid gap-y-2">
+          <div>
+            <p>Sent payload:</p>
+
+            <div className="bg-gray-300 min-h-[100px] p-2">
+              <pre className="break-all whitespace-break-spaces">
+                {JSON.stringify(sentVerifyPayload, null, 2)}
+              </pre>
+            </div>
+          </div>
+
+          <div className="grid gap-y-2">
+            <div className="grid grid-cols-2 gap-x-2">
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() => onStagingVerifyClick(VerificationLevel.Device)}
+              >
+                Send staging app verify (Device)
+              </button>
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() => onStagingVerifyClick(VerificationLevel.Document)}
+              >
+                Send staging app verify (Document)
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-2">
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() =>
+                  onStagingVerifyClick(VerificationLevel.SecureDocument)
+                }
+              >
+                Send staging app verify (SecureDocument)
+              </button>
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() => onStagingVerifyClick(VerificationLevel.Orb)}
+              >
+                Send staging app verify (Orb)
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-2">
+              <button
+                className={clsx(
+                  'bg-black text-white rounded-lg p-4 w-full disabled:opacity-20',
+                )}
+                onClick={() => onProdVerifyClick(VerificationLevel.Device)}
+              >
+                Send production app verify (Device)
+              </button>
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() => onProdVerifyClick(VerificationLevel.Document)}
+              >
+                Send production app verify (Document)
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-2">
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() =>
+                  onProdVerifyClick(VerificationLevel.SecureDocument)
+                }
+              >
+                Send production app verify (SecureDocument)
+              </button>
+              <button
+                className="bg-black text-white rounded-lg p-4 w-full disabled:opacity-20"
+                onClick={() => onProdVerifyClick(VerificationLevel.Orb)}
+              >
+                Send production app verify (Orb)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full grid gap-y-2">
+          <p>Message from &quot;{ResponseEvent.MiniAppVerifyAction}&quot; </p>
+
+          <div className="bg-gray-300 min-h-[100px] p-2">
+            <pre className="break-all whitespace-break-spaces">
+              {JSON.stringify(verifyActionAppPayload, null, 2) ??
+                JSON.stringify(null)}
+            </pre>
+          </div>
+
+          <div className="grid gap-y-2">
+            <p>Validation message:</p>
+            <p className="bg-gray-300 p-2">
+              {verifyActionAppPayloadValidationMessage ?? 'No validation'}
+            </p>
+          </div>
+
+          <div className="grid gap-y-2">
+            <p>`DEV_PORTAL/api/v2/verify` Response:</p>
+            <pre className="break-all whitespace-break-spaces bg-gray-300 p-2">
+              {JSON.stringify(devPortalVerifyResponse, null, 2) ??
+                'No validation'}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+File: demo/with-next/components/ClientContent/VerifyAction/verify-cloud-proof.ts
+================================================
+'use server';
+
+import {
+  ISuccessResult,
+  IVerifyResponse,
+  verifyCloudProof,
+} from '@worldcoin/minikit-js';
+
+export const verifyProof = async (params: {
+  app_id: `app_${string}`;
+  action: string;
+  signal?: string;
+  payload: ISuccessResult;
+}) => {
+  const { app_id, action, payload, signal } = params;
+  let verifyResponse: IVerifyResponse | null = null;
+  const stagingEndpoint = `${process.env.NEXT_SERVER_STAGING_DEV_PORTAL_URL}/api/v2/verify/${app_id}`;
+
+  try {
+    verifyResponse = await verifyCloudProof(
+      payload,
+      app_id,
+      action,
+      signal,
+
+      process.env.NEXT_DEPLOYMENT_ENVIRONMENT === 'staging'
+        ? stagingEndpoint
+        : undefined,
+    );
+
+    console.log('verifyResponse', verifyResponse);
+  } catch (error) {
+    console.log('Error in verifyCloudProof', error);
+  }
+
+  return verifyResponse;
+};
+
+
+
+
+================================================
+File: packages/core/README.md
+================================================
+# minikit-js
+
+## 🚀 Getting Started
+
+MiniKit is currently available on npm. To install, run:
+`pnpm i @worldcoin/minikit-js`
+
+or use the CDN:
+`https://cdn.jsdelivr.net/npm/@worldcoin/minikit-js@[version]/+esm`
+
+For comprehensive setup instructions and usage examples, visit our [developer documentation](https://docs.world.org/mini-apps).
+
+## 🛠 ️Developing Locally
+
+To run the example mini app locally:
+
+```
+pnpm i
+cd demo/with-next
+pnpm dev
+```
+
+This will launch a demo mini app with all essential commands implemented, allowing you to explore and test the features.
+
+
+
+================================================
+File: packages/core/CHANGELOG.md
+================================================
+# Changelog
+
+## [1.7.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.6.2...minikit-js-v1.7.0) (2025-03-12)
+
+
+### Features
+
+* 1.6 Release (viem upgrade and eth support) ([#142](https://github.com/worldcoin/minikit-js/issues/142)) ([37175d8](https://github.com/worldcoin/minikit-js/commit/37175d8dfff7430d40e07193f8dbb148182dfb66))
+* add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+* add transaction payload validation ([#121](https://github.com/worldcoin/minikit-js/issues/121)) ([00cb744](https://github.com/worldcoin/minikit-js/commit/00cb7444797f487be595ab706bb60b51f0da289d))
+* Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+* expose method to fetch user details ([#122](https://github.com/worldcoin/minikit-js/issues/122)) ([02875a1](https://github.com/worldcoin/minikit-js/commit/02875a1fdcd870b2bfc5ab86ccb48db175631c2c))
+* isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+* Notifications, contacts, bug fixes ([#117](https://github.com/worldcoin/minikit-js/issues/117)) ([5cc1849](https://github.com/worldcoin/minikit-js/commit/5cc1849b2d556e419e3e00ff76167b54a65427c1))
+* share contacts command ([#104](https://github.com/worldcoin/minikit-js/issues/104)) ([bae6d76](https://github.com/worldcoin/minikit-js/commit/bae6d76735be04cd19637f38f3f833ae164c452f))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+* username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+
+## [1.6.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.5.0...minikit-js-v1.6.0) (2025-02-11)
+
+
+### Features
+
+* 1.6 Release (viem upgrade and eth support) ([#142](https://github.com/worldcoin/minikit-js/issues/142)) ([37175d8](https://github.com/worldcoin/minikit-js/commit/37175d8dfff7430d40e07193f8dbb148182dfb66))
+
+## [1.5.0](https://github.com/worldcoin/minikit-js/compare/minikit-js-v1.4.0...minikit-js-v1.5.0) (2025-01-09)
+
+
+### Features
+
+* add transaction payload validation ([#121](https://github.com/worldcoin/minikit-js/issues/121)) ([00cb744](https://github.com/worldcoin/minikit-js/commit/00cb7444797f487be595ab706bb60b51f0da289d))
+* expose method to fetch user details ([#122](https://github.com/worldcoin/minikit-js/issues/122)) ([02875a1](https://github.com/worldcoin/minikit-js/commit/02875a1fdcd870b2bfc5ab86ccb48db175631c2c))
+* Notifications, contacts, bug fixes ([#117](https://github.com/worldcoin/minikit-js/issues/117)) ([5cc1849](https://github.com/worldcoin/minikit-js/commit/5cc1849b2d556e419e3e00ff76167b54a65427c1))
+
+## [1.4.0](https://github.com/worldcoin/minikit-js/compare/core-v1.3.0...core-v1.4.0) (2024-12-03)
+
+### Features
+
+- add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+- Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+- isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+- share contacts command ([#104](https://github.com/worldcoin/minikit-js/issues/104)) ([bae6d76](https://github.com/worldcoin/minikit-js/commit/bae6d76735be04cd19637f38f3f833ae164c452f))
+
+### Bug Fixes
+
+- Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+- username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+
+## [1.3.0](https://github.com/worldcoin/minikit-js/compare/core-v1.2.0...core-v1.3.0) (2024-11-26)
+
+### Features
+
+- add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+- Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+- share contacts command ([#104](https://github.com/worldcoin/minikit-js/issues/104)) ([bae6d76](https://github.com/worldcoin/minikit-js/commit/bae6d76735be04cd19637f38f3f833ae164c452f))
+
+### Bug Fixes
+
+- Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+- username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+
+## [1.2.0](https://github.com/worldcoin/minikit-js/compare/core-v1.1.1...core-v1.2.0) (2024-11-01)
+
+### Features
+
+- add static appId var ([#83](https://github.com/worldcoin/minikit-js/issues/83)) ([a83c9fb](https://github.com/worldcoin/minikit-js/commit/a83c9fb6cf731efdde5e3a2b7eafe6c0915cbb50))
+- Add username support ([#93](https://github.com/worldcoin/minikit-js/issues/93)) ([f28841e](https://github.com/worldcoin/minikit-js/commit/f28841e598fc181698d33819b0e56dcc73aa42a7))
+
+### Bug Fixes
+
+- Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+- username query parsing ([#108](https://github.com/worldcoin/minikit-js/issues/108)) ([b71e5ee](https://github.com/worldcoin/minikit-js/commit/b71e5eeed1e72c587fe76816d10309ae9a13e101))
+
+
+
+================================================
+File: packages/core/global.d.ts
+================================================
+interface Window {
+  webkit?: {
+    messageHandlers?: {
+      minikit?: {
+        postMessage?: (payload: Record<string, any>) => void;
+      };
+    };
+  };
+
+  Android?: {
+    postMessage?: (payload: string) => void;
+  };
+
+  MiniKit?: import('./minikit').MiniKit;
+
+  WorldApp?: {
+    world_app_version: number;
+    device_os: 'ios' | 'android';
+
+    supported_commands: Array<{
+      name: import('./types/commands').Command;
+      supported_versions: Array<number>;
+    }>;
+  };
+}
+
+
+
+================================================
+File: packages/core/index.ts
+================================================
+export { MiniKit } from './minikit';
+
+export * from './types/commands';
+export * from './types/errors';
+export * from './types/payment';
+export * from './types/responses';
+export * from './types/wallet-auth';
+
+export { tokenToDecimals } from 'helpers/payment/client';
+
+export { VerificationLevel, type ISuccessResult } from '@worldcoin/idkit-core';
+export {
+  verifyCloudProof,
+  type IVerifyResponse,
+} from '@worldcoin/idkit-core/backend';
+
+export {
+  SAFE_CONTRACT_ABI,
+  parseSiweMessage,
+  verifySiweMessage,
+} from 'helpers/siwe/siwe';
+
+export { getIsUserVerified } from 'helpers/address-book';
+
+
+
+================================================
+File: packages/core/jest.config.ts
+================================================
+import type { Config } from 'jest';
+
+const config: Config = {
+  preset: 'ts-jest',
+  moduleDirectories: ['node_modules', '<rootDir>'],
+  modulePathIgnorePatterns: ['<rootDir>/deploy/cdk.out'],
+  testMatch: ['**/*.test.ts'],
+  testPathIgnorePatterns: ['node_modules'],
+  collectCoverageFrom: ['**/*.(t|j)s'],
+  reporters: ['default'],
+};
+
+export default config;
+
+
+
+================================================
+File: packages/core/minikit.ts
+================================================
+import { VerificationLevel } from '@worldcoin/idkit-core';
+import { encodeAction, generateSignal } from '@worldcoin/idkit-core/hashing';
+import { validatePaymentPayload } from 'helpers/payment/client';
+import { compressAndPadProof } from 'helpers/proof';
+import { generateSiweMessage } from 'helpers/siwe/siwe';
+import { validateWalletAuthCommandInput } from 'helpers/siwe/validate-wallet-auth-command-input';
+import { validateSendTransactionPayload } from 'helpers/transaction/validate-payload';
+import { getUserProfile } from 'helpers/usernames';
+import {
+  AsyncHandlerReturn,
+  Command,
+  CommandReturnPayload,
+  GetPermissionsPayload,
+  MiniKitInstallReturnType,
+  PayCommandInput,
+  PayCommandPayload,
+  RequestPermissionInput,
+  RequestPermissionPayload,
+  SendHapticFeedbackInput,
+  SendHapticFeedbackPayload,
+  SendTransactionInput,
+  SendTransactionPayload,
+  ShareContactsPayload,
+  SignMessageInput,
+  SignMessagePayload,
+  SignTypedDataInput,
+  SignTypedDataPayload,
+  VerifyCommandInput,
+  VerifyCommandPayload,
+  WalletAuthInput,
+  WalletAuthPayload,
+  WebViewBasePayload,
+} from 'types/commands';
+import {
+  MiniKitInstallErrorCodes,
+  MiniKitInstallErrorMessage,
+} from 'types/errors';
+import { Network } from 'types/payment';
+import { sendWebviewEvent } from './helpers/send-webview-event';
+import {
+  EventHandler,
+  EventPayload,
+  MiniAppGetPermissionsPayload,
+  MiniAppPaymentPayload,
+  MiniAppRequestPermissionPayload,
+  MiniAppSendHapticFeedbackPayload,
+  MiniAppSendTransactionPayload,
+  MiniAppShareContactsPayload,
+  MiniAppSignMessagePayload,
+  MiniAppSignTypedDataPayload,
+  MiniAppVerifyActionPayload,
+  MiniAppWalletAuthPayload,
+  ResponseEvent,
+} from './types/responses';
+import { User } from './types/user';
+
+export const sendMiniKitEvent = <
+  T extends WebViewBasePayload = WebViewBasePayload,
+>(
+  payload: T,
+) => {
+  sendWebviewEvent(payload);
+};
+
+export class MiniKit {
+  private static readonly MINIKIT_VERSION = 1;
+
+  private static readonly miniKitCommandVersion: Record<Command, number> = {
+    [Command.Verify]: 1,
+    [Command.Pay]: 1,
+    [Command.WalletAuth]: 1,
+    [Command.SendTransaction]: 1,
+    [Command.SignMessage]: 1,
+    [Command.SignTypedData]: 1,
+    [Command.ShareContacts]: 1,
+    [Command.RequestPermission]: 1,
+    [Command.GetPermissions]: 1,
+    [Command.SendHapticFeedback]: 1,
+  };
+
+  private static isCommandAvailable = {
+    [Command.Verify]: false,
+    [Command.Pay]: false,
+    [Command.WalletAuth]: false,
+    [Command.SendTransaction]: false,
+    [Command.SignMessage]: false,
+    [Command.SignTypedData]: false,
+    [Command.ShareContacts]: false,
+    [Command.RequestPermission]: false,
+    [Command.GetPermissions]: false,
+    [Command.SendHapticFeedback]: false,
+  };
+
+  private static listeners: Record<ResponseEvent, EventHandler> = {
+    [ResponseEvent.MiniAppVerifyAction]: () => {},
+    [ResponseEvent.MiniAppPayment]: () => {},
+    [ResponseEvent.MiniAppWalletAuth]: () => {},
+    [ResponseEvent.MiniAppSendTransaction]: () => {},
+    [ResponseEvent.MiniAppSignMessage]: () => {},
+    [ResponseEvent.MiniAppSignTypedData]: () => {},
+    [ResponseEvent.MiniAppShareContacts]: () => {},
+    [ResponseEvent.MiniAppRequestPermission]: () => {},
+    [ResponseEvent.MiniAppGetPermissions]: () => {},
+    [ResponseEvent.MiniAppSendHapticFeedback]: () => {},
+  };
+
+  public static appId: string | null = null;
+  /**
+   * @deprecated you should use MiniKit.user.walletAddress instead
+   */
+  public static walletAddress: string | null = null;
+  public static user: User | null = null;
+
+  private static sendInit() {
+    sendWebviewEvent({
+      command: 'init',
+      payload: { version: this.MINIKIT_VERSION },
+    });
+  }
+
+  public static subscribe<E extends ResponseEvent>(
+    event: E,
+    handler: EventHandler<E>,
+  ) {
+    if (event === ResponseEvent.MiniAppWalletAuth) {
+      const originalHandler =
+        handler as EventHandler<ResponseEvent.MiniAppWalletAuth>;
+
+      const wrappedHandler: EventHandler<ResponseEvent.MiniAppWalletAuth> = (
+        payload,
+      ) => {
+        if (payload.status === 'success') {
+          MiniKit.walletAddress = payload.address;
+          MiniKit.getUserByAddress(payload.address).then((user) => {
+            MiniKit.user = user;
+          });
+        }
+
+        originalHandler(payload);
+      };
+
+      this.listeners[event] = wrappedHandler as EventHandler<E>;
+    } else if (event === ResponseEvent.MiniAppVerifyAction) {
+      const originalHandler =
+        handler as EventHandler<ResponseEvent.MiniAppVerifyAction>;
+      const wrappedHandler: EventHandler<ResponseEvent.MiniAppVerifyAction> = (
+        payload,
+      ) => {
+        if (
+          payload.status === 'success' &&
+          payload.verification_level === VerificationLevel.Orb
+        ) {
+          // Note: On Chain Proofs won't work on staging with this change
+          compressAndPadProof(payload.proof as `0x${string}`).then(
+            (compressedProof) => {
+              payload.proof = compressedProof;
+              originalHandler(payload);
+            },
+          );
+        } else {
+          originalHandler(payload);
+        }
+      };
+      this.listeners[event] = wrappedHandler as EventHandler<E>;
+    } else {
+      this.listeners[event] = handler;
+    }
+  }
+
+  public static unsubscribe(event: ResponseEvent) {
+    delete this.listeners[event];
+  }
+
+  public static trigger(event: ResponseEvent, payload: EventPayload) {
+    if (!this.listeners[event]) {
+      console.error(`No handler for event ${event}`);
+      return;
+    }
+    this.listeners[event](payload);
+  }
+
+  private static async awaitCommand<
+    E extends ResponseEvent,
+    C extends Command,
+    T extends EventPayload<E>,
+  >(
+    event: E,
+    command: C,
+    executor: () => CommandReturnPayload<C> | null,
+  ): AsyncHandlerReturn<CommandReturnPayload<C> | null, T> {
+    return new Promise((resolve) => {
+      let commandPayload: CommandReturnPayload<C> | null = null;
+      const handleAndUnsubscribe = (payload: EventPayload<E>) => {
+        this.unsubscribe(event);
+        resolve({ commandPayload, finalPayload: payload as T });
+      };
+      this.subscribe(event, handleAndUnsubscribe);
+      commandPayload = executor();
+    });
+  }
+
+  private static commandsValid(
+    worldAppSupportedCommands: NonNullable<
+      typeof window.WorldApp
+    >['supported_commands'],
+  ) {
+    return Object.entries(this.miniKitCommandVersion).every(
+      ([minikitCommandName, version]) => {
+        const commandInput = worldAppSupportedCommands.find(
+          (command) => command.name === minikitCommandName,
+        );
+
+        if (!commandInput) {
+          console.error(
+            `Command ${minikitCommandName} is not supported by the app. Try updating the app version`,
+          );
+        } else {
+          MiniKit.isCommandAvailable[minikitCommandName] = true;
+        }
+
+        return commandInput
+          ? commandInput.supported_versions.includes(version)
+          : false;
+      },
+    );
+  }
+
+  public static install(appId?: string): MiniKitInstallReturnType {
+    if (typeof window === 'undefined' || Boolean(window.MiniKit)) {
+      return {
+        success: false,
+        errorCode: MiniKitInstallErrorCodes.AlreadyInstalled,
+        errorMessage:
+          MiniKitInstallErrorMessage[MiniKitInstallErrorCodes.AlreadyInstalled],
+      };
+    }
+
+    if (!appId) {
+      console.warn('App ID not provided during install');
+    } else {
+      MiniKit.appId = appId;
+    }
+
+    if (!window.WorldApp) {
+      return {
+        success: false,
+        errorCode: MiniKitInstallErrorCodes.OutsideOfWorldApp,
+        errorMessage:
+          MiniKitInstallErrorMessage[
+            MiniKitInstallErrorCodes.OutsideOfWorldApp
+          ],
+      };
+    }
+
+    try {
+      window.MiniKit = MiniKit;
+      this.sendInit();
+    } catch (error) {
+      console.error(
+        MiniKitInstallErrorMessage[MiniKitInstallErrorCodes.Unknown],
+        error,
+      );
+
+      return {
+        success: false,
+        errorCode: MiniKitInstallErrorCodes.Unknown,
+        errorMessage:
+          MiniKitInstallErrorMessage[MiniKitInstallErrorCodes.Unknown],
+      };
+    }
+
+    // If commands are missing we will install minikit regardless
+    if (!this.commandsValid(window.WorldApp.supported_commands)) {
+      return {
+        success: false,
+        errorCode: MiniKitInstallErrorCodes.AppOutOfDate,
+        errorMessage:
+          MiniKitInstallErrorMessage[MiniKitInstallErrorCodes.AppOutOfDate],
+      };
+    }
+
+    return { success: true };
+  }
+
+  public static isInstalled(debug?: boolean) {
+    if (debug) console.log('MiniKit is alive!');
+    const isInstalled = Boolean(window.MiniKit);
+    if (!isInstalled)
+      console.error(
+        "MiniKit is not installed. Make sure you're running the application inside of World App",
+      );
+    return isInstalled;
+  }
+
+  public static getUserByAddress = async (address: string): Promise<User> => {
+    const userProfile = await getUserProfile(address);
+
+    return {
+      walletAddress: address,
+      username: userProfile.username,
+      profilePictureUrl: userProfile.profilePictureUrl,
+    };
+  };
+
+  public static commands = {
+    verify: (payload: VerifyCommandInput): VerifyCommandPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.Verify]
+      ) {
+        console.error(
+          "'verify' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      const timestamp = new Date().toISOString();
+      const eventPayload: VerifyCommandPayload = {
+        action: encodeAction(payload.action),
+        signal: generateSignal(payload.signal).digest,
+        verification_level: payload.verification_level || VerificationLevel.Orb,
+        timestamp,
+      };
+
+      sendMiniKitEvent({
+        command: Command.Verify,
+        version: this.miniKitCommandVersion[Command.Verify],
+        payload: eventPayload,
+      });
+
+      return eventPayload;
+    },
+
+    pay: (payload: PayCommandInput): PayCommandPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.Pay]
+      ) {
+        console.error(
+          "'pay' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+        return null;
+      }
+
+      // Validate the payload
+      if (!validatePaymentPayload(payload)) {
+        return null;
+      }
+
+      const network = Network.WorldChain;
+
+      const eventPayload: PayCommandPayload = {
+        ...payload,
+        network,
+      };
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.Pay,
+        version: this.miniKitCommandVersion[Command.Pay],
+        payload: eventPayload,
+      });
+
+      return eventPayload;
+    },
+
+    walletAuth: (payload: WalletAuthInput): WalletAuthPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.WalletAuth]
+      ) {
+        console.error(
+          "'walletAuth' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      const validationResult = validateWalletAuthCommandInput(payload);
+
+      if (!validationResult.valid) {
+        console.error(
+          'Failed to validate wallet auth input:\n\n -->',
+          validationResult.message,
+        );
+
+        return null;
+      }
+
+      let protocol: string | null = null;
+
+      try {
+        const currentUrl = new URL(window.location.href);
+        protocol = currentUrl.protocol.split(':')[0];
+      } catch (error) {
+        console.error('Failed to get current URL', error);
+        return null;
+      }
+
+      const siweMessage = generateSiweMessage({
+        scheme: protocol,
+        domain: window.location.host,
+        statement: payload.statement ?? undefined,
+        uri: window.location.href,
+        version: 1,
+        chain_id: 480,
+        nonce: payload.nonce,
+        issued_at: new Date().toISOString(),
+        expiration_time: payload.expirationTime?.toISOString() ?? undefined,
+        not_before: payload.notBefore?.toISOString() ?? undefined,
+        request_id: payload.requestId ?? undefined,
+      });
+
+      const walletAuthPayload = { siweMessage };
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.WalletAuth,
+        version: this.miniKitCommandVersion[Command.WalletAuth],
+        payload: walletAuthPayload,
+      });
+
+      return walletAuthPayload;
+    },
+
+    sendTransaction: (
+      payload: SendTransactionInput,
+    ): SendTransactionPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.SendTransaction]
+      ) {
+        console.error(
+          "'sendTransaction' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      const validatedPayload = validateSendTransactionPayload(payload);
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.SendTransaction,
+        version: this.miniKitCommandVersion[Command.SendTransaction],
+        payload: validatedPayload,
+      });
+
+      return validatedPayload;
+    },
+
+    signMessage: (payload: SignMessageInput): SignMessagePayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.SignMessage]
+      ) {
+        console.error(
+          "'signMessage' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.SignMessage,
+        version: this.miniKitCommandVersion[Command.SignMessage],
+        payload,
+      });
+
+      return payload;
+    },
+
+    signTypedData: (
+      payload: SignTypedDataInput,
+    ): SignTypedDataPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.SignTypedData]
+      ) {
+        console.error(
+          "'signTypedData' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.SignTypedData,
+        version: this.miniKitCommandVersion[Command.SignTypedData],
+        payload,
+      });
+
+      return payload;
+    },
+
+    shareContacts: (
+      payload: ShareContactsPayload,
+    ): ShareContactsPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.SignTypedData]
+      ) {
+        console.error(
+          "'shareContacts' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.ShareContacts,
+        version: this.miniKitCommandVersion[Command.ShareContacts],
+        payload,
+      });
+
+      return payload;
+    },
+
+    requestPermission: (
+      payload: RequestPermissionInput,
+    ): RequestPermissionPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.RequestPermission]
+      ) {
+        console.error(
+          "'requestPermission' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.RequestPermission,
+        version: this.miniKitCommandVersion[Command.RequestPermission],
+        payload,
+      });
+
+      return payload;
+    },
+
+    getPermissions: (): GetPermissionsPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.GetPermissions]
+      ) {
+        console.error(
+          "'getPermissions' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.GetPermissions,
+        version: this.miniKitCommandVersion[Command.GetPermissions],
+        payload: {},
+      });
+
+      return {
+        status: 'sent',
+      };
+    },
+
+    sendHapticFeedback: (
+      payload: SendHapticFeedbackInput,
+    ): SendHapticFeedbackPayload | null => {
+      if (
+        typeof window === 'undefined' ||
+        !this.isCommandAvailable[Command.SendHapticFeedback]
+      ) {
+        console.error(
+          "'sendHapticFeedback' command is unavailable. Check MiniKit.install() or update the app version",
+        );
+        return null;
+      }
+
+      sendMiniKitEvent<WebViewBasePayload>({
+        command: Command.SendHapticFeedback,
+        version: this.miniKitCommandVersion[Command.SendHapticFeedback],
+        payload,
+      });
+
+      return payload;
+    },
+  };
+
+  /**
+   * This object contains async versions of all the commands.
+   * Instead of using event listeners, you can just `await` these.
+   *
+   * They return a standardized object
+   *
+   * commandPayload - object returned by the command function
+   *
+   * finalPayload - object returned by the event listener, or in other words, WorldApp response
+   */
+  public static commandsAsync = {
+    verify: async (
+      payload: VerifyCommandInput,
+    ): AsyncHandlerReturn<
+      VerifyCommandPayload | null,
+      MiniAppVerifyActionPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppVerifyAction,
+            Command.Verify,
+            () => this.commands.verify(payload),
+          );
+          if (
+            response.finalPayload.status === 'success' &&
+            response.finalPayload.verification_level === VerificationLevel.Orb
+          ) {
+            response.finalPayload.proof = await compressAndPadProof(
+              response.finalPayload.proof as `0x${string}`,
+            );
+          }
+          resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    pay: async (
+      payload: PayCommandInput,
+    ): AsyncHandlerReturn<PayCommandPayload | null, MiniAppPaymentPayload> => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppPayment,
+            Command.Pay,
+            () => this.commands.pay(payload),
+          );
+          resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    walletAuth: async (
+      payload: WalletAuthInput,
+    ): AsyncHandlerReturn<
+      WalletAuthPayload | null,
+      MiniAppWalletAuthPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppWalletAuth,
+            Command.WalletAuth,
+            () => this.commands.walletAuth(payload),
+          );
+          return resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    sendTransaction: async (
+      payload: SendTransactionInput,
+    ): AsyncHandlerReturn<
+      SendTransactionPayload | null,
+      MiniAppSendTransactionPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppSendTransaction,
+            Command.SendTransaction,
+            () => this.commands.sendTransaction(payload),
+          );
+          return resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    signMessage: async (
+      payload: SignMessageInput,
+    ): AsyncHandlerReturn<
+      SignMessagePayload | null,
+      MiniAppSignMessagePayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppSignMessage,
+            Command.SignMessage,
+            () => this.commands.signMessage(payload),
+          );
+          return resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    signTypedData: async (
+      payload: SignTypedDataInput,
+    ): AsyncHandlerReturn<
+      SignTypedDataPayload | null,
+      MiniAppSignTypedDataPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppSignTypedData,
+            Command.SignTypedData,
+            () => this.commands.signTypedData(payload),
+          );
+          return resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    shareContacts: async (
+      payload: ShareContactsPayload,
+    ): AsyncHandlerReturn<
+      ShareContactsPayload | null,
+      MiniAppShareContactsPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppShareContacts,
+            Command.ShareContacts,
+            () => this.commands.shareContacts(payload),
+          );
+          return resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+
+    requestPermission: async (
+      payload: RequestPermissionInput,
+    ): AsyncHandlerReturn<
+      RequestPermissionPayload | null,
+      MiniAppRequestPermissionPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppRequestPermission,
+            Command.RequestPermission,
+            () => this.commands.requestPermission(payload),
+          );
+          resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    getPermissions: async (): AsyncHandlerReturn<
+      GetPermissionsPayload | null,
+      MiniAppGetPermissionsPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppGetPermissions,
+            Command.GetPermissions,
+            () => this.commands.getPermissions(),
+          );
+          resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    sendHapticFeedback: async (
+      payload: SendHapticFeedbackInput,
+    ): AsyncHandlerReturn<
+      SendHapticFeedbackPayload | null,
+      MiniAppSendHapticFeedbackPayload
+    > => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const response = await MiniKit.awaitCommand(
+            ResponseEvent.MiniAppSendHapticFeedback,
+            Command.SendHapticFeedback,
+            () => this.commands.sendHapticFeedback(payload),
+          );
+          resolve(response);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+  };
+}
+
+
+
+================================================
+File: packages/core/package.json
+================================================
+{
+  "dependencies": {
+    "@worldcoin/idkit-core": "^2.0.2",
+    "abitype": "^1.0.6"
+  },
+  "description": "minikit-js is our SDK for building mini-apps.",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-sort-imports-desc": "^1.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "viem": "2.23.5"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "require": {
+        "types": "./build/index.d.cts",
+        "default": "./build/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "./build/**",
+    "README.md"
+  ],
+  "homepage": "https://docs.worldcoin.org/mini-apps",
+  "keywords": [
+    "minikit",
+    "miniapps"
+  ],
+  "license": "MIT",
+  "main": "index.ts",
+  "name": "@worldcoin/minikit-js",
+  "peerDependencies": {
+    "viem": "^2.23.5"
+  },
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "prettier --check .",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "types": "index.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./build/*/index.d.ts",
+        "./build/index.d.ts"
+      ]
+    }
+  },
+  "version": "1.8.0"
+}
+
+
+================================================
+File: packages/core/tsconfig.json
+================================================
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "jest"],
+    "moduleResolution": "bundler",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "build", ".turbo", "coverage"]
+}
+
+
+
+================================================
+File: packages/core/tsup.config.ts
+================================================
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  dts: true,
+  clean: true,
+  outDir: 'build',
+  format: ['esm', 'cjs'],
+  external: ['@worldcoin/idkit-core'],
+  entry: ['index.ts'],
+  define: { 'process.env.NODE_ENV': '"production"' },
+});
+
+
+
+================================================
+File: packages/core/.eslintrc.cjs
+================================================
+module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
+  ignorePatterns: [
+    '.eslintrc.cjs',
+    'postcss.config.cjs',
+    'tsup.config.ts',
+    '/build',
+  ],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import', 'prettier'],
+  parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
+    project: ['./tsconfig.json'],
+    tsconfigRootDir: __dirname,
+  },
+  rules: {
+    'import/prefer-default-export': 'off',
+    'import/no-default-export': 'off',
+    'no-empty': ['error', { allowEmptyCatch: true }],
+
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/no-misused-promises': 'warn',
+
+    // not included into recommended set rules
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/consistent-type-imports': [
+      'warn',
+      { prefer: 'type-imports' },
+    ],
+    '@typescript-eslint/require-await': 'off',
+    'sort-imports': 'off', // we use TypeScripts' organize imports feature
+    '@typescript-eslint/no-var-requires': 'error',
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
+    '@typescript-eslint/prefer-for-of': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/prefer-reduce-type-parameter': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/promise-function-async': [
+      'error',
+      { checkArrowFunctions: false },
+    ],
+    '@typescript-eslint/sort-type-constituents': 'warn',
+
+    'jsx-a11y/media-has-caption': 0,
+  },
+
+  settings: {
+    react: {
+      version: 'detect',
+    },
+
+    polyfills: ['fetch'],
+  },
+};
+
+
+
+================================================
+File: packages/core/helpers/send-webview-event.ts
+================================================
+export const sendWebviewEvent = <
+  T extends Record<string, any> = Record<string, any>,
+>(
+  payload: T,
+) => {
+  if (window.webkit) {
+    window.webkit?.messageHandlers?.minikit?.postMessage?.(payload);
+  } else if (window.Android) {
+    window.Android.postMessage?.(JSON.stringify(payload));
+  }
+};
+
+
+
+================================================
+File: packages/core/helpers/address-book/index.ts
+================================================
+import { createPublicClient, http } from 'viem';
+import { worldchain } from 'viem/chains';
+
+const worldIdAddressBookContractAddress =
+  '0x57b930D551e677CC36e2fA036Ae2fe8FdaE0330D';
+const addressVerifiedUntilAbi = [
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '',
+        type: 'address',
+      },
+    ],
+    name: 'addressVerifiedUntil',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+];
+
+export const getIsUserVerified = async (
+  walletAddress: string,
+  rpcUrl?: string,
+): Promise<boolean> => {
+  const publicClient = createPublicClient({
+    chain: worldchain,
+    transport: http(
+      rpcUrl || 'https://worldchain-mainnet.g.alchemy.com/public',
+    ),
+  });
+
+  try {
+    const verifiedUntilResponse = (await publicClient.readContract({
+      address: worldIdAddressBookContractAddress,
+      abi: addressVerifiedUntilAbi,
+      functionName: 'addressVerifiedUntil',
+      args: [walletAddress],
+    })) as BigInt;
+
+    const verifiedUntil = Number(verifiedUntilResponse.toString());
+
+    if (!Number.isFinite(verifiedUntil)) {
+      console.warn('Invalid verifiedUntil value:', verifiedUntil);
+      return false;
+    }
+
+    const currentTime = Math.floor(Date.now() / 1000);
+    return verifiedUntil > currentTime;
+  } catch (error) {
+    console.error('Error verifying user:', error);
+    return false;
+  }
+};
+
+
+
+================================================
+File: packages/core/helpers/payment/client.ts
+================================================
+import { PayCommandInput } from 'types/commands';
+import { TokenDecimals, Tokens } from 'types/payment';
+
+// This is a helper function to convert token amount to decimals for payment
+// Amount should be in expected amount ie $25.12 should be 25.12
+export const tokenToDecimals = (amount: number, token: Tokens): number => {
+  const decimals = TokenDecimals[token];
+  if (decimals === undefined) {
+    throw new Error(`Invalid token: ${token}`);
+  }
+  const factor = 10 ** decimals;
+  const result = amount * factor;
+  if (!Number.isInteger(result)) {
+    throw new Error(`The resulting amount is not a whole number: ${result}`);
+  }
+  return result;
+};
+
+export const validatePaymentPayload = (payload: PayCommandInput): boolean => {
+  if (
+    payload.tokens.some(
+      (token) =>
+        token.symbol == 'USDCE' && parseFloat(token.token_amount) < 0.1,
+    )
+  ) {
+    console.error('USDCE amount should be greater than $0.1');
+    return false; // reject
+  }
+
+  if (payload.reference.length > 36) {
+    console.error('Reference must not exceed 36 characters');
+    return false;
+  }
+
+  if (typeof payload.reference !== 'string') {
+    throw new Error('Reference must be a string');
+  }
+
+  return true; // accept
+};
+
+
+
+================================================
+File: packages/core/helpers/proof/index.ts
+================================================
+import {
+  createPublicClient,
+  decodeAbiParameters,
+  encodeAbiParameters,
+  http,
+} from 'viem';
+import { worldchain } from 'viem/chains';
+
+const semaphoreVerifierAddress = '0x79f46b94d134109EbcbbddBAeD0E88790409A0e4';
+const semaphoreVerifierAbi = [
+  {
+    inputs: [
+      {
+        internalType: 'uint256[8]',
+        name: 'proof',
+        type: 'uint256[8]',
+      },
+    ],
+    name: 'compressProof',
+    outputs: [
+      {
+        internalType: 'uint256[4]',
+        name: 'compressed',
+        type: 'uint256[4]',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+];
+
+export const compressAndPadProof = async (
+  proof: `0x${string}`,
+  rpcUrl?: string,
+): Promise<`0x${string}`> => {
+  try {
+    const publicClient = createPublicClient({
+      chain: worldchain,
+      transport: http(
+        rpcUrl || 'https://worldchain-mainnet.g.alchemy.com/public',
+      ),
+    });
+
+    const decodedProof = decodeAbiParameters(
+      [{ type: 'uint256[8]' }],
+      proof,
+    )[0] as readonly [
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+    ];
+
+    const compressedProof = (await publicClient.readContract({
+      address: semaphoreVerifierAddress,
+      abi: semaphoreVerifierAbi,
+      functionName: 'compressProof',
+      args: [decodedProof],
+    })) as [bigint, bigint, bigint, bigint];
+
+    const paddedProof: [
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+      bigint,
+    ] = [...compressedProof, 0n, 0n, 0n, 0n];
+
+    return encodeAbiParameters([{ type: 'uint256[8]' }], [paddedProof]);
+  } catch (e) {
+    console.log('Failed to compress proof', {
+      e,
+      proof,
+    });
+
+    return proof;
+  }
+};
+
+
+
+================================================
+File: packages/core/helpers/siwe/siwe.ts
+================================================
+import { MiniAppWalletAuthSuccessPayload } from 'types/responses';
+import { SiweMessage } from 'types/wallet-auth';
+import {
+  Client,
+  createPublicClient,
+  getContract,
+  hashMessage,
+  http,
+  recoverAddress,
+} from 'viem';
+import { worldchain } from 'viem/chains';
+
+const PREAMBLE = ' wants you to sign in with your Ethereum account:';
+const URI_TAG = 'URI: ';
+const VERSION_TAG = 'Version: ';
+const CHAIN_TAG = 'Chain ID: ';
+const NONCE_TAG = 'Nonce: ';
+const IAT_TAG = 'Issued At: ';
+const EXP_TAG = 'Expiration Time: ';
+const NBF_TAG = 'Not Before: ';
+const RID_TAG = 'Request ID: ';
+const ERC_191_PREFIX = '\x19Ethereum Signed Message:\n';
+
+const tagged = (line, tag) => {
+  if (line && line.includes(tag)) {
+    return line.replace(tag, ''); // This removes the exact tag content from the line
+  } else {
+    throw new Error(`Missing '${tag}'`);
+  }
+};
+
+// TODO: Refactor this into a class
+export const parseSiweMessage = (inputString: string) => {
+  const lines = inputString.split('\n')[Symbol.iterator]();
+  const domain = tagged(lines.next()?.value, PREAMBLE);
+  const address = lines.next()?.value;
+  lines.next();
+
+  const nextValue = lines.next()?.value;
+  let statement;
+  if (nextValue) {
+    statement = nextValue;
+    lines.next();
+  }
+
+  const uri = tagged(lines.next()?.value, URI_TAG);
+  const version = tagged(lines.next()?.value, VERSION_TAG);
+  const chain_id = tagged(lines.next()?.value, CHAIN_TAG);
+  const nonce = tagged(lines.next()?.value, NONCE_TAG);
+  const issued_at = tagged(lines.next()?.value, IAT_TAG);
+
+  // These ones are optional. Check if the line exists and matches the expected tag before parsing.
+  let expiration_time, not_before, request_id;
+  for (let line of lines) {
+    if (line.startsWith(EXP_TAG)) {
+      expiration_time = tagged(line, EXP_TAG);
+    } else if (line.startsWith(NBF_TAG)) {
+      not_before = tagged(line, NBF_TAG);
+    } else if (line.startsWith(RID_TAG)) {
+      request_id = tagged(line, RID_TAG);
+    }
+  }
+
+  if (lines.next().done === false) {
+    throw new Error('Extra lines in the input');
+  }
+
+  const siweMessageData: SiweMessage = {
+    domain,
+    address,
+    statement,
+    uri,
+    version,
+    chain_id,
+    nonce,
+    issued_at,
+    expiration_time,
+    not_before,
+    request_id,
+  };
+
+  return siweMessageData;
+};
+
+export const generateSiweMessage = (siweMessageData: SiweMessage) => {
+  let siweMessage = '';
+
+  if (siweMessageData.scheme) {
+    siweMessage += `${siweMessageData.scheme}://${siweMessageData.domain} wants you to sign in with your Ethereum account:\n`;
+  } else {
+    siweMessage += `${siweMessageData.domain} wants you to sign in with your Ethereum account:\n`;
+  }
+
+  // NOTE: This is differs from the ERC-4361 spec where the address is required
+  if (siweMessageData.address) {
+    siweMessage += `${siweMessageData.address}\n`;
+  } else {
+    siweMessage += '{address}\n';
+  }
+  siweMessage += '\n';
+
+  if (siweMessageData.statement) {
+    siweMessage += `${siweMessageData.statement}\n`;
+  }
+
+  siweMessage += '\n';
+
+  siweMessage += `URI: ${siweMessageData.uri}\n`;
+  siweMessage += `Version: ${siweMessageData.version}\n`;
+  siweMessage += `Chain ID: ${siweMessageData.chain_id}\n`;
+  siweMessage += `Nonce: ${siweMessageData.nonce}\n`;
+  siweMessage += `Issued At: ${siweMessageData.issued_at}\n`;
+
+  if (siweMessageData.expiration_time) {
+    siweMessage += `Expiration Time: ${siweMessageData.expiration_time}\n`;
+  }
+
+  if (siweMessageData.not_before) {
+    siweMessage += `Not Before: ${siweMessageData.not_before}\n`;
+  }
+
+  if (siweMessageData.request_id) {
+    siweMessage += `Request ID: ${siweMessageData.request_id}\n`;
+  }
+
+  return siweMessage;
+};
+
+export const SAFE_CONTRACT_ABI = [
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+    ],
+    name: 'isOwner',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+];
+
+// Nonce is required to be passed in as a parameter to verify the message
+export const verifySiweMessage = async (
+  payload: MiniAppWalletAuthSuccessPayload,
+  nonce: string,
+  statement?: string,
+  requestId?: string,
+  userProvider?: Client,
+) => {
+  if (typeof window !== 'undefined') {
+    throw new Error('Verify can only be called in the backend');
+  }
+
+  const { message, signature, address } = payload;
+  const siweMessageData = parseSiweMessage(message);
+
+  // Check expiration_time has not passed
+  if (siweMessageData.expiration_time) {
+    const expirationTime = new Date(siweMessageData.expiration_time);
+    if (expirationTime < new Date()) {
+      throw new Error('Expired message');
+    }
+  }
+
+  if (siweMessageData.not_before) {
+    const notBefore = new Date(siweMessageData.not_before);
+    if (notBefore > new Date()) {
+      throw new Error('Not Before time has not passed');
+    }
+  }
+
+  if (nonce && siweMessageData.nonce !== nonce) {
+    throw new Error(
+      `Nonce mismatch. Got: ${siweMessageData.nonce}, Expected: ${nonce}`,
+    );
+  }
+
+  if (statement && siweMessageData.statement !== statement) {
+    throw new Error(
+      `Statement mismatch. Got: ${siweMessageData.statement}, Expected: ${statement}`,
+    );
+  }
+
+  if (requestId && siweMessageData.request_id !== requestId) {
+    throw new Error(
+      `Request ID mismatch. Got: ${siweMessageData.request_id}, Expected: ${requestId}`,
+    );
+  }
+
+  // Check ERC-191 Signature Matches not recovery
+  let provider =
+    userProvider ||
+    createPublicClient({ chain: worldchain, transport: http() });
+  const signedMessage = `${ERC_191_PREFIX}${message.length}${message}`;
+  const hashedMessage = hashMessage(signedMessage);
+  const contract = getContract({
+    address: address as `0x${string}`,
+    abi: SAFE_CONTRACT_ABI,
+    client: provider,
+  });
+
+  try {
+    const recoveredAddress = await recoverAddress({
+      hash: hashedMessage,
+      signature: `0x${signature}`,
+    });
+
+    const isOwner = await contract.read.isOwner([recoveredAddress]);
+    if (!isOwner) {
+      throw new Error('Signature verification failed, invalid owner');
+    }
+  } catch (error) {
+    throw new Error('Signature verification failed');
+  }
+  return { isValid: true, siweMessageData: siweMessageData };
+};
+
+
+
+================================================
+File: packages/core/helpers/siwe/validate-wallet-auth-command-input.ts
+================================================
+import { WalletAuthInput } from 'types/commands';
+
+type ValidationResult =
+  | {
+      valid: true;
+    }
+  | {
+      valid: false;
+      message: string;
+    };
+
+export const validateWalletAuthCommandInput = (
+  params: WalletAuthInput,
+): ValidationResult => {
+  if (!params.nonce) {
+    return { valid: false, message: "'nonce' is required" };
+  }
+
+  if (params.nonce.length < 8) {
+    return { valid: false, message: "'nonce' must be at least 8 characters" };
+  }
+
+  if (params.statement && params.statement.includes('\n')) {
+    return { valid: false, message: "'statement' must not contain newlines" };
+  }
+
+  if (params.expirationTime && new Date(params.expirationTime) < new Date()) {
+    return { valid: false, message: "'expirationTime' must be in the future" };
+  }
+
+  if (
+    params.expirationTime &&
+    new Date(params.expirationTime) >
+      new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+  ) {
+    return { valid: false, message: "'expirationTime' must be within 7 days" };
+  }
+
+  if (
+    params.notBefore &&
+    new Date(params.notBefore) > new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+  ) {
+    return { valid: false, message: "'notBefore' must be within 7 days" };
+  }
+
+  return { valid: true };
+};
+
+
+
+================================================
+File: packages/core/helpers/transaction/validate-payload.ts
+================================================
+import { SendTransactionInput } from 'types/commands';
+
+const isValidHex = (str: string): boolean => {
+  return /^0x[0-9A-Fa-f]+$/.test(str);
+};
+
+const processPayload = <T>(payload: T): T => {
+  // Handle primitives directly
+  if (
+    typeof payload === 'boolean' ||
+    typeof payload === 'string' ||
+    payload === null ||
+    payload === undefined
+  ) {
+    return payload;
+  }
+
+  // Convert numbers to strings to prevent overflow issues
+  if (typeof payload === 'number' || typeof payload === 'bigint') {
+    return String(payload) as unknown as T;
+  }
+
+  // Handle arrays by processing each element
+  if (Array.isArray(payload)) {
+    return payload.map((value) => processPayload(value)) as unknown as T;
+  }
+
+  // Handle objects
+  if (typeof payload === 'object') {
+    const result = { ...payload } as any;
+
+    // Special handling for transaction value fields
+    if ('value' in result && result.value !== undefined) {
+      // For transaction value, we need to ensure it's a valid hex string
+      if (typeof result.value !== 'string') {
+        result.value = String(result.value);
+      }
+
+      if (!isValidHex(result.value)) {
+        console.error(
+          'Transaction value must be a valid hex string',
+          result.value,
+        );
+        throw new Error(
+          `Transaction value must be a valid hex string: ${result.value}`,
+        );
+      }
+    }
+
+    // Process all object properties recursively
+    for (const key in result) {
+      if (Object.prototype.hasOwnProperty.call(result, key)) {
+        result[key] = processPayload(result[key]);
+      }
+    }
+
+    return result;
+  }
+
+  // Fallback for any other types
+  return payload;
+};
+
+export const validateSendTransactionPayload = (
+  payload: SendTransactionInput,
+): SendTransactionInput => {
+  return processPayload(payload);
+};
+
+
+
+================================================
+File: packages/core/helpers/usernames/index.ts
+================================================
+export const getUserProfile = async (address: string) => {
+  const res = await fetch('https://usernames.worldcoin.org/api/v1/query', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      addresses: [address],
+    }),
+  });
+
+  const usernames = await res.json();
+  return usernames?.[0] ?? { username: null, profilePictureUrl: null };
+};
+
+
+
+================================================
+File: packages/core/tests/siwe.test.ts
+================================================
+import { parseSiweMessage, verifySiweMessage } from 'helpers/siwe/siwe';
+import { MiniAppWalletAuthSuccessPayload } from 'types/responses';
+
+const siweMessage = `https://test.com wants you to sign in with your Ethereum account:\n\
+{{address}}\n\n\
+statement\n\n\
+URI: https://test.com\n\
+Version: 1\n\
+Chain ID: 10\n\
+Nonce: 12345678\n\
+Issued At: ${new Date().toISOString()}\n\
+Expiration Time: ${new Date(
+  new Date().getTime() + 1000 * 60 * 60 * 24 * 7,
+).toISOString()}\n\
+Not Before: ${new Date(
+  new Date().getTime() - 1000 * 60 * 60 * 24 * 7,
+).toISOString()}\n\
+Request ID: 0`;
+
+const incompleteSiweMessage = `https://test.com wants you to sign in with your Ethereum account:\n\
+{{address}}\n\n\n\
+URI: https://test.com\n\
+Version: 1\n\
+Chain ID: 10\n\
+Nonce: 12345678\n\
+Issued At: ${new Date().toISOString()}\n\
+Expiration Time: 2024-05-03T00:00:00Z\n\
+Request ID: 0`;
+
+const invalidSiweMessage = `https://test.com wants you to sign in with your Ethereum account:\n\
+{{address}}\n\n\n\
+URI: https://test.com\n\
+Version: 1\n\
+Chain ID: 10\n\
+Issued At: ${new Date().toISOString()}\n\
+Expiration Time: 2024-05-03T00:00:00Z\n\
+Request ID: 0`;
+
+const signatureSiweMessage = (
+  issuedAt = new Date(),
+  expirationDays = 7,
+  notBeforeDays = -1,
+) =>
+  `http://localhost:3000 wants you to sign in with your Ethereum account:\n0xd809de3086ea4f53ed3979cead25e1ff72b564a3\n\n\nURI: http://localhost:3000/\nVersion: 1\nChain ID: 10\nNonce: 814434bd-ed2c-412e-aa2c-c4b266a42027\nIssued At: ${issuedAt.toISOString()}\nExpiration Time: ${new Date(issuedAt.getTime() + 1000 * 60 * 60 * 24 * expirationDays).toISOString()}\nNot Before: ${new Date(issuedAt.getTime() + 1000 * 60 * 60 * 24 * notBeforeDays).toISOString()}\nRequest ID: 0\n`;
+
+const signature =
+  'f75530590312f5b36b6ef0003800003ba0af04640c72838580f76a3883d2365f397670d785475c39514629345cec307bcbe8c81fb85430da0dc3ef43c9a946d91b';
+
+describe('Test SIWE Message Parsing', () => {
+  test('Correctly parses full SIWE message', () => {
+    parseSiweMessage(siweMessage);
+  });
+
+  test('Correctly parses incomplete SIWE message', () => {
+    parseSiweMessage(incompleteSiweMessage);
+  });
+
+  test('Correctly rejects missing required values', () => {
+    console.log(invalidSiweMessage);
+    expect(() => parseSiweMessage(invalidSiweMessage)).toThrow(
+      "Missing 'Nonce: '",
+    );
+  });
+});
+
+describe('Test SIWE Message Verification', () => {
+  test('Verify SIWE Message', () => {
+    // TODO: Implement this test
+  });
+
+  test('Verify SIWE Message with invalid signature', async () => {
+    const payload: MiniAppWalletAuthSuccessPayload = {
+      status: 'success',
+      message: signatureSiweMessage(new Date(), 7, -1),
+      signature: 'random_signature',
+      address: '0xd809de3086ea4f53ed3979cead25e1ff72b564a3',
+      version: 1,
+    };
+    await expect(
+      verifySiweMessage(payload, '814434bd-ed2c-412e-aa2c-c4b266a42027'),
+    ).rejects.toThrow('Signature verification failed');
+  });
+
+  test('Verify SIWE Message with invalid address', async () => {
+    const payload: MiniAppWalletAuthSuccessPayload = {
+      status: 'success' as const,
+      message: signatureSiweMessage(new Date(), 7, -1),
+      signature: signature,
+      address: '0x0000000000000000000000000000000000000000',
+      version: 1,
+    };
+
+    await expect(
+      verifySiweMessage(payload, '814434bd-ed2c-412e-aa2c-c4b266a42027'),
+    ).rejects.toThrow('Signature verification failed');
+  });
+});
+
+
+
+================================================
+File: packages/core/tests/validate-payload.test.ts
+================================================
+import { validateSendTransactionPayload } from '../helpers/transaction/validate-payload';
+const ABI = [
+  {
+    inputs: [
+      {
+        internalType: 'address payable',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+    name: 'pay',
+    outputs: [],
+    stateMutability: 'payable',
+    type: 'function',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+    name: 'Paid',
+    type: 'event',
+  },
+];
+describe('validateSendTransactionPayload', () => {
+  it('should validate simple string values and preserve ABI', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: ['0x456', '1000000000000000000'],
+          abi: ABI,
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(payload);
+  });
+
+  it('should validate nested objects', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          abi: [
+            {
+              name: 'transfer',
+              type: 'function',
+              inputs: [
+                { name: 'recipient', type: 'address' },
+                { name: 'amount', type: 'uint256' },
+              ],
+            },
+          ],
+          functionName: 'transfer',
+          args: ['0x456', [1000000000000000000, '1', [true]]],
+        },
+      ],
+    };
+
+    const formattedPayload = {
+      transaction: [
+        {
+          address: '0x123',
+          abi: [
+            {
+              name: 'transfer',
+              type: 'function',
+              inputs: [
+                { name: 'recipient', type: 'address' },
+                { name: 'amount', type: 'uint256' },
+              ],
+            },
+          ],
+          functionName: 'transfer',
+          args: ['0x456', ['1000000000000000000', '1', [true]]],
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(
+      formattedPayload,
+    );
+  });
+
+  it('should validate with permit2 data', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: ['0x456', '1000000000000000000'],
+          abi: [],
+        },
+      ],
+      permit2: [
+        {
+          permitted: {
+            token: '0x789',
+            amount: '1000000000000000000',
+          },
+          spender: '0xabc',
+          nonce: '1',
+          deadline: '1234567890',
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(payload);
+  });
+
+  it('should fix numbers', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: [123, '1000000000000000000'], // number instead of string
+          abi: ABI,
+        },
+      ],
+    };
+    const formattedPayload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: ['123', '1000000000000000000'], // number instead of string
+          abi: ABI,
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(
+      formattedPayload,
+    );
+  });
+
+  it('should preserve booleans', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: [true, '1000000000000000000'], // boolean instead of string
+          abi: [],
+        },
+      ],
+    };
+    const formattedPayload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: [true, '1000000000000000000'], // boolean instead of string
+          abi: [],
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(
+      formattedPayload,
+    );
+  });
+
+  it('should catch bigints ', () => {
+    const payload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: [true, '1000000000000000000'], // boolean instead of string
+          abi: [],
+        },
+      ],
+      permit2: [
+        {
+          permitted: {
+            token: '0x789',
+            amount: BigInt('1000000000000000000'),
+          },
+          spender: '0xabc',
+          nonce: '1',
+          deadline: '1234567890',
+        },
+      ],
+    };
+    const formattedPayload = {
+      transaction: [
+        {
+          address: '0x123',
+          functionName: 'transfer',
+          args: [true, '1000000000000000000'], // boolean instead of string
+          abi: [],
+        },
+      ],
+      permit2: [
+        {
+          permitted: {
+            token: '0x789',
+            amount: '1000000000000000000',
+          },
+          spender: '0xabc',
+          nonce: '1',
+          deadline: '1234567890',
+        },
+      ],
+    };
+    expect(validateSendTransactionPayload(payload)).toMatchObject(
+      formattedPayload,
+    );
+  });
+});
+
+
+
+================================================
+File: packages/core/types/commands.ts
+================================================
+import { IDKitConfig, VerificationLevel } from '@worldcoin/idkit-core';
+import type { TypedData, TypedDataDomain } from 'abitype';
+import { MiniKitInstallErrorCodes, MiniKitInstallErrorMessage } from './errors';
+import { Network, Tokens } from './payment';
+import { Permit2, Transaction } from './transactions';
+
+export enum Command {
+  Verify = 'verify',
+  Pay = 'pay',
+  WalletAuth = 'wallet-auth',
+  SendTransaction = 'send-transaction',
+  SignMessage = 'sign-message',
+  SignTypedData = 'sign-typed-data',
+  ShareContacts = 'share-contacts',
+  RequestPermission = 'request-permission',
+  GetPermissions = 'get-permissions',
+  SendHapticFeedback = 'send-haptic-feedback',
+}
+
+export type WebViewBasePayload = {
+  command: Command;
+  version: number;
+  payload: Record<string, any>;
+};
+
+export type AsyncHandlerReturn<CommandPayload, FinalPayload> = Promise<{
+  commandPayload: CommandPayload;
+  finalPayload: FinalPayload;
+}>;
+
+// Values developers can specify
+export type VerifyCommandInput = {
+  action: IDKitConfig['action'];
+  signal?: IDKitConfig['signal'];
+  verification_level?: VerificationLevel;
+};
+
+// Full list of values sent to the app
+export type VerifyCommandPayload = VerifyCommandInput & {
+  timestamp: string;
+};
+
+export type TokensPayload = {
+  symbol: Tokens;
+  token_amount: string;
+};
+
+export type PayCommandInput = {
+  reference: string;
+  to: string;
+  tokens: TokensPayload[];
+  network?: Network; // Optional
+  description: string;
+};
+
+export type PayCommandPayload = PayCommandInput;
+
+export type WalletAuthInput = {
+  nonce: string;
+  statement?: string;
+  requestId?: string;
+  expirationTime?: Date;
+  notBefore?: Date;
+};
+
+export type WalletAuthPayload = {
+  siweMessage: string;
+};
+
+export type MiniKitInstallReturnType =
+  | { success: true }
+  | {
+      success: false;
+      errorCode: MiniKitInstallErrorCodes;
+      errorMessage: (typeof MiniKitInstallErrorMessage)[MiniKitInstallErrorCodes];
+    };
+
+export type SendTransactionInput = {
+  transaction: Transaction[];
+  permit2?: Permit2[]; // Optional
+};
+
+export type SendTransactionPayload = SendTransactionInput;
+
+export type SignMessageInput = {
+  message: string;
+};
+
+export type SignMessagePayload = SignMessageInput;
+
+export type SignTypedDataInput = {
+  types: TypedData;
+  primaryType: string;
+  message: Record<string, unknown>;
+  domain?: TypedDataDomain;
+};
+
+export type SignTypedDataPayload = SignTypedDataInput;
+
+// Anchor: Share Contacts Payload
+export type ShareContactsInput = {
+  isMultiSelectEnabled: boolean;
+  inviteMessage?: string;
+};
+export type ShareContactsPayload = ShareContactsInput;
+
+// Anchor: Request Permission Payload
+export enum Permission {
+  Notifications = 'notifications',
+  Contacts = 'contacts',
+}
+
+export type RequestPermissionInput = {
+  permission: Permission;
+};
+
+export type RequestPermissionPayload = RequestPermissionInput;
+
+// Anchor: Get Permissions Payload
+export type GetPermissionsInput = {};
+
+export type GetPermissionsPayload = GetPermissionsInput;
+
+// Anchor: Send Haptic Feedback Payload
+export type SendHapticFeedbackInput =
+  | {
+      hapticsType: 'notification';
+      style: 'error' | 'success' | 'warning';
+    }
+  | {
+      hapticsType: 'selection-changed';
+      // never necessary or used but improves DX
+      style?: never;
+    }
+  | {
+      hapticsType: 'impact';
+      style: 'light' | 'medium' | 'heavy';
+    };
+
+export type SendHapticFeedbackPayload = SendHapticFeedbackInput;
+
+type CommandReturnPayloadMap = {
+  [Command.Verify]: VerifyCommandPayload;
+  [Command.Pay]: PayCommandPayload;
+  [Command.WalletAuth]: WalletAuthPayload;
+  [Command.SendTransaction]: SendTransactionPayload;
+  [Command.SignMessage]: SignMessagePayload;
+  [Command.SignTypedData]: SignTypedDataPayload;
+  [Command.ShareContacts]: ShareContactsPayload;
+  [Command.RequestPermission]: RequestPermissionPayload;
+  [Command.GetPermissions]: GetPermissionsPayload;
+  [Command.SendHapticFeedback]: SendHapticFeedbackPayload;
+};
+export type CommandReturnPayload<T extends Command> =
+  T extends keyof CommandReturnPayloadMap ? CommandReturnPayloadMap[T] : never;
+
+
+
+================================================
+File: packages/core/types/errors.ts
+================================================
+import { AppErrorCodes } from '@worldcoin/idkit-core';
+
+export { AppErrorCodes as VerificationErrorCodes } from '@worldcoin/idkit-core';
+
+export const VerificationErrorMessage: Record<AppErrorCodes, string> = {
+  [AppErrorCodes.VerificationRejected]:
+    "You've cancelled the request in World App.",
+  [AppErrorCodes.MaxVerificationsReached]:
+    'You have already verified the maximum number of times for this action.',
+  [AppErrorCodes.CredentialUnavailable]:
+    'It seems you do not have the verification level required by this app.',
+  [AppErrorCodes.MalformedRequest]:
+    'There was a problem with this request. Please try again or contact the app owner.',
+  [AppErrorCodes.InvalidNetwork]:
+    'Invalid network. If you are the app owner, visit docs.worldcoin.org/test for details.',
+  [AppErrorCodes.InclusionProofFailed]:
+    'There was an issue fetching your credential. Please try again.',
+  [AppErrorCodes.InclusionProofPending]:
+    'Your identity is still being registered. Please wait a few minutes and try again.',
+  [AppErrorCodes.UnexpectedResponse]:
+    'Unexpected response from your wallet. Please try again.',
+  [AppErrorCodes.FailedByHostApp]:
+    'Verification failed by the app. Please contact the app owner for details.',
+  [AppErrorCodes.GenericError]:
+    'Something unexpected went wrong. Please try again.',
+  [AppErrorCodes.ConnectionFailed]:
+    'Connection to your wallet failed. Please try again.',
+};
+
+export enum PaymentErrorCodes {
+  InputError = 'input_error',
+  UserRejected = 'user_rejected',
+  PaymentRejected = 'payment_rejected',
+  InvalidReceiver = 'invalid_receiver',
+  InsufficientBalance = 'insufficient_balance',
+  TransactionFailed = 'transaction_failed',
+  GenericError = 'generic_error',
+  UserBlocked = 'user_blocked',
+}
+
+export const PaymentErrorMessage: Record<PaymentErrorCodes, string> = {
+  [PaymentErrorCodes.InputError]:
+    'There was a problem with this request. Please try again or contact the app owner.',
+  [PaymentErrorCodes.UserRejected]:
+    'You have cancelled the payment in World App.',
+  [PaymentErrorCodes.PaymentRejected]:
+    "You've cancelled the payment in World App.",
+  [PaymentErrorCodes.InvalidReceiver]:
+    'The receiver address is invalid. Please contact the app owner.',
+  [PaymentErrorCodes.InsufficientBalance]:
+    'You do not have enough balance to complete this transaction.',
+  [PaymentErrorCodes.TransactionFailed]:
+    'The transaction failed. Please try again.',
+  [PaymentErrorCodes.GenericError]:
+    'Something unexpected went wrong. Please try again.',
+  [PaymentErrorCodes.UserBlocked]:
+    "User's region is blocked from making payments.",
+};
+
+export enum PaymentValidationErrors {
+  MalformedRequest = 'There was a problem with this request. Please try again or contact the app owner.',
+  InvalidTokenAddress = 'The token address is invalid. Please contact the app owner.',
+  InvalidAppId = 'The app ID is invalid. Please contact the app owner.',
+  DuplicateReference = 'This reference ID already exists please generate a new one and try again.',
+}
+
+export enum WalletAuthErrorCodes {
+  MalformedRequest = 'malformed_request',
+  UserRejected = 'user_rejected',
+  GenericError = 'generic_error',
+}
+
+export const WalletAuthErrorMessage = {
+  [WalletAuthErrorCodes.MalformedRequest]:
+    'Provided parameters in the request are invalid.',
+  [WalletAuthErrorCodes.UserRejected]: 'User rejected the request.',
+  [WalletAuthErrorCodes.GenericError]: 'Something unexpected went wrong.',
+};
+
+export enum SendTransactionErrorCodes {
+  InvalidOperation = 'invalid_operation',
+  UserRejected = 'user_rejected',
+  InputError = 'input_error',
+  SimulationFailed = 'simulation_failed',
+  TransactionFailed = 'transaction_failed',
+  GenericError = 'generic_error',
+  DisallowedOperation = 'disallowed_operation',
+  InvalidContract = 'invalid_contract',
+  MaliciousOperation = 'malicious_operation',
+  DailyTxLimitReached = 'daily_tx_limit_reached',
+  PermittedAmountExceedsSlippage = 'permitted_amount_exceeds_slippage',
+  PermittedAmountNotFound = 'permitted_amount_not_found',
+}
+
+export const SendTransactionErrorMessage: Record<
+  SendTransactionErrorCodes,
+  string
+> = {
+  [SendTransactionErrorCodes.InvalidOperation]:
+    'Transaction included an operation that was invalid',
+  [SendTransactionErrorCodes.UserRejected]: 'User rejected the request.',
+  [SendTransactionErrorCodes.InputError]: 'Invalid payload.',
+  [SendTransactionErrorCodes.SimulationFailed]:
+    'The transaction simulation failed.',
+  [SendTransactionErrorCodes.TransactionFailed]:
+    'The transaction failed. Please try again later.',
+  [SendTransactionErrorCodes.GenericError]:
+    'Something unexpected went wrong. Please try again.',
+  [SendTransactionErrorCodes.DisallowedOperation]:
+    'The operation requested is not allowed. Please refer to the docs.',
+  [SendTransactionErrorCodes.InvalidContract]:
+    'The contract address is not allowed for your application. Please check your developer portal configurations',
+  [SendTransactionErrorCodes.MaliciousOperation]:
+    'The operation requested is considered malicious.',
+  [SendTransactionErrorCodes.DailyTxLimitReached]:
+    'Daily transaction limit reached. Max 100 transactions per day. Wait until the next day.',
+  [SendTransactionErrorCodes.PermittedAmountExceedsSlippage]:
+    'Permitted amount exceeds slippage. You must spend at least 90% of the permitted amount.',
+  [SendTransactionErrorCodes.PermittedAmountNotFound]:
+    'Permitted amount not found in permit2 payload.',
+};
+
+export enum SignMessageErrorCodes {
+  InvalidMessage = 'invalid_message',
+  UserRejected = 'user_rejected',
+  GenericError = 'generic_error',
+}
+
+export const SignMessageErrorMessage = {
+  [SignMessageErrorCodes.InvalidMessage]: 'Invalid message requested',
+  [SignMessageErrorCodes.UserRejected]: 'User rejected the request.',
+  [SignMessageErrorCodes.GenericError]: 'Something unexpected went wrong.',
+};
+
+export enum SignTypedDataErrorCodes {
+  InvalidOperation = 'invalid_operation',
+  UserRejected = 'user_rejected',
+  InputError = 'input_error',
+  SimulationFailed = 'simulation_failed',
+  GenericError = 'generic_error',
+  DisallowedOperation = 'disallowed_operation',
+  InvalidContract = 'invalid_contract',
+  MaliciousOperation = 'malicious_operation',
+}
+
+export const SignTypedDataErrorMessage = {
+  [SignTypedDataErrorCodes.InvalidOperation]:
+    'Transaction included an operation that was invalid',
+  [SignTypedDataErrorCodes.UserRejected]: 'User rejected the request.',
+  [SignTypedDataErrorCodes.InputError]: 'Invalid payload.',
+  [SignTypedDataErrorCodes.SimulationFailed]:
+    'The transaction simulation failed.',
+  [SignTypedDataErrorCodes.GenericError]:
+    'Something unexpected went wrong. Please try again.',
+  [SignTypedDataErrorCodes.DisallowedOperation]:
+    'The operation requested is not allowed. Please refer to the docs.',
+  [SignTypedDataErrorCodes.InvalidContract]:
+    'The contract address is not allowed for your application. Please check your developer portal configurations',
+  [SignTypedDataErrorCodes.MaliciousOperation]:
+    'The operation requested is considered malicious.',
+};
+
+export enum MiniKitInstallErrorCodes {
+  Unknown = 'unknown',
+  AlreadyInstalled = 'already_installed',
+  OutsideOfWorldApp = 'outside_of_worldapp',
+  NotOnClient = 'not_on_client',
+  AppOutOfDate = 'app_out_of_date',
+}
+
+export const MiniKitInstallErrorMessage = {
+  [MiniKitInstallErrorCodes.Unknown]: 'Failed to install MiniKit.',
+  [MiniKitInstallErrorCodes.AlreadyInstalled]: 'MiniKit is already installed.',
+  [MiniKitInstallErrorCodes.OutsideOfWorldApp]:
+    'MiniApp launched outside of WorldApp.',
+  [MiniKitInstallErrorCodes.NotOnClient]: 'Window object is not available.',
+  [MiniKitInstallErrorCodes.AppOutOfDate]:
+    'WorldApp is out of date. Please update the app.',
+};
+
+export enum ShareContactsErrorCodes {
+  UserRejected = 'user_rejected',
+  GenericError = 'generic_error',
+}
+
+export const ShareContactsErrorMessage = {
+  [ShareContactsErrorCodes.UserRejected]: 'User rejected the request.',
+  [ShareContactsErrorCodes.GenericError]: 'Something unexpected went wrong.',
+};
+
+export enum RequestPermissionErrorCodes {
+  UserRejected = 'user_rejected',
+  GenericError = 'generic_error',
+  AlreadyRequested = 'already_requested',
+  PermissionDisabled = 'permission_disabled',
+  AlreadyGranted = 'already_granted',
+  UnsupportedPermission = 'unsupported_permission',
+}
+
+export const RequestPermissionErrorMessage = {
+  [RequestPermissionErrorCodes.UserRejected]: 'User declined sharing contacts',
+  [RequestPermissionErrorCodes.GenericError]:
+    'Request failed for unknown reason.',
+  [RequestPermissionErrorCodes.AlreadyRequested]:
+    'User has already declined turning on notifications once',
+  [RequestPermissionErrorCodes.PermissionDisabled]:
+    'User does not have this permission enabled in World App',
+  [RequestPermissionErrorCodes.AlreadyGranted]:
+    'If the user has already granted this mini app permission',
+  [RequestPermissionErrorCodes.UnsupportedPermission]:
+    'The permission requested is not supported by this mini app',
+};
+
+export enum GetPermissionsErrorCodes {
+  GenericError = 'generic_error',
+}
+
+export const GetPermissionsErrorMessage = {
+  [GetPermissionsErrorCodes.GenericError]:
+    'Something unexpected went wrong. Please try again.',
+};
+
+export enum SendHapticFeedbackErrorCodes {
+  GenericError = 'generic_error',
+  UserRejected = 'user_rejected',
+}
+
+export const SendHapticFeedbackErrorMessage = {
+  [SendHapticFeedbackErrorCodes.GenericError]:
+    'Something unexpected went wrong.',
+  [SendHapticFeedbackErrorCodes.UserRejected]: 'User rejected the request.',
+};
+
+
+
+================================================
+File: packages/core/types/payment.ts
+================================================
+export enum Tokens {
+  USDCE = 'USDCE',
+  WLD = 'WLD',
+}
+
+export const TokenDecimals: { [key in Tokens]: number } = {
+  [Tokens.USDCE]: 6,
+  [Tokens.WLD]: 18,
+};
+
+export enum Network {
+  Optimism = 'optimism',
+  WorldChain = 'worldchain',
+}
+
+
+
+================================================
+File: packages/core/types/responses.ts
+================================================
+import { VerificationLevel } from '@worldcoin/idkit-core';
+import { Permission } from './commands';
+import {
+  GetPermissionsErrorCodes,
+  PaymentErrorCodes,
+  RequestPermissionErrorCodes,
+  SendHapticFeedbackErrorCodes,
+  SendTransactionErrorCodes,
+  ShareContactsErrorCodes,
+  SignMessageErrorCodes,
+  SignTypedDataErrorCodes,
+  VerificationErrorCodes,
+  WalletAuthErrorCodes,
+  WalletAuthErrorMessage,
+} from './errors';
+import { Network } from './payment';
+
+export enum ResponseEvent {
+  MiniAppVerifyAction = 'miniapp-verify-action',
+  MiniAppPayment = 'miniapp-payment',
+  MiniAppWalletAuth = 'miniapp-wallet-auth',
+  MiniAppSendTransaction = 'miniapp-send-transaction',
+  MiniAppSignMessage = 'miniapp-sign-message',
+  MiniAppSignTypedData = 'miniapp-sign-typed-data',
+  MiniAppShareContacts = 'miniapp-share-contacts',
+  MiniAppRequestPermission = 'miniapp-request-permission',
+  MiniAppGetPermissions = 'miniapp-get-permissions',
+  MiniAppSendHapticFeedback = 'miniapp-send-haptic-feedback',
+}
+
+export type MiniAppVerifyActionSuccessPayload = {
+  status: 'success';
+  proof: string;
+  merkle_root: string;
+  nullifier_hash: string;
+  verification_level: VerificationLevel;
+  version: number;
+};
+
+export type MiniAppVerifyActionErrorPayload = {
+  status: 'error';
+  error_code: VerificationErrorCodes;
+  version: number;
+};
+
+export type MiniAppVerifyActionPayload =
+  | MiniAppVerifyActionSuccessPayload
+  | MiniAppVerifyActionErrorPayload;
+
+export type MiniAppPaymentSuccessPayload = {
+  status: 'success';
+  transaction_status: 'submitted';
+  transaction_id: string;
+  reference: string;
+  from: string;
+  chain: Network;
+  timestamp: string;
+  version: number;
+};
+
+export type MiniAppPaymentErrorPayload = {
+  status: 'error';
+  error_code: PaymentErrorCodes;
+  version: number;
+};
+
+export type MiniAppPaymentPayload =
+  | MiniAppPaymentSuccessPayload
+  | MiniAppPaymentErrorPayload;
+
+export type MiniAppWalletAuthSuccessPayload = {
+  status: 'success';
+  message: string;
+  signature: string;
+  address: string;
+  version: number;
+};
+
+export type MiniAppWalletAuthErrorPayload = {
+  status: 'error';
+  error_code: WalletAuthErrorCodes;
+  details: (typeof WalletAuthErrorMessage)[WalletAuthErrorCodes];
+  version: number;
+};
+
+export type MiniAppWalletAuthPayload =
+  | MiniAppWalletAuthSuccessPayload
+  | MiniAppWalletAuthErrorPayload;
+
+export type MiniAppSendTransactionSuccessPayload = {
+  status: 'success';
+  transaction_status: 'submitted';
+  transaction_id: string;
+  reference: string;
+  from: string;
+  chain: Network;
+  timestamp: string;
+  version: number;
+  mini_app_id?: string;
+};
+
+export type MiniAppSendTransactionErrorPayload = {
+  status: 'error';
+  error_code: SendTransactionErrorCodes;
+  details?: Record<string, any>;
+  version: number;
+  mini_app_id?: string;
+};
+
+export type MiniAppSendTransactionPayload =
+  | MiniAppSendTransactionSuccessPayload
+  | MiniAppSendTransactionErrorPayload;
+
+export type MiniAppSignMessageSuccessPayload = {
+  status: 'success';
+  signature: string;
+  address: string;
+  version: number;
+};
+
+export type MiniAppSignMessageErrorPayload = {
+  status: 'error';
+  error_code: SignMessageErrorCodes;
+  details?: Record<string, any>;
+  version: number;
+};
+
+export type MiniAppSignMessagePayload =
+  | MiniAppSignMessageSuccessPayload
+  | MiniAppSignMessageErrorPayload;
+
+export type MiniAppSignTypedDataSuccessPayload = {
+  status: 'success';
+  signature: string;
+  address: string;
+  version: number;
+};
+
+export type MiniAppSignTypedDataErrorPayload = {
+  status: 'error';
+  error_code: SignTypedDataErrorCodes;
+  details?: Record<string, any>;
+  version: number;
+};
+
+export type MiniAppSignTypedDataPayload =
+  | MiniAppSignTypedDataSuccessPayload
+  | MiniAppSignTypedDataErrorPayload;
+
+// Anchor: Share Contacts Payload
+export type Contact = {
+  username: string;
+  walletAddress: string;
+  profilePictureUrl: string | null;
+};
+
+export type MiniAppShareContactsSuccessPayload = {
+  status: 'success';
+  contacts: Contact[];
+  version: number;
+  timestamp: string;
+};
+
+export type MiniAppShareContactsErrorPayload = {
+  status: 'error';
+  error_code: ShareContactsErrorCodes;
+  version: number;
+};
+
+export type MiniAppShareContactsPayload =
+  | MiniAppShareContactsSuccessPayload
+  | MiniAppShareContactsErrorPayload;
+
+// Anchor: Request Permission Payload
+export type MiniAppRequestPermissionSuccessPayload = {
+  status: 'success';
+  permission: Permission;
+  timestamp: string;
+  version: number;
+};
+
+export type MiniAppRequestPermissionErrorPayload = {
+  status: 'error';
+  error_code: RequestPermissionErrorCodes;
+  description: string;
+  version: number;
+};
+
+export type MiniAppRequestPermissionPayload =
+  | MiniAppRequestPermissionSuccessPayload
+  | MiniAppRequestPermissionErrorPayload;
+
+// Anchor: Get Permissions Payload
+
+export type PermissionSettings = {
+  [K in Permission]?: any;
+};
+
+export type MiniAppGetPermissionsSuccessPayload = {
+  status: 'success';
+  permissions: PermissionSettings;
+  version: number;
+  timestamp: string;
+};
+
+export type MiniAppGetPermissionsErrorPayload = {
+  status: 'error';
+  error_code: GetPermissionsErrorCodes;
+  details: string;
+  version: number;
+};
+
+export type MiniAppGetPermissionsPayload =
+  | MiniAppGetPermissionsSuccessPayload
+  | MiniAppGetPermissionsErrorPayload;
+
+export type MiniAppSendHapticFeedbackSuccessPayload = {
+  status: 'success';
+  version: number;
+  timestamp: string;
+};
+
+export type MiniAppSendHapticFeedbackErrorPayload = {
+  status: 'error';
+  error_code: SendHapticFeedbackErrorCodes;
+  version: number;
+};
+
+export type MiniAppSendHapticFeedbackPayload =
+  | MiniAppSendHapticFeedbackSuccessPayload
+  | MiniAppSendHapticFeedbackErrorPayload;
+
+type EventPayloadMap = {
+  [ResponseEvent.MiniAppVerifyAction]: MiniAppVerifyActionPayload;
+  [ResponseEvent.MiniAppPayment]: MiniAppPaymentPayload;
+  [ResponseEvent.MiniAppWalletAuth]: MiniAppWalletAuthPayload;
+  [ResponseEvent.MiniAppSendTransaction]: MiniAppSendTransactionPayload;
+  [ResponseEvent.MiniAppSignMessage]: MiniAppSignMessagePayload;
+  [ResponseEvent.MiniAppSignTypedData]: MiniAppSignTypedDataPayload;
+  [ResponseEvent.MiniAppShareContacts]: MiniAppShareContactsPayload;
+  [ResponseEvent.MiniAppRequestPermission]: MiniAppRequestPermissionPayload;
+  [ResponseEvent.MiniAppGetPermissions]: MiniAppGetPermissionsPayload;
+  [ResponseEvent.MiniAppSendHapticFeedback]: MiniAppSendHapticFeedbackPayload;
+};
+
+export type EventPayload<T extends ResponseEvent = ResponseEvent> =
+  T extends keyof EventPayloadMap ? EventPayloadMap[T] : never;
+
+export type EventHandler<E extends ResponseEvent = ResponseEvent> = <
+  T extends EventPayload<E>,
+>(
+  data: T,
+) => void;
+
+
+
+================================================
+File: packages/core/types/transactions.ts
+================================================
+import type {
+  Abi,
+  AbiParametersToPrimitiveTypes,
+  AbiStateMutability,
+  ExtractAbiFunction,
+  ExtractAbiFunctionNames,
+} from 'abitype';
+
+export type Permit2 = {
+  permitted: {
+    token: string;
+    amount: string | unknown;
+  };
+  spender: string;
+  nonce: string | unknown;
+  deadline: string | unknown;
+};
+
+export type Transaction = {
+  address: string;
+  abi: Abi | readonly unknown[];
+  functionName: ContractFunctionName<
+    Abi | readonly unknown[],
+    'payable' | 'nonpayable'
+  >;
+  value?: string | undefined;
+  args: ContractFunctionArgs<
+    Abi | readonly unknown[],
+    'payable' | 'nonpayable',
+    ContractFunctionName<Abi | readonly unknown[], 'payable' | 'nonpayable'>
+  >;
+};
+
+export type ContractFunctionName<
+  abi extends Abi | readonly unknown[] = Abi,
+  mutability extends AbiStateMutability = AbiStateMutability,
+> =
+  ExtractAbiFunctionNames<
+    abi extends Abi ? abi : Abi,
+    mutability
+  > extends infer functionName extends string
+    ? [functionName] extends [never]
+      ? string
+      : functionName
+    : string;
+
+export type ContractFunctionArgs<
+  abi extends Abi | readonly unknown[] = Abi,
+  mutability extends AbiStateMutability = AbiStateMutability,
+  functionName extends ContractFunctionName<
+    abi,
+    mutability
+  > = ContractFunctionName<abi, mutability>,
+> =
+  AbiParametersToPrimitiveTypes<
+    ExtractAbiFunction<
+      abi extends Abi ? abi : Abi,
+      functionName,
+      mutability
+    >['inputs'],
+    'inputs'
+  > extends infer args
+    ? [args] extends [never]
+      ? readonly unknown[]
+      : args
+    : readonly unknown[];
+
+
+
+================================================
+File: packages/core/types/user.ts
+================================================
+export type User = {
+  walletAddress: string;
+  username: string | null;
+  profilePictureUrl: string | null;
+};
+
+
+
+================================================
+File: packages/core/types/wallet-auth.ts
+================================================
+export type SiweMessage = {
+  scheme?: string;
+  domain: string;
+  address?: string;
+  statement?: string;
+  uri: string;
+  version: number;
+  chain_id: number;
+  nonce: string;
+  issued_at: string;
+  expiration_time?: string;
+  not_before?: string;
+  request_id?: string;
+};
+
+
+
+================================================
+File: packages/react/README.md
+================================================
+# minikit-react
+
+This package contains helper functions and components for building mini apps with React. This is not required to run a mini app and is only a convenience package for developers as it contains nice abstractions.
+
+## 🚀 Getting Started
+
+MiniKit is currently available on npm. To install, run:
+
+```
+pnpm i @worldcoin/minikit-react
+```
+
+For comprehensive setup instructions and usage examples, visit our [developer documentation](https://docs.world.org/mini-apps).
+
+## 🛠 ️Developing Locally
+
+To run the example mini app locally:
+
+```
+pnpm i
+cd demo/with-next
+pnpm dev
+```
+
+This will launch a demo mini app with all essential commands implemented, allowing you to explore and test the features.
+
+
+
+================================================
+File: packages/react/CHANGELOG.md
+================================================
+# Changelog
+
+## [1.7.0](https://github.com/worldcoin/minikit-js/compare/minikit-react-v1.6.2...minikit-react-v1.7.0) (2025-03-12)
+
+
+### Features
+
+* 1.6 Release (viem upgrade and eth support) ([#142](https://github.com/worldcoin/minikit-js/issues/142)) ([37175d8](https://github.com/worldcoin/minikit-js/commit/37175d8dfff7430d40e07193f8dbb148182dfb66))
+* isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.7.0
+
+## [1.6.0](https://github.com/worldcoin/minikit-js/compare/minikit-react-v1.5.0...minikit-react-v1.6.0) (2025-02-11)
+
+
+### Features
+
+* 1.6 Release (viem upgrade and eth support) ([#142](https://github.com/worldcoin/minikit-js/issues/142)) ([37175d8](https://github.com/worldcoin/minikit-js/commit/37175d8dfff7430d40e07193f8dbb148182dfb66))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.6.0
+
+## [1.5.0](https://github.com/worldcoin/minikit-js/compare/minikit-react-v1.4.0...minikit-react-v1.5.0) (2025-01-09)
+
+
+### Features
+
+* isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.5.0
+
+## [1.4.0](https://github.com/worldcoin/minikit-js/compare/react-v1.3.0...react-v1.4.0) (2024-12-03)
+
+
+### Features
+
+* isUserVerified helper & react bindings ([#118](https://github.com/worldcoin/minikit-js/issues/118)) ([ab8ba8d](https://github.com/worldcoin/minikit-js/commit/ab8ba8da23709a7e5ee4fad7620d91f011735c49))
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.4.0
+
+## [1.3.0](https://github.com/worldcoin/minikit-js/compare/react-v1.2.0...react-v1.3.0) (2024-11-26)
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.3.0
+
+## [1.2.0](https://github.com/worldcoin/minikit-js/compare/react-v1.1.1...react-v1.2.0) (2024-11-01)
+
+
+### Bug Fixes
+
+* Add Readmes to prepare for open source ([#84](https://github.com/worldcoin/minikit-js/issues/84)) ([4d2f5a0](https://github.com/worldcoin/minikit-js/commit/4d2f5a01a392d8ab7743747ce3ca5ba481999db5))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @worldcoin/minikit-js bumped to 1.2.0
+
+
+
+================================================
+File: packages/react/package.json
+================================================
+{
+  "name": "@worldcoin/minikit-react",
+  "version": "1.8.0",
+  "homepage": "https://docs.worldcoin.org/mini-apps",
+  "description": "minikit-react is a set of hooks for building mini-apps",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "require": {
+        "types": "./build/index.d.cts",
+        "default": "./build/index.cjs"
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./build/*/index.d.ts",
+        "./build/index.d.ts"
+      ]
+    }
+  },
+  "main": "index.ts",
+  "types": "index.ts",
+  "engines": {
+    "node": ">= 16"
+  },
+  "files": [
+    "./build/**",
+    "README.md"
+  ],
+  "keywords": [
+    "minikit",
+    "miniapps"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint ./ --ext .ts",
+    "prepublishOnly": "npm run build",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@worldcoin/minikit-js": "workspace:*",
+    "abitype": "^1.0.6",
+    "turbo": "^2.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-sort-imports-desc": "^1.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "viem": "2.23.5",
+    "react": "^18.2.0",
+    "@types/react": "^18.0.25",
+    "react-dom": "^18.2.0",
+    "@types/react-dom": "^18.0.9",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2"
+  },
+  "peerDependencies": {
+    "viem": "2.23.5",
+    "react": ">=18"
+  }
+}
+
+
+
+================================================
+File: packages/react/tsconfig.json
+================================================
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "react"],
+    "moduleResolution": "bundler",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@worldcoin/minikit-js": ["../core"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": ["node_modules", "build", ".turbo", "coverage"]
+}
+
+
+
+================================================
+File: packages/react/tsup.config.ts
+================================================
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  dts: true,
+  clean: true,
+  outDir: 'build',
+  format: ['esm', 'cjs'],
+  external: ['@worldcoin/idkit-core'],
+  entry: ['src/index.ts'],
+  define: { 'process.env.NODE_ENV': '"production"' },
+});
+
+
+
+================================================
+File: packages/react/src/index.ts
+================================================
+export { useIsUserVerified } from './address-book/is-verified';
+export * from './components';
+export { useWaitForTransactionReceipt } from './transaction/hooks';
+export * from './types/client';
+
+
+
+================================================
+File: packages/react/src/address-book/index.ts
+================================================
+export { useIsUserVerified } from './is-verified';
+
+
+
+================================================
+File: packages/react/src/address-book/is-verified.tsx
+================================================
+import { getIsUserVerified } from '@worldcoin/minikit-js';
+import { useEffect, useState } from 'react';
+
+/**
+ * Checks if a user is Orb verified
+ *
+ * @param walletAddress - The wallet address of the user
+ * @param rpcUrl - Your preferred RPC node URL, https://worldchain-mainnet.g.alchemy.com/public by default
+ */
+export const useIsUserVerified = (walletAddress: string, rpcUrl?: string) => {
+  const [isUserVerified, setIsUserVerified] = useState<boolean | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchIsUserVerified = async () => {
+      try {
+        const data = await getIsUserVerified(walletAddress);
+        setIsUserVerified(data);
+      } catch (err) {
+        setIsError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchIsUserVerified();
+  }, [walletAddress]);
+
+  return { isUserVerified, isLoading, isError };
+};
+
+
+
+================================================
+File: packages/react/src/components/index.ts
+================================================
+export {
+  UsernameSearch,
+  type GetSearchedUsernameResult,
+} from './username-search';
+
+
+
+================================================
+File: packages/react/src/components/username-search.tsx
+================================================
+const createDebounce = () => {
+  let timeoutId: NodeJS.Timeout;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return <T extends (...args: any) => any>(fn: T, delay: number) => {
+    return (...args: Parameters<T>) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        fn(...args);
+      }, delay);
+    };
+  };
+};
+
+const DEBOUNCE_DELAY_MS = 300;
+const debounce = createDebounce();
+
+type SearchUsernameResponseBodySuccess = Array<{
+  address: string;
+  profile_picture_url: string | null;
+  username: string;
+}>;
+
+export type GetSearchedUsernameResult = Awaited<
+  ReturnType<typeof getSearchedUsername>
+>;
+
+const getSearchedUsername = async (username: string) => {
+  const response = await fetch(
+    `https://usernames.worldcoin.org/api/v1/search/${username}`,
+  );
+
+  if (response.status === 200) {
+    const json = (await response.json()) as SearchUsernameResponseBodySuccess;
+    return { status: response.status, data: json };
+  }
+
+  return { status: response.status, error: 'Error fetching data' };
+};
+
+type Props = {
+  value: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setSearchedUsernames: (searchedUsernames: GetSearchedUsernameResult) => void;
+  className?: string;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+};
+
+/**
+ * Simple component that allows users to search for usernames.
+ *
+ * It is encouraged to build your own components, using this as a base/reference
+ *
+ * You can add more <input /> props/override existing ones by passing inputProps.
+ * Debounce delay is 300ms.
+ */
+export const UsernameSearch = ({
+  value,
+  handleChange,
+  setSearchedUsernames,
+  className,
+  inputProps,
+}: Props) => {
+  const debouncedSearch = debounce(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const username = e.target.value;
+      const data = await getSearchedUsername(username);
+
+      setSearchedUsernames(data);
+    },
+    DEBOUNCE_DELAY_MS,
+  );
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    debouncedSearch(e);
+    handleChange(e);
+  };
+
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      className={className || 'rounded-md border-black border-2'}
+      {...inputProps}
+    />
+  );
+};
+
+
+
+================================================
+File: packages/react/src/transaction/hooks.ts
+================================================
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  type Account,
+  type Address,
+  type Chain,
+  type ParseAccount,
+  type PublicClient,
+  type RpcSchema,
+  type TransactionReceipt,
+  type Transport,
+} from 'viem';
+import { fetchTransactionHash } from '.';
+import { AppConfig } from '../types/client';
+
+interface UseTransactionReceiptOptions<
+  transport extends Transport = Transport,
+  chain extends Chain | undefined = Chain | undefined,
+  accountOrAddress extends Account | Address | undefined = undefined,
+  rpcSchema extends RpcSchema | undefined = undefined,
+> {
+  client: PublicClient<
+    transport,
+    chain,
+    ParseAccount<accountOrAddress>,
+    rpcSchema
+  >;
+  appConfig: AppConfig;
+  transactionId: string;
+  confirmations?: number;
+  timeout?: number;
+  pollingInterval?: number;
+}
+
+interface UseTransactionReceiptResult {
+  transactionHash?: `0x${string}`;
+  receipt?: TransactionReceipt;
+  isError: boolean;
+  isLoading: boolean;
+  isSuccess: boolean;
+  error?: Error;
+  retrigger: () => void;
+}
+
+export function useWaitForTransactionReceipt<
+  transport extends Transport = Transport,
+  chain extends Chain | undefined = Chain | undefined,
+  accountOrAddress extends Account | Address | undefined = undefined,
+  rpcSchema extends RpcSchema | undefined = undefined,
+>(
+  options: UseTransactionReceiptOptions<
+    transport,
+    chain,
+    accountOrAddress,
+    rpcSchema
+  >,
+): UseTransactionReceiptResult {
+  const {
+    client,
+    appConfig: _appConfig,
+    transactionId,
+    confirmations = 1,
+    timeout,
+    pollingInterval = 4000,
+  } = options;
+
+  const appConfig = useMemo(() => _appConfig, [_appConfig]);
+
+  const [transactionHash, setTransactionHash] = useState<
+    `0x${string}` | undefined
+  >(undefined);
+  const [receipt, setReceipt] = useState<TransactionReceipt | undefined>(
+    undefined,
+  );
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [error, setError] = useState<Error | undefined>(undefined);
+  const [pollCount, setPollCount] = useState<number>(0);
+
+  const retrigger = useCallback(() => {
+    reset();
+    setIsLoading(false);
+    setPollCount((count) => count + 1);
+  }, []);
+
+  const reset = useCallback(() => {
+    setTransactionHash(undefined);
+    setReceipt(undefined);
+    setIsError(false);
+    setError(undefined);
+  }, []);
+
+  const fetchStatus = useCallback(async () => {
+    return await fetchTransactionHash(appConfig, transactionId);
+  }, [appConfig, transactionId]);
+
+  useEffect(() => {
+    if (!transactionId) {
+      setIsLoading(false);
+      return;
+    }
+
+    reset();
+    setIsLoading(true);
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+    let timeoutId: NodeJS.Timeout | null = null;
+
+    const pollHash = async () => {
+      if (signal.aborted) return;
+
+      try {
+        const status = await fetchStatus();
+
+        if (signal.aborted) return;
+
+        if (!status.transactionHash) {
+          timeoutId = setTimeout(pollHash, pollingInterval);
+        } else if (status.transactionHash) {
+          setTransactionHash(status.transactionHash);
+          setIsLoading(false);
+        } else {
+          timeoutId = setTimeout(pollHash, pollingInterval);
+        }
+      } catch (err) {
+        if (signal.aborted) return;
+        setIsError(true);
+        setError(err instanceof Error ? err : new Error(String(err)));
+        setIsLoading(false);
+      }
+    };
+
+    pollHash();
+
+    return () => {
+      abortController.abort();
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [transactionId, pollCount]);
+
+  useEffect(() => {
+    if (!transactionHash) return;
+    if (receipt) return;
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    const fetchReceipt = async () => {
+      try {
+        const txnReceipt = await client.waitForTransactionReceipt({
+          hash: transactionHash,
+          confirmations,
+          timeout,
+        });
+        if (signal.aborted) return;
+        setReceipt(txnReceipt);
+      } catch (err) {
+        if (signal.aborted) return;
+        setIsError(true);
+        setError(err instanceof Error ? err : new Error(String(err)));
+      }
+    };
+
+    fetchReceipt();
+
+    return () => {
+      abortController.abort();
+    };
+  }, [transactionHash, confirmations, timeout, client]);
+
+  const isSuccess = receipt !== undefined && receipt.status === 'success';
+
+  return {
+    transactionHash,
+    receipt,
+    isError,
+    isLoading,
+    isSuccess,
+    error,
+    retrigger,
+  };
+}
+
+
+
+================================================
+File: packages/react/src/transaction/index.ts
+================================================
+import { AppConfig } from 'src/types/client';
+
+export interface TransactionStatus {
+  transactionHash: `0x${string}`;
+  transactionStatus: 'pending' | 'mined' | 'failed';
+}
+
+export async function fetchTransactionHash(
+  appConfig: AppConfig,
+  transactionId: string,
+): Promise<TransactionStatus> {
+  try {
+    const response = await fetch(
+      `https://developer.worldcoin.org/api/v2/minikit/transaction/${transactionId}?app_id=${appConfig.app_id}&type=transaction`,
+      {
+        method: 'GET',
+      },
+    );
+
+    console.log('Received response:', response.url);
+    if (!response.ok) {
+      throw new Error('Failed to fetch transaction status');
+    }
+
+    const data: TransactionStatus = await response.json();
+    return data;
+  } catch (error) {
+    console.log('Error fetching transaction status', error);
+    throw new Error('Failed to fetch transaction status');
+  }
+}
+
+
+
+================================================
+File: packages/react/src/types/client.ts
+================================================
+export type AppConfig = {
+  app_id: string;
+};
+
+
+
+================================================
+File: .github/dependabot.yml
+================================================
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 10
+    reviewers:
+      - 'andy-t-wang'
+      - 'michalstruck'
+    assignees:
+      - 'andy-t-wang'
+      - 'michalstruck'
+
+
+
+================================================
+File: .github/pull_request_template.md
+================================================
+## PR Type
+
+- [ ] Regular Task
+- [ ] Bug Fix
+- [ ] QA Tests
+
+## Description
+
+<!---
+Describe what has been changed or added in this PR.
+
+Please add enough context for:
+1) A reviewer to understand the change
+2) Other engineers trying to figure out why this code exists in the future
+-->
+
+## Checklist
+
+<!-- Check all that apply and leave empty those that don't. -->
+
+- [ ] I have self-reviewed this PR.
+- [ ] I have left comments in the code for clarity.
+- [ ] I have added necessary unit tests.
+- [ ] I have updated the documentation as needed.
+
+
+
+================================================
+File: .github/workflows/ci.yml
+================================================
+name: CI
+on:
+  - pull_request
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.9.0
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run lint
+        run: pnpm lint
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.9.0
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm turbo run build
+
+      - name: Run typecheck
+        run: pnpm type-check
+
+  run-tests:
+    name: Run Tests
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: packages/core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.9.0
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: ./
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm test
+
+
+
+================================================
+File: .github/workflows/create-manifest.yml
+================================================
+name: Create Manifest PR
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-manifest-pr:
+    name: Create or Update Manifest PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create/Update Manifest PR
+        id: manifest
+        uses: google-github-actions/release-please-action@v3
+        with:
+          command: manifest
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          monorepo-tags: true
+          release-type: node
+
+
+================================================
+File: .github/workflows/release.yml
+================================================
+name: New Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create Release
+        id: release
+        uses: google-github-actions/release-please-action@v3
+        with:
+          command: release        # Use release to actually create the release
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          monorepo-tags: true
+          release-type: node
+
+      - name: Debug Output
+        run: echo "Release Created - ${{ steps.release.outputs.release_created }}"
+
+  publish-npm:
+    needs: release
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.release_created == 'true' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: "9.9.0"
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: pnpm
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish Core to npm
+        working-directory: ./packages/core
+        run: pnpm publish --report-summary --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish React to npm
+        working-directory: ./packages/react
+        run: pnpm publish --report-summary --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-github:
+    needs: release
+    name: Publish to GitHub Package Registry
+    runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.release_created == 'true' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: "9.9.0"
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: pnpm
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish Core to GitHub
+        working-directory: ./packages/core
+        run: pnpm publish --report-summary --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Publish React to GitHub
+        working-directory: ./packages/react
+        run: pnpm publish --report-summary --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+
+
+================================================
+File: .github/workflows/relyance-sci.yml
+================================================
+name: Relyance SCI Scan
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+jobs:
+  execute-relyance-sci:
+    name: Relyance SCI Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull and run SCI binary
+        run: |-
+          docker pull gcr.io/relyance-ext/compliance_inspector:release && \
+          docker run --rm -v `pwd`:/repo --env API_KEY='${{ secrets.DPP_SCI_KEY }}' gcr.io/relyance-ext/compliance_inspector:release
+
+
