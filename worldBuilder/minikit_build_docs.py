@@ -3,7 +3,7 @@ import re
 import tiktoken
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-
+import sys
 # LangChain / Vector Store imports
 from langchain_community.document_loaders import RecursiveUrlLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -11,6 +11,12 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import SKLearnVectorStore
 
 load_dotenv()
+
+if not os.getenv("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY") == "your_openai_api_key_here":
+    print("Error: OPENAI_API_KEY is not set or is still the default value.")
+    print("Please set your OpenAI API key in the .env file located in the worldBuilder directory.")
+    print("Example: OPENAI_API_KEY=sk-yourapikey")
+    sys.exit(1)
 
 def bs4_extractor(html: str) -> str:
     soup = BeautifulSoup(html, "lxml")
