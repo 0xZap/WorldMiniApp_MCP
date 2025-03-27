@@ -9,7 +9,15 @@ from langchain_community.vectorstores import SKLearnVectorStore
 
 BASE_PATH = os.path.dirname(__file__)
 
-mcp = FastMCP("World-MCP-Server")
+port = int(os.environ.get("PORT", "8080"))
+        
+mcp = FastMCP(
+    "World-MCP-Server",
+    host="0.0.0.0",
+    port=port,
+    debug=True,
+    log_level="INFO",
+)
 
 ###############################################################################
 # World UI Kit Query Tool
