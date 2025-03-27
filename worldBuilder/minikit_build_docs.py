@@ -12,6 +12,9 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import SKLearnVectorStore
 from langchain.docstore.document import Document
 
+# Load environment variables from .env file
+load_dotenv()
+
 def bs4_extractor(html: str) -> str:
     soup = BeautifulSoup(html, "lxml")
     # Attempt to target the main <article> content

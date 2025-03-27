@@ -6,8 +6,16 @@ from mcp.server.fastmcp import FastMCP
 # For retrieving from the local vector store:
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import SKLearnVectorStore
+from dotenv import load_dotenv
 
 BASE_PATH = os.path.dirname(__file__)
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get API key from environment variable (or set it manually below)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 port = int(os.environ.get("PORT", "8080"))
         
