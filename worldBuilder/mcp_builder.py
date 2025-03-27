@@ -19,19 +19,19 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 port = int(os.environ.get("PORT", "8080"))
         
-# mcp = FastMCP(
-#     "World-MCP-Server",
-#     host="0.0.0.0",
-#     port=port,
-#     debug=True,
-#     log_level="INFO",
-# )
-
 mcp = FastMCP(
     "World-MCP-Server",
+    host="0.0.0.0",
+    port=port,
     debug=True,
     log_level="INFO",
 )
+
+# mcp = FastMCP(
+#     "World-MCP-Server",
+#     debug=True,
+#     log_level="INFO",
+# )
 
 ###############################################################################
 # World UI Kit Query Tool
@@ -186,9 +186,9 @@ def main():
     This function is called when the server is run as a CLI script.
     """
     # Check if running in GCP/Docker environment
-    # mcp.run(transport="sse")
+    mcp.run(transport="sse")
     
-    mcp.run(transport="stdio")
+    # mcp.run(transport="stdio")
 
 if __name__ == "__main__":
     main()
