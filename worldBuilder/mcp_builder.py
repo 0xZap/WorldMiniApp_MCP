@@ -164,16 +164,7 @@ def main():
     This function is called when the server is run as a CLI script.
     """
     # Check if running in GCP/Docker environment
-    is_production = os.environ.get("PORT") is not None
-    
-    if is_production:
-        # Get port from environment variable for GCP
-        port = int(os.environ.get("PORT", 8080))
-        # Run as HTTP server for production
-        mcp.run(transport="http", port=port, host="0.0.0.0")
-    else:
-        # Default for local development
-        mcp.run(transport="stdio")
+    mcp.run(transport="see")
 
 if __name__ == "__main__":
     main()
