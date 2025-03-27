@@ -12,11 +12,7 @@ from langchain_community.vectorstores import SKLearnVectorStore
 
 load_dotenv()
 
-if not os.getenv("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY") == "your_openai_api_key_here":
-    print("Error: OPENAI_API_KEY is not set or is still the default value.")
-    print("Please set your OpenAI API key in the .env file located in the worldBuilder directory.")
-    print("Example: OPENAI_API_KEY=sk-yourapikey")
-    sys.exit(1)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def bs4_extractor(html: str) -> str:
     soup = BeautifulSoup(html, "lxml")
