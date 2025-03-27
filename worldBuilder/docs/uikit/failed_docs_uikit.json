@@ -1,0 +1,776 @@
+[
+  {
+    "content": "export interface BulletListItemProps extends ComponentProps<\"div\"> {\n  children?: ReactNode;\n  bulletPoint: ReactNode;\n}\n\n=== USAGE EXPLANATION ===\n1. What this component does or represents:\n\u2003\u2022 This code defines an interface called BulletListItemProps for a React component. The interface extends the default properties of a div element (via ComponentProps<\"div\">), meaning any standard HTML div attribute can also be passed in.\n\u2003\u2022 It specifically requires a prop named bulletPoint of type ReactNode,",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BulletListItem/BulletListItem.tsx"
+    }
+  },
+  {
+    "content": "export const BulletListItem = forwardRef<HTMLDivElement, BulletListItemProps>(\n  ({ children, className, bulletPoint, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        className={cn(\"grid grid-cols-[auto_1fr] gap-x-3 items-center\", className)}\n        {...props}\n      >\n        {bulletPoint}\n        <Typography className=\"text-gray-500\">{children}</Typography>\n      </div>\n    );\n  },\n);\n\nBulletListItem.displayName = \"BulletListItem\";\n\n=== USAGE EXPLANATION ===\n1. What It D",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BulletListItem/BulletListItem.tsx"
+    }
+  },
+  {
+    "content": "export interface RadioGroupItemProps extends Omit<RadixRadioGroupItemProps, \"className\"> {\n  /**\n   * The value of the radio group item.\n   */\n  value: string;\n  /**\n   * When true, prevents the user from interacting with the radio item.\n   */\n  disabled?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2003\u2022 This interface defines the props for a radio group item component in a React and TypeScript setting.\n\u2003\u2022 It extends the properties of an underlying Radix UI radio group item (RadixRadioGroup",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/RadioGroup/RadioGroupItem.tsx"
+    }
+  },
+  {
+    "content": "export const RadioGroupItem = forwardRef<HTMLButtonElement, RadioGroupItemProps>(\n  ({ value, disabled, ...rest }, ref) => {\n    return (\n      <RadioGroupPrimitive.Item\n        ref={ref}\n        value={value}\n        className=\"size-6 rounded-full border-[0.09375rem] transition-all data-[state=checked]:border-gray-900 data-[state=unchecked]:border-gray-200 data-[state=checked]:bg-gray-900 data-[state=unchecked]:bg-transparent disabled:cursor-not-allowed disabled:opacity-50\"\n        disabled={di",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/RadioGroup/RadioGroupItem.tsx"
+    }
+  },
+  {
+    "content": "export interface RadioGroupProps\n  extends Omit<RadixRadioGroupProps, \"onValueChange\" | \"onChange\" | \"className\"> {\n  /**\n   * The value of the radio item that should be checked when initially rendered.\n   * Use when you do not need to control the state of the radio items.\n   */\n  defaultValue?: string;\n  /**\n   * The controlled value of the radio item to check.\n   * Should be used in conjunction with onChange.\n   */\n  value?: string;\n  /**\n   * Callback function that is triggered when the value",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/RadioGroup/RadioGroup.tsx"
+    }
+  },
+  {
+    "content": "export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(\n  (\n    {\n      defaultValue,\n      onChange: onValueChange,\n      orientation = \"vertical\",\n      disabled = false,\n      name,\n      ...rest\n    },\n    ref,\n  ) => {\n    return (\n      <RadioGroupPrimitive.Root\n        ref={ref}\n        defaultValue={defaultValue}\n        onValueChange={onValueChange}\n        className={radioGroupVariants({ orientation })}\n        disabled={disabled}\n        orientation={orientation}\n      ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/RadioGroup/RadioGroup.tsx"
+    }
+  },
+  {
+    "content": "export const Token: React.FC<TokenProps> = ({\n  value,\n  size = 40,\n  variant = \"color\",\n  disabled = false,\n}) => {\n  const Icon = tokens[value];\n  return <Icon width={size} height={size} disabled={disabled} variant={variant} />;\n};\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2003\u2022 The Token component displays an icon based on a token value. It looks up an icon component from a tokens mapping (presumably imported or defined elsewhere) using the provided value.\n\u2003\u2022 It passes down properties like wid",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Token/Token.tsx"
+    }
+  },
+  {
+    "content": "export const getBackgroundClass = ({\n  disabled,\n  variant,\n}: {\n  disabled?: boolean;\n  variant?: TokenVariant;\n}) => (disabled ? \"fill-gray-350\" : variant === \"color\" ? \"fill-current\" : \"fill-gray-100\");\n\n=== USAGE EXPLANATION ===\n1. What it does:  \nThe getBackgroundClass function is a utility that returns a CSS class string based on two optional properties: disabled and variant. If disabled is true, it returns \"fill-gray-350\". Otherwise, if the variant is \"color\", it returns \"fill-current\", a",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Token/icons/utils.ts"
+    }
+  },
+  {
+    "content": "export const getIconFillClass = ({\n  disabled,\n  variant,\n}: {\n  disabled?: boolean;\n  variant?: TokenVariant;\n}) => (disabled || variant === \"color\" ? \"fill-gray-0\" : \"fill-gray-900\");\n\n=== USAGE EXPLANATION ===\n1. What the component does or represents:\n\u2003\u2022 This function, getIconFillClass, is a utility that calculates and returns a CSS class name used to set the fill color of an icon (typically in an SVG). It bases its decision on the input properties: if the icon is disabled or its variant equa",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Token/icons/utils.ts"
+    }
+  },
+  {
+    "content": "export type TokenVariant = \"color\" | \"monochrome\";\n\n=== USAGE EXPLANATION ===\n1. What it represents:\n\u2022 The code defines a TypeScript type alias named TokenVariant.\n\u2022 It is a union type that restricts values to either \"color\" or \"monochrome\". This ensures that any property or variable of type TokenVariant can only hold one of these two string literals.\n\n2. How to use it:\n\u2022 In a larger React application, you can use TokenVariant to strongly type props that expect a variant indicator. For example, ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Token/icons/types.ts"
+    }
+  },
+  {
+    "content": "export interface IconProps extends React.SVGProps<SVGSVGElement> {\n  /** Variant of the token icon (default: \"default\") */\n  variant?: TokenVariant;\n  /** Whether the token is disabled */\n  disabled?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. Component Purpose:\n\u2003\u2022 This code defines the TypeScript interface IconProps, which extends React\u2019s built-in SVG properties (React.SVGProps<SVGSVGElement>) for an SVG element. It provides additional, optional customizations for an icon (likely a token icon) th",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Token/icons/types.ts"
+    }
+  },
+  {
+    "content": "export interface TabsProps extends Omit<BaseToggleGroupProps, \"type\" | \"size\" | \"orientation\"> {\n  /**\n   * Whether the toggle group is disabled\n   */\n  disabled?: boolean;\n  /**\n   * Whether the toggle group should loop when navigating through items\n   */\n  loop?: boolean;\n  /**\n   * The default selected tab value\n   */\n  defaultValue?: string;\n  /**\n   * The selected tab value\n   */\n  value?: string;\n  /**\n   * Callback when tab selection changes\n   */\n  onValueChange?: (value: string) => void",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Tabs/types.ts"
+    }
+  },
+  {
+    "content": "export interface TabItemProps extends Omit<BaseToggleGroupItemProps, \"className\" | \"children\"> {\n  /**\n   * The icon to display\n   */\n  icon: ReactNode;\n  /**\n   * The icon to display when the tab item is active\n   */\n  altIcon?: ReactNode;\n  /**\n   * The label text\n   */\n  label?: string;\n  /**\n   * Whether the tab item is disabled\n   */\n  disabled?: boolean;\n  /**\n   * The value of the tab item\n   */\n  value: string;\n}\n\n=== USAGE EXPLANATION ===\nThis interface defines the expected properties f",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Tabs/types.ts"
+    }
+  },
+  {
+    "content": "export interface WalletAddressFieldProps\n  extends Omit<\n    InputProps,\n    \"startAdornment\" | \"startAdornmentWidth\" | \"endAdornment\" | \"endAdornmentWidth\"\n  > {\n  /**\n   * If true, the input will display in an error state with error styling\n   */\n  error?: boolean;\n  /**\n   * If true, the input will display in a valid state with success styling\n   */\n  isValid?: boolean;\n  /**\n   * Label for the input\n   * @default \"Enter wallet address\"\n   */\n  label?: string;\n  /**\n   * Label for the paste b",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/WalletAddressField/WalletAddressField.tsx"
+    }
+  },
+  {
+    "content": "export const WalletAddressField = forwardRef<HTMLInputElement, WalletAddressFieldProps>(\n  (\n    {\n      isValid,\n      disabled,\n      type = \"text\",\n      autoComplete = \"off\",\n      spellCheck = \"false\",\n      label = \"Wallet address\",\n      pasteButtonLabel = \"Paste\",\n      ...props\n    },\n    forwardedRef,\n  ) => {\n    const inputRef = useRef<HTMLInputElement>(null);\n    const [isPasted, setIsPasted] = useState(false);\n    const [value, setValue] = useState(\"\");\n    const [isFocused, setIsF",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/WalletAddressField/WalletAddressField.tsx"
+    }
+  },
+  {
+    "content": "export default WalletAddressField;\n\n=== USAGE EXPLANATION ===\nBelow is a concise explanation of the provided code snippet:\n\n1. What the Component Does or Represents:\n\u2003\u2022 Although only a default export statement is shown, the identifier \u201cWalletAddressField\u201d implies it\u2019s a React component focused on handling wallet addresses.\n\u2003\u2022 Typically, such a component serves as a form field for entering or displaying a cryptocurrency wallet address. It might include built\u2011in validation (format checking, length",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/WalletAddressField/WalletAddressField.tsx"
+    }
+  },
+  {
+    "content": "export { DrawerContext, useDrawer };\n\n=== USAGE EXPLANATION ===\nThis snippet is exporting two items\u2014DrawerContext and useDrawer\u2014which together provide a way to manage and access state for a \u201cdrawer\u201d (typically a sliding panel or sidebar) throughout your React application.\n\n1. What It Represents:\n\u2003\u2022 DrawerContext: A React context that holds the state and handlers related to the drawer. It lets you pass data (like whether the drawer is open, functions to open/close it, etc.) deeply into the compon",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/use-drawer.ts"
+    }
+  },
+  {
+    "content": "export { Drawer, DrawerTrigger, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle };\n\n=== USAGE EXPLANATION ===\n1. What this component represents:\n\u2003\u2022 The code exports a set of modular sub-components that together form a \"Drawer\" UI element\u2014an off-canvas panel commonly used for navigation, notifications, or additional content in an application.\n\u2003\u2022 Each export represents a different part of the Drawer:\n\u2003\u2003\u2013 Drawer: The outer container managing the overall drawer state and structure.\n\u2003\u2003\u2013 DrawerT",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/Drawer.tsx"
+    }
+  },
+  {
+    "content": "export interface WithFadeFromProps {\n  /**\n   * Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up.\n   * Should go from least visible. Example `[0.2, 0.5, 0.8]`.\n   * You can also use px values, which doesn't take screen height into account.\n   */\n  snapPoints: (number | string)[];\n  /**\n   * Index of a `snapPoint` from which the overlay fade should be applied. Defaults to the last snap point.\n   */\n  fadeFromIndex: number;\n}\n\n=== USAGE EXPLANATI",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface WithoutFadeFromProps {\n  /**\n   * Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up.\n   * Should go from least visible. Example `[0.2, 0.5, 0.8]`.\n   * You can also use px values, which doesn't take screen height into account.\n   */\n  snapPoints?: (number | string)[];\n  fadeFromIndex?: never;\n}\ntype BaseDrawerProps = {\n  /** Whether the drawer should take up the full page */\n  height?: \"full\" | \"fit\";\n  /** The active snap point",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export type DrawerProps = BaseDrawerProps & (WithFadeFromProps | WithoutFadeFromProps);\n\n/**\n * Props for the DrawerContent component\n */\n\n=== USAGE EXPLANATION ===\n1. Purpose of the Component:\n\u2022 This code defines a TypeScript type\u2014DrawerProps\u2014for a React drawer (or panel) component. A drawer is typically an overlay or side panel that can slide into view.\n\u2022 The DrawerProps type combines common properties (BaseDrawerProps) with one of two possible sets of additional properties. Depending on the i",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerContentProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> {\n  /** The content of the drawer */\n  children?: React.ReactNode;\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n  /** Whether to close the drawer when clicking outside */\n  onCloseAutoFocus?: (event: Event) => void;\n  /** Called when the escape key is pressed */\n  onEscapeKeyDown?: (event: KeyboardEvent) => void;\n  /** Called when pointer down occurs",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerHeaderProps\n  extends Omit<React.HTMLAttributes<HTMLDivElement>, \"className\"> {\n  /** Optional icon to display in the header */\n  icon?: React.ReactNode;\n  children?: React.ReactNode;\n}\n\n/**\n * Props for the DrawerTitle component\n */\n\n=== USAGE EXPLANATION ===\n1. What this component does or represents:\n\u2003\u2022 This is a TypeScript interface (DrawerHeaderProps) defining the props for a DrawerHeader (or similar) component. It extends the standard HTML div attributes\u2014except for th",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerTitleProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title> {\n  children?: React.ReactNode;\n  /** Whether to render the title without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the DrawerDescription component\n */\n\n=== USAGE EXPLANATION ===\n1. What this component represents:\n   \u2022 This interface (DrawerTitleProps) describes the props for a drawer title component in a UI library.\n   \u2022 It extends the properties of a predefined DrawerPrimi",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerDescriptionProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description> {\n  children?: React.ReactNode;\n  /** Whether to render the description without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the DrawerTrigger component\n */\n\n=== USAGE EXPLANATION ===\nThis interface defines the allowed props for a description component used within a drawer (a UI element that slides in/out) context. Here\u2019s what you need to know:\n\n1. What It Does:\n\u2003\u2022 ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerTriggerProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> {\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the DrawerTrigger component\n */\n\n=== USAGE EXPLANATION ===\n1. What it represents:  \n\u2003\u2022 This interface defines the props for a DrawerTrigger component, which acts as the interactive element (e.g., button) used to open or toggle a drawer (typically a sidebar or modal panel).  \n\u2003\u2022 It ext",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export interface DrawerCloseProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Close> {\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. Purpose of the Component:\n\u2003\u2022 The code defines a TypeScript interface, DrawerCloseProps, for a component (typically named DrawerClose) that represents the close trigger for a drawer UI element.\n\u2003\u2022 It inherits all standard props from an underlying component (DrawerPrimitive.Clos",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Drawer/types.ts"
+    }
+  },
+  {
+    "content": "export type CountryCode = keyof typeof FlagComponents;\ninterface FlagProps {\n  /**\n   * ISO 3166-1 alpha-2 country code (e.g. 'US', 'GB', 'FR')\n   */\n  countryCode: CountryCode;\n  /**\n   * Width and height in pixels for the flag SVG. Defaults to 40px if not specified.\n   */\n  size?: number;\n}\n\n=== USAGE EXPLANATION ===\n1. Purpose:\n\u2022 This component (or type definitions) is intended for displaying country flag icons as SVGs.  \n\u2022 It uses a type mapping (FlagComponents) where each key is an ISO 3166",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Flag/Flag.tsx"
+    }
+  },
+  {
+    "content": "export const Flag = forwardRef<SVGSVGElement, FlagProps>(({ countryCode, size = 40 }, ref) => {\n  const Component = FlagComponents[countryCode];\n\n  return <Component ref={ref} width={size} height={size} />;\n});\n\nFlag.displayName = \"Flag\";\n\n=== USAGE EXPLANATION ===\n1. What the Component Does:\n\u2003\u2022 The Flag component is a React functional component that renders an SVG flag icon based on a specified country code.\n\u2003\u2022 It uses React\u2019s forwardRef to pass a ref down to the rendered SVG element.\n\u2003\u2022 The co",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Flag/Flag.tsx"
+    }
+  },
+  {
+    "content": "export const isSupportedCountryCode = (code: string): code is CountryCode => {\n  return Object.prototype.hasOwnProperty.call(FlagComponents, code.toUpperCase());\n};\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2003\u2022 This function is a TypeScript type guard that checks whether a given string (representing a country code) is supported by your application.  \n\u2003\u2022 It does so by converting the provided code to uppercase and verifying if it exists as a property key within the FlagComponents object.  \n\u2003\u2022 The",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Flag/utils.ts"
+    }
+  },
+  {
+    "content": "export const countryCodes = Object.keys(FlagComponents).map((code) =>\n  code.toUpperCase(),\n) as CountryCode[];\n\n=== USAGE EXPLANATION ===\n1. What this code does:\n\u2003\u2022 This snippet creates and exports a constant array called countryCodes. It retrieves all the keys from the FlagComponents object, converts each key to uppercase, and then asserts that the resulting array conforms to the CountryCode[] type. Essentially, it derives an array of standardized country codes (in uppercase) based on the avai",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Flag/constants.ts"
+    }
+  },
+  {
+    "content": "export const LazyFlag = forwardRef<SVGSVGElement, FlagProps>(\n  ({ countryCode, size = 40 }, ref) => {\n    const FlagComponent = lazy(() =>\n      import(`./flag-components/${countryCode.toLowerCase()}.tsx`).catch(() => ({\n        default: () => <Placeholder size={size} className=\"animate-none bg-gray-200\" />,\n      })),\n    );\n\n    return (\n      <Suspense fallback={<Placeholder size={size} />}>\n        <FlagComponent ref={ref} width={size} height={size} />\n      </Suspense>\n    );\n  },\n);\n\nLazy",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Flag/LazyFlag.tsx"
+    }
+  },
+  {
+    "content": "export const Marble = forwardRef<HTMLImageElement, ComponentProps<\"img\">>((props, ref) => {\n  const { className, ...rest } = props;\n\n  return (\n    <img\n      ref={ref}\n      alt=\"Marble\"\n      className={cn(\n        \"rounded-full border-2 border-gray-100 p-[3px] aspect-square w-[7.5rem] object-cover\",\n        className,\n      )}\n      {...rest}\n    />\n  );\n});\n\nMarble.displayName = \"Marble\";\n\n=== USAGE EXPLANATION ===\n1. What the Component Represents:\n\u2022 Marble is a React functional component th",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Marble/Marble.tsx"
+    }
+  },
+  {
+    "content": "export type FormProps = RadixFormProps;\n\n=== USAGE EXPLANATION ===\n1. What it represents:\n\u2003\u2022 This snippet creates a type alias called FormProps that exactly mirrors the type RadixFormProps.\n\u2003\u2022 It\u2019s used to define the shape of props expected by a form component, likely leveraging the prop definitions from the Radix UI library\u2019s form component implementation.\n\n2. How to use it in a larger application:\n\u2003\u2022 You can use FormProps as the props type when building your form component. For example:\n\u2003\u2003\n\u2003\u2003i",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Root = RadixForm.Root;\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2003\u2022 The code snippet exports a constant named \"Root\" that is simply reassigning RadixForm.Root. Essentially, this component is a form container or a root component from the RadixForm library that handles form behaviors such as validation, submission, and layout as defined by Radix UI components.\n\n2. How to use it:\n\u2003\u2022 In your larger application, import \"Root\" from the module where this code is defined.\n\u2003\u2022 Use it as the",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Field = RadixForm.Field;\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2003\u2022 This line of code re-exports the Field component from the RadixForm object, making it available under the current module\u2019s namespace. Essentially, it acts as an alias so that other parts of your application can import Field directly without having to reach into RadixForm itself.\n\n2. How to use it in a larger application:\n\u2003\u2022 The Field component is likely used as part of building forms (e.g., for input validation,",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Control = RadixForm.Control;\n\n=== USAGE EXPLANATION ===\n1. What this component does or represents:\n\u2003\u2022 The exported Control is essentially a re-export of RadixForm.Control, meaning it wraps or \u201caliases\u201d the Control component provided by the RadixForm library. In most cases, RadixForm.Control is a building block for managing form layout, styling, or state in a UI form.\n\n2. How to use it in a larger application:\n\u2003\u2022 Import the Control component into your form component file:\n\u2003\u2003import { ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Message = forwardRef<\n  React.ElementRef<typeof RadixForm.Message>,\n  React.ComponentPropsWithoutRef<typeof RadixForm.Message> & {\n    error?: boolean;\n    textAlign?: \"left\" | \"center\" | \"right\";\n  }\n>(({ className, error, textAlign = \"left\", ...props }, ref) => (\n  <div\n    className={cn(\n      \" px-2 flex items-center justify-center\",\n      textAlign === \"left\" && \"justify-start\",\n      textAlign === \"center\" && \"justify-center\",\n      textAlign === \"right\" && \"justify-end\",\n    ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const ValidityState: typeof RadixForm.ValidityState = RadixForm.ValidityState;\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2003\u2022 This code re\u2011exports the ValidityState object from a RadixForm library. Essentially, it creates a local alias for RadixForm.ValidityState with the proper TypeScript type annotation.\n\n2. How to Use It:\n\u2003\u2022 Import this ValidityState export into your application wherever you work with RadixForm validation.\n\u2003\u2022 Use it as part of your form components to manage or display vali",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Submit: typeof RadixForm.Submit = RadixForm.Submit;\n\n=== USAGE EXPLANATION ===\n1. Component Purpose:\n\u2022 This code exports a Submit component that is exactly the same as RadixForm.Submit. Essentially, it acts as a pass-through or alias to the RadixForm.Submit component, which is likely a submit button or form control provided by a UI library (Radix UI in this case).\n\n2. How to Use It in a Larger Application:\n\u2022 Integration: Import the Submit component into your form component and use i",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Form/Form.tsx"
+    }
+  },
+  {
+    "content": "export const Progress = ({ value, asChild, max, getValueLabel, className }: ProgressProps) => {\n  return (\n    <RadixProgress.Root\n      className={cn(\n        \"relative h-1.5 w-full overflow-hidden rounded-full bg-gray-100\",\n        className,\n      )}\n      style={{\n        // Fix overflow clipping in Safari\n        // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0\n        transform: \"translateZ(0)\",\n      }}\n      value={value}\n      max={max}\n      asChild={asChild}\n      ge",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Progress/Progress.tsx"
+    }
+  },
+  {
+    "content": "export const inputVariants = cva(\n  cn(\n    \"peer h-[3.5rem] w-full rounded-[0.625rem] border border-gray-100 bg-gray-100 px-4 outline-none transition duration-300\",\n    \"file:hidden\",\n    \"invalid:border-error-600 invalid:focus:border-error-600 invalid:bg-gray-0\",\n    \"placeholder:text-gray-500\",\n    \"focus:border-gray-300 focus:bg-gray-0 focus-visible:outline-none\",\n    \"disabled:cursor-not-allowed disabled:opacity-50\",\n  ),\n  {\n    variants: {\n      error: {\n        true: \"border-error-600 fo",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Input/Input.tsx"
+    }
+  },
+  {
+    "content": "export const iconVariants = cva(\n  \"absolute top-1 bottom-1 flex items-center justify-center overflow-hidden text-gray-400\",\n  {\n    variants: {\n      disabled: {\n        true: \"text-gray-300 cursor-not-allowed\",\n      },\n      position: {\n        start: \"left-0\",\n        end: \"right-0\",\n      },\n    },\n  },\n);\n\nconst dividerVariants = cva(\"border-r  h-[1.625rem] absolute\", {\n  variants: {\n    position: {\n      start: \"left-0\",\n      end: \"right-0\",\n    },\n    error: {\n      true: \"border-error-",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Input/Input.tsx"
+    }
+  },
+  {
+    "content": "export interface InputProps\n  extends Omit<\n      React.InputHTMLAttributes<HTMLInputElement>,\n      \"className\" | \"style\" | \"placeholder\"\n    >,\n    VariantProps<typeof inputVariants> {\n  /**\n   * If true, the input will display in an error state with error styling\n   */\n  error?: boolean;\n  /**\n   * If true, the input will display in a valid state with success styling\n   */\n  isValid?: boolean;\n  /**\n   * Element to be rendered at the start (left side) of the input.\n   * The component passed t",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Input/Input.tsx"
+    }
+  },
+  {
+    "content": "export const Input = React.forwardRef<HTMLInputElement, InputProps>(\n  (\n    {\n      type = \"text\",\n      error,\n      startAdornment,\n      endAdornment,\n      isValid,\n      startAdornmentWidth = DEFAULT_ADORNMENT_WIDTH,\n      endAdornmentWidth = DEFAULT_ADORNMENT_WIDTH,\n      disabled,\n      className,\n      label,\n      id,\n      showStartDivider,\n      showEndDivider,\n      variant = \"default\",\n      ...props\n    },\n    ref,\n  ) => {\n    return (\n      <div className=\"relative flex w-full i",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Input/Input.tsx"
+    }
+  },
+  {
+    "content": "export function Delete(props: React.SVGProps<SVGSVGElement>) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      {...props}\n    >\n      <path\n        d=\"M15 6L9 12L15 18\"\n        stroke=\"currentColor\"\n        strokeWidth=\"2.5\"\n        strokeLinecap=\"square\"\n      />\n    </svg>\n  );\n}\n\n=== USAGE EXPLANATION ===\n1. Purpose of the Component:\n   \u2022 This React functional component named Delete renders an SV",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/NumberPad/Delete.tsx"
+    }
+  },
+  {
+    "content": "export const NumberPad = ({\n  value = \"\",\n  onChange,\n  disabled = false,\n  onLongDeletePress = () => {},\n  longPressOptions = {\n    threshold: 1500,\n  },\n}: NumberPadProps) => {\n  // Validate that value is a valid number or empty string\n  if (value !== \"\" && isNaN(Number(value))) {\n    console.error(\"NumberPad value must be a valid number or empty string\");\n  }\n\n  const handleButtonClick = (buttonValue: string) => {\n    if (!onChange || disabled) return;\n\n    if (buttonValue === \"del\") {\n      ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/NumberPad/NumberPad.tsx"
+    }
+  },
+  {
+    "content": "export { ToggleGroupRoot, ToggleGroupItem };\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2022 ToggleGroupRoot and ToggleGroupItem are UI components designed for creating groups of toggle buttons. They typically work together: ToggleGroupRoot acts as a container (the group), while ToggleGroupItem is an individual toggle element. This setup is often used to allow users to select one or more options from a set.\n\n2. How to Use It:\n\u2022 Import the components into your app:\n\u2003\u2003import { ToggleGroupRoot, ToggleGro",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ToggleGroup/ToggleGroup.tsx"
+    }
+  },
+  {
+    "content": "export interface ToggleGroupItemProps\n  extends Omit<React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item>, \"asChild\"> {\n  /**\n   * Whether this item should be rendered as a child of another component\n   * @default false\n   */\n  asChild?: boolean;\n\n  /**\n   * The value of the toggle group item\n   */\n  value: string;\n\n  /**\n   * When true, prevents the user from interacting with the toggle group item\n   */\n  disabled?: boolean;\n}\n/**\n * Props for single selection mode\n */\ninterface Sin",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ToggleGroup/types.ts"
+    }
+  },
+  {
+    "content": "export type ToggleGroupRootProps = (SingleToggleGroupProps | MultipleToggleGroupProps) & {\n  /**\n   * Whether this component should be rendered as a child of another component\n   * @default false\n   */\n  asChild?: boolean;\n\n  /**\n   * When true, prevents the user from interacting with the toggle group\n   * @default false\n   */\n  disabled?: boolean;\n  /**\n   * When true and rovingFocus is true, keyboard navigation will loop from last item to first, and vice versa.\n   * @default true\n   */\n  loop?",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ToggleGroup/types.ts"
+    }
+  },
+  {
+    "content": "export const reducer = (state: State, action: Action): State => {\n  switch (action.type) {\n    case \"ADD_TOAST\":\n      return {\n        ...state,\n        toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT),\n      };\n\n    case \"UPDATE_TOAST\":\n      return {\n        ...state,\n        toasts: state.toasts.map((t) =>\n          t.id === action.toast.id ? { ...t, ...action.toast } : t,\n        ),\n      };\n\n    case \"DISMISS_TOAST\": {\n      const { toastId } = action;\n\n      // ! Side effects",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Toast/use-toast.tsx"
+    }
+  },
+  {
+    "content": "export function Toaster({ duration }: { duration?: number }) {\n  const { toasts } = useToast();\n\n  return (\n    <ToastProvider duration={duration}>\n      {toasts.map(({ id, ...props }) => (\n        <Toast key={id} {...props} />\n      ))}\n      <ToastViewport />\n    </ToastProvider>\n  );\n}\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2022 The Toaster component is responsible for rendering toast notifications.\n\u2022 It uses a custom hook (useToast) to obtain a list of toast messages (each with an id and a",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Toast/Toaster.tsx"
+    }
+  },
+  {
+    "content": "export { type ToastProps, ToastProvider, ToastViewport, Toast };\n\n=== USAGE EXPLANATION ===\n1. What It Represents:\n\u2022 This code exports several related items for implementing toast notifications in a React application.\n\u2022 ToastProvider: A context provider that manages toast notifications\u2019 state and logic.\n\u2022 ToastViewport: A container component where toast notifications are rendered on the screen.\n\u2022 Toast: An individual toast notification component.\n\u2022 ToastProps: A TypeScript type that defines the ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Toast/Toast.tsx"
+    }
+  },
+  {
+    "content": "export interface ChipProps extends HTMLAttributes<HTMLDivElement> {\n  /**\n   * The variant of the chip. Default value is \"default\".\n   */\n  variant?: ChipVariant;\n  /**\n   * The label text displayed on the chip.\n   */\n  label: string;\n  /**\n   * Optional icon to display alongside the label.\n   */\n  icon?: ReactNode;\n  /**\n   *  Optional additional CSS class names.\n   */\n  className?: string;\n}\n\nconst chipVariants = cva(\n  \"inline-flex h-7 items-center gap-2 rounded-full px-4 font-sans text-sm fo",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Chip/Chip.tsx"
+    }
+  },
+  {
+    "content": "export const Chip = forwardRef<HTMLDivElement, ChipProps & VariantProps<typeof chipVariants>>(\n  ({ icon, label, variant = \"default\", className, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        className={chipVariants({ variant, className, isIcon: !!icon })}\n        {...props}\n      >\n        {icon && <Slot style={{ width: \"1rem\", height: \"1rem\" }}>{icon}</Slot>}\n        <Typography variant=\"subtitle\" level={4}>\n          {label}\n        </Typography>\n      </div>\n    );\n ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Chip/Chip.tsx"
+    }
+  },
+  {
+    "content": "export interface CheckboxProps\n  extends Omit<RadixCheckboxProps, \"onCheckedChange\" | \"onChange\" | \"className\"> {\n  /**\n   * Whether to forward the root element\n   * @default false\n   */\n  asChild?: boolean;\n\n  /**\n   * The initial checked state when the checkbox is uncontrolled\n   */\n  defaultChecked?: boolean;\n\n  /**\n   * The controlled checked state of the checkbox\n   */\n  checked?: boolean;\n\n  /**\n   * Event handler called when the checked state changes\n   */\n  onChange?: (checked: boolean) ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Checkbox/Checkbox.tsx"
+    }
+  },
+  {
+    "content": "export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(\n  ({ checked, onChange: onCheckedChange, disabled = false, ...props }, ref) => {\n    return (\n      <RadixCheckbox.Root\n        ref={ref}\n        checked={checked}\n        onCheckedChange={onCheckedChange}\n        disabled={disabled}\n        className=\"flex size-6 items-center justify-center rounded-md border-[0.09375rem] transition-all data-[state=checked]:border-gray-900 data-[state=checked]:bg-gray-900 data-[state=unchecked",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Checkbox/Checkbox.tsx"
+    }
+  },
+  {
+    "content": "export interface PillProps\n  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, \"className\" | \"style\">,\n    VariantProps<typeof pillVariants> {\n  /**\n   * Whether the pill is checked\n   * @default false\n   */\n  checked?: boolean;\n  /**\n   * Whether the pill is rendered as a child component\n   * @default false\n   */\n  asChild?: boolean;\n}\n\n=== USAGE EXPLANATION ===\nThis interface defines the prop structure for a \"Pill\" component\u2014a stylized button that visually resembles a pill. Here\u2019s a concis",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Pill/Pill.tsx"
+    }
+  },
+  {
+    "content": "export const Pill = forwardRef<HTMLButtonElement, PillProps>(\n  ({ checked, children, asChild, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        ref={ref}\n        className={cn(\n          pillVariants({ checked }),\n          typographyVariants({ variant: \"label\", level: 2 }),\n        )}\n        {...props}\n      >\n        {children}\n      </Comp>\n    );\n  },\n);\n\nPill.displayName = \"Pill\";\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2022 The Pill component",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Pill/Pill.tsx"
+    }
+  },
+  {
+    "content": "export function GroupedCountryList({\n  groupedCountries,\n  onSelect,\n  value,\n}: GroupedCountryListProps) {\n  if (Object.keys(groupedCountries).length === 0) {\n    return (\n      <div className=\"flex flex-col items-center justify-center grow text-gray-400 gap-2 h-full\">\n        <Magnifier className=\"size-8\" />\n        <Typography variant=\"body\" level={3}>\n          No search results\n        </Typography>\n      </div>\n    );\n  }\n\n  return (\n    <>\n      {Object.entries(groupedCountries)\n        .",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/GroupedCountryList.tsx"
+    }
+  },
+  {
+    "content": "export const getValidatedCountryCode = (\n  code: string,\n  defaultCountryCode: CountryCode,\n): CountryCode => {\n  const upperCaseCode = code.toUpperCase() as CountryCode;\n\n  return isSupportedCountryCode(upperCaseCode) ? upperCaseCode : defaultCountryCode;\n};\n\n=== USAGE EXPLANATION ===\nThis snippet defines a utility function rather than a UI component. Here\u2019s a concise breakdown:\n\n1. What it does:\n\u2003\u2022 The function, named getValidatedCountryCode, takes two arguments: a country code as a string and",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/utils.ts"
+    }
+  },
+  {
+    "content": "export const getCountryDataListByCodes = (\n  countryCodes: CountryCode[] | undefined,\n): CountryData[] => {\n  if (!countryCodes?.length) {\n    return extendedCountryDataList;\n  }\n\n  const countryCodeSet = new Set(countryCodes);\n\n  return extendedCountryDataList.filter((country) => {\n    const countryCode = parseCountry(country).iso2.toUpperCase();\n\n    return countryCodeSet.has(countryCode as CountryCode);\n  });\n};\n\n=== USAGE EXPLANATION ===\n1. Purpose and Representation:\n\u2003\u2022 This function, getCo",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/utils.ts"
+    }
+  },
+  {
+    "content": "export const filterCountries = (countries: CountryData[], searchText: string) => {\n  if (!searchText) {\n    return countries;\n  }\n\n  return countries.filter((country) => {\n    const parsedCountry = parseCountry(country);\n    const countryName = parsedCountry.name.toLowerCase();\n    const dialCode = `${DIAL_CODE_PREFIX}${parsedCountry.dialCode.toLowerCase()}`;\n    const searchLower = searchText.toLowerCase();\n\n    return countryName.includes(searchLower) || dialCode.includes(searchLower);\n  });\n}",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/utils.ts"
+    }
+  },
+  {
+    "content": "export default CountrySelectorButton;\n\n=== USAGE EXPLANATION ===\nThis file exports a component named CountrySelectorButton as its default export. Although the snippet shows only the export statement, we can infer the following:\n\n1. What It Represents:\n\u2003\u2022 CountrySelectorButton is a UI component (likely a button) that is designed to let users interact with country-related functionality. For example, it might open a list or dropdown of countries, trigger a modal, or otherwise allow users to select ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/CountrySelectorButton.tsx"
+    }
+  },
+  {
+    "content": "export const extendedCountryDataList: CountryData[] = [\n  ...supportedDefaultCountryCodes,\n  ...customCountries,\n].sort((a, b) => a[0].localeCompare(b[0])); // sorted by country name\n\n=== USAGE EXPLANATION ===\n1. What It Does:\n\u2003\u2022 This code exports a constant array named extendedCountryDataList that combines two arrays\u2014supportedDefaultCountryCodes and customCountries.  \n\u2003\u2022 It concatenates these arrays using the spread operator and then sorts the resulting array by the first element of each Countr",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/constants.ts"
+    }
+  },
+  {
+    "content": "export const DIAL_CODE_PREFIX = \"+\";\n\n=== USAGE EXPLANATION ===\n1. What it represents:\n   \u2022 The code defines and exports a constant named DIAL_CODE_PREFIX, which represents the plus sign (\u201c+\u201d) commonly used as a prefix for international telephone dial codes.\n\n2. How to use it in a larger application:\n   \u2022 Import the constant wherever you need to prefix phone numbers with an international dial code indicator. \n   \u2022 For example, in a phone number input component, you can import DIAL_CODE_PREFIX to",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/constants.ts"
+    }
+  },
+  {
+    "content": "export const startAdornmentWidthByDialCodeLength: Record<string, number> = {\n  \"1\": 5.5,\n  \"2\": 6,\n  \"3\": 6.5,\n  \"4\": 7,\n};\n\n=== USAGE EXPLANATION ===\n1. What it does:  \n\u2003\u2022 This code snippet defines a mapping (a TypeScript Record) where the keys are string representations of dial code lengths (e.g., \"1\", \"2\", etc.), and the values are numeric widths (likely used for UI spacing).  \n\u2003\u2022 It is not a React component itself but a utility configuration that helps calculate the width of a UI start adorn",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/constants.ts"
+    }
+  },
+  {
+    "content": "export default CountryListItem;\n\n=== USAGE EXPLANATION ===\nBelow is a concise explanation for the provided snippet:\n\n1. What this component does or represents:\n\u2003\u2022 The snippet shows the default export of a React component named CountryListItem. Although the full implementation isn\u2019t shown, its name implies that it represents a single item in a list of countries. This component likely renders details such as the country\u2019s name, flag, or code, making it reusable wherever a country needs to be displ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/CountryListItem.tsx"
+    }
+  },
+  {
+    "content": "export interface PhoneFieldProps\n  extends Omit<\n    InputProps,\n    \"onChange\" | \"startAdornment\" | \"startAdornmentWidth\" | \"placeholder\"\n  > {\n  /**\n   * Current phone number value.\n   */\n  value?: string;\n  /**\n   * Callback triggered when the phone number changes.\n   */\n  onChange?: (phone: string, countryCode: CountryCode) => void;\n  /**\n   * List of countries to display in the country selector.\n   * If not provided, all countries will be displayed.\n   */\n  countries?: CountryCode[];\n  /**\n",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/PhoneField.tsx"
+    }
+  },
+  {
+    "content": "export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(\n  (\n    {\n      value,\n      onChange,\n      countries,\n      label = \"Phone\",\n      defaultCountryCode = \"US\",\n      disableDialCodePrefill = true,\n      disabled = false,\n      error = false,\n      isValid,\n      endAdornment,\n      endAdornmentWidth,\n      type = \"tel\",\n      inputMode = \"tel\",\n      autoComplete = \"tel\",\n      autoCapitalize = \"off\",\n      autoCorrect = \"off\",\n      ...props\n    },\n    ref,\n  ) => {\n    c",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PhoneField/PhoneField.tsx"
+    }
+  },
+  {
+    "content": "export const Spinner = ({ className }: SpinnerProps) => {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"h-6 w-6 animate-spin text-gray-900\", className)}\n    >\n      <circle\n        cx=\"12\"\n        cy=\"12\"\n        r=\"10.75\"\n        stroke=\"currentColor\"\n        strokeOpacity=\"0.16\"\n        strokeWidth=\"2.5\"\n      />\n      <path\n        d=\"M17.8921 1.54613C16.1312 0.553676 14.1482 0.0",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Spinner/Spinner.tsx"
+    }
+  },
+  {
+    "content": "export const ListItem = forwardRef<HTMLButtonElement, ListItemProps>(\n  ({ children, label, description, startAdornment, endAdornment, disabled, ...props }, ref) => {\n    return (\n      <button ref={ref} className={listItemStyles()} {...props} disabled={disabled}>\n        {startAdornment && <div className=\"mr-3 flex-shrink-0\">{startAdornment}</div>}\n        <div className=\"flex flex-col flex-grow min-w-0 items-start gap-0.5\">\n          {label && (\n            <Typography variant=\"subtitle\" level",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ListItem/ListItem.tsx"
+    }
+  },
+  {
+    "content": "export interface PasswordFieldProps\n  extends Omit<InputProps, \"startAdornment\" | \"startAdornmentWidth\"> {\n  /**\n   * If true, the input will display in an error state with error styling\n   */\n  error?: boolean;\n  /**\n   * If true, the input will display in a valid state with success styling\n   */\n  isValid?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. What it represents:\n\u2003\u2022 This interface defines the properties (props) for a PasswordField component, which is a specialized input field for passwords",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PasswordField/PasswordField.tsx"
+    }
+  },
+  {
+    "content": "export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(\n  (\n    {\n      isValid,\n      disabled,\n      type = \"password\",\n      autoComplete = \"current-password\",\n      spellCheck = \"false\",\n      inputMode = \"text\",\n      autoCapitalize = \"off\",\n      autoCorrect = \"off\",\n      endAdornment: endAdornmentProp,\n      endAdornmentWidth: endAdornmentWidthProp,\n      ...props\n    },\n    ref,\n  ) => {\n    const [showPassword, setShowPassword] = useState(false);\n    return (\n   ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PasswordField/PasswordField.tsx"
+    }
+  },
+  {
+    "content": "export function Clear({ className }: ClearProps) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6\", className)}\n    >\n      <path\n        d=\"M6.75729 17.2426L11.9999 12M17.2426 6.75736L11.9999 12M11.9999 12L6.75729 6.75736M11.9999 12L17.2426 17.2426\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.5\"\n        strokeLinecap=\"square\"\n      />\n    </svg>\n  );\n}\n\n=== USAGE EXP",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ClearButton/Clear.tsx"
+    }
+  },
+  {
+    "content": "export const CLEAR_BUTTON_WIDTH = 1.25;\n\nconst ClearButton = React.forwardRef<HTMLButtonElement, ClearButtonProps>(\n  ({ children, inputRef, className, onClear, ...props }, ref) => {\n    const handleClear = (e: React.MouseEvent<HTMLButtonElement>) => {\n      e.preventDefault();\n      e.stopPropagation();\n\n      if (inputRef && \"current\" in inputRef && inputRef.current) {\n        inputRef.current.value = \"\";\n        onClear?.();\n      }\n    };\n\n    return (\n      <button\n        type=\"button\"\n   ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ClearButton/ClearButton.tsx"
+    }
+  },
+  {
+    "content": "export interface TextAreaProps\n  extends Omit<\n      React.TextareaHTMLAttributes<HTMLTextAreaElement>,\n      \"className\" | \"style\" | \"placeholder\"\n    >,\n    VariantProps<typeof inputVariants> {\n  /**\n   * If true, the textarea will display in an error state with error styling\n   */\n  error?: boolean;\n  /**\n   * If true, the textarea will display in a focused state with focus styling\n   * @default false\n   */\n  isFocused?: boolean;\n  /**\n   * The label text for the textarea\n   */\n  label?: stri",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/TextArea/TextArea.tsx"
+    }
+  },
+  {
+    "content": "export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(\n  ({ error, isFocused = false, disabled, label, variant = \"default\", id, ...props }, ref) => {\n    return (\n      <div className=\"relative flex w-full items-center group\">\n        <textarea\n          ref={ref}\n          id={id}\n          placeholder={label}\n          disabled={disabled}\n          className={cn(\n            inputVariants({ error, isFocused, variant }),\n            typographyVariants({ variant: \"body\", l",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/TextArea/TextArea.tsx"
+    }
+  },
+  {
+    "content": "export interface ButtonProps\n  extends ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  /**\n   * The variant style to use\n   * @default \"primary\"\n   */\n  variant?: \"primary\" | \"secondary\" | \"tertiary\";\n  /**\n   * The size of the button\n   * @default \"lg\"\n   */\n  size?: \"sm\" | \"lg\" | \"icon\";\n  /**\n   * The state of the button\n   * @default undefined\n   */\n  state?: \"pending\" | \"success\" | \"failed\";\n  /**\n   * Whether the button should take up the full width of ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Button/Button.tsx"
+    }
+  },
+  {
+    "content": "export const Button = forwardRef<HTMLButtonElement, ButtonProps>(\n  (\n    { variant = \"primary\", size = \"lg\", fullWidth, asChild, state, children, ...props },\n    ref,\n  ) => {\n    const Comp = asChild ? Slot : \"button\";\n\n    const stateful = !!state;\n\n    return (\n      <Comp\n        ref={ref}\n        {...props}\n        className={cn(\n          buttonVariants({\n            variant,\n            size,\n            stateful,\n            fullWidth,\n          }),\n          typographyVariants({\n      ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Button/Button.tsx"
+    }
+  },
+  {
+    "content": "export function Tick({ className }: TickProps) {\n  return (\n    <svg\n      width=\"16\"\n      height=\"16\"\n      viewBox=\"0 0 16 16\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"h-4 w-4\", className)}\n      data-testid=\"tick-icon\"\n    >\n      <path\n        d=\"M3.33334 8.66669L6.00001 11.3334L12.6667 4.66669\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.5\"\n        strokeLinecap=\"square\"\n      />\n    </svg>\n  );\n}\n\n=== USAGE EXPLANATION ===\n1. What the Compon",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/Tick.tsx"
+    }
+  },
+  {
+    "content": "export function EyeClosed({ className }: EyeProps) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6\", className)}\n    >\n      <path\n        d=\"M19.5001 16L17.0249 12.6038\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.5\"\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n      />\n      <path\n        d=\"M12 17.5V14\"\n        stroke=\"currentColor\"\n        strokeW",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/EyeClosed.tsx"
+    }
+  },
+  {
+    "content": "export function ArrowDown(props: React.SVGProps<SVGSVGElement>) {\n  return (\n    <svg\n      width=\"18\"\n      height=\"18\"\n      viewBox=\"0 0 18 18\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      {...props}\n    >\n      <path\n        d=\"M4.5 6.75L9 11.25L13.5 6.75\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.35\"\n        strokeLinecap=\"square\"\n      />\n    </svg>\n  );\n}\n\n=== USAGE EXPLANATION ===\n1. Functionality and Representation:\n   \u2022 The ArrowDown component is a React ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/ArrowDown.tsx"
+    }
+  },
+  {
+    "content": "export function Magnifier({ className }: MagnifierProps) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6\", className)}\n    >\n      <path\n        d=\"M17 17L21 21\"\n        stroke=\"currentColor\"\n        strokeWidth=\"2\"\n        strokeLinecap=\"square\"\n        strokeLinejoin=\"round\"\n      />\n      <path\n        d=\"M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 1",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/Magnifier.tsx"
+    }
+  },
+  {
+    "content": "export const Success = ({ className }: SuccessProps) => {\n  return (\n    <svg\n      width=\"25\"\n      height=\"24\"\n      viewBox=\"0 0 25 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6 text-success-600\", className)}\n    >\n      <rect x=\"0.5\" width=\"24\" height=\"24\" rx=\"12\" fill=\"currentColor\" />\n      <rect\n        opacity=\"0.2\"\n        x=\"0.5\"\n        width=\"24\"\n        height=\"24\"\n        rx=\"12\"\n        fill=\"url(#paint0_radial_578_332)\"\n      />\n      ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/Success.tsx"
+    }
+  },
+  {
+    "content": "export function Eye({ className }: EyeProps) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6\", className)}\n    >\n      <path\n        d=\"M3 13C6.6 5 17.4 5 21 13\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.5\"\n        strokeLinecap=\"square\"\n        strokeLinejoin=\"round\"\n      />\n      <path\n        d=\"M12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11C13.656",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/Eye.tsx"
+    }
+  },
+  {
+    "content": "export const Fail = ({ className }: FailProps) => {\n  return (\n    <svg\n      width=\"25\"\n      height=\"24\"\n      viewBox=\"0 0 25 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-6 text-error-600\", className)}\n    >\n      <rect x=\"0.5\" width=\"24\" height=\"24\" rx=\"12\" fill=\"currentColor\" />\n      <rect\n        opacity=\"0.2\"\n        x=\"0.5\"\n        width=\"24\"\n        height=\"24\"\n        rx=\"12\"\n        fill=\"url(#paint0_radial_578_338)\"\n      />\n      <rect\n  ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/Fail.tsx"
+    }
+  },
+  {
+    "content": "export function MagicWand({ className }: MagicWandProps) {\n  return (\n    <svg\n      width=\"20\"\n      height=\"20\"\n      viewBox=\"0 0 20 20\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"size-5\", className)}\n    >\n      <path\n        d=\"M14.0774 3.8389L3.82886 14.0874L4.48362 14.7421L5.25751 15.516L5.91227 16.1707L16.1607 5.92225L15.506 5.26752L14.7321 4.49363L14.0774 3.8389Z\"\n        stroke=\"currentColor\"\n        strokeWidth=\"1.5\"\n        strokeLinecap=\"round\"\n ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/MagicWand.tsx"
+    }
+  },
+  {
+    "content": "export function XMark({ className }: XMarkProps) {\n  return (\n    <svg\n      width=\"24\"\n      height=\"24\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      className={cn(\"h-6 w-6\", className)}\n    >\n      <path\n        d=\"M6.75729 17.2426L11.9999 12M17.2426 6.75736L11.9999 12M11.9999 12L6.75729 6.75736M11.9999 12L17.2426 17.2426\"\n        stroke=\"currentColor\"\n        strokeWidth=\"2\"\n        strokeLinecap=\"square\"\n      />\n    </svg>\n  );\n}\n\n=== USAGE EXPL",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Icons/XMark.tsx"
+    }
+  },
+  {
+    "content": "export const ColorPickerItem = forwardRef<HTMLButtonElement, ColorPickerItemProps>(\n  ({ value, ...props }, ref) => {\n    return (\n      <RadioGroup.Item\n        ref={ref}\n        value={value}\n        className=\"size-[2.5rem] cursor-default rounded-full outline-none flex items-center justify-center relative disabled:opacity-90 disabled:cursor-not-allowed\"\n        style={{\n          background: value,\n        }}\n        {...props}\n      >\n        <RadioGroup.Indicator\n          className=\"absolu",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ColorPicker/ColorPicker.tsx"
+    }
+  },
+  {
+    "content": "export const ColorPickerGroup = forwardRef<HTMLDivElement, ColorPickerGroupProps>(\n  ({ value, onChange, children, ...props }, ref) => {\n    return (\n      <RadioGroup.Root\n        ref={ref}\n        value={value}\n        onValueChange={onChange}\n        className=\"flex gap-4 items-center\"\n        {...props}\n      >\n        {children}\n      </RadioGroup.Root>\n    );\n  },\n);\n\n=== USAGE EXPLANATION ===\nThis component, ColorPickerGroup, is essentially a wrapper around a radio group component (RadioG",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ColorPicker/ColorPicker.tsx"
+    }
+  },
+  {
+    "content": "export default ColorPickerGroup;\n\n=== USAGE EXPLANATION ===\nThis component, ColorPickerGroup, is a React component designed to group multiple color picker elements into one interface. It likely serves as a reusable UI element that lets users choose colors\u2014for example, to configure themes, draw with color selections, or set palette values in a settings panel.\n\n1. What It Does or Represents:\n\u2003\u2022 It encapsulates one or more color picker controls into a single grouped component.\n\u2003\u2022 It manages the lay",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/ColorPicker/ColorPicker.tsx"
+    }
+  },
+  {
+    "content": "export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {\n  /**\n   * The HTML element to render the typography as\n   * @default \"p\"\n   */\n  as?:\n    | \"p\"\n    | \"h1\"\n    | \"h2\"\n    | \"h3\"\n    | \"h4\"\n    | \"h5\"\n    | \"h6\"\n    | \"span\"\n    | \"small\"\n    | \"strong\"\n    | \"div\"\n    | \"em\";\n}\n\n=== USAGE EXPLANATION ===\n1. Purpose:\n\u2022 This code defines the properties (props) for a Typography component that renders text using various HTML elements.\n\u2022 It extends React\u2019s built-in HTML a",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export interface TypographyNumberProps extends TypographyProps {\n  variant?: \"number\";\n  level?: 1 | 2 | 3 | 4 | 5;\n}\n\n=== USAGE EXPLANATION ===\n1. What It Represents:\n\u2003\u2022 This interface defines the properties for a specialized typography component focused on displaying numbers.\n\u2003\u2022 It extends a base set of typography properties (TypographyProps) and adds two optional properties:\n\u2003\u2003\u2013 variant: It must be the literal string \"number\", which signals that this instance is a numeric typography variant.\n",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export interface TypographyCommonProps extends TypographyProps {\n  variant?: \"heading\" | \"subtitle\" | \"body\";\n  level?: 1 | 2 | 3 | 4;\n}\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2022 The code defines a TypeScript interface named TypographyCommonProps that extends an existing interface (TypographyProps).  \n\u2022 It adds two optional properties:  \n\u2003\u2013 variant: Specifies the style type for the text. It accepts \"heading\", \"subtitle\", or \"body\".  \n\u2003\u2013 level: Indicates the heading level (when applicable) and ca",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export interface TypographyLabelProps extends TypographyProps {\n  variant?: \"label\";\n  level?: 1 | 2;\n}\n\n=== USAGE EXPLANATION ===\n1. What this component represents:\n\u2003\u2022 This interface, TypographyLabelProps, defines the properties for a specialized typography component tailored to represent a label.  \n\u2003\u2022 It extends a broader set of typography properties (TypographyProps) and adds two optional properties:  \n\u2003\u2003\u2013 variant: When provided, must be the string \"label\". This likely indicates the component",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export interface TypographyDisplayProps extends TypographyProps {\n  variant?: \"display\";\n  level?: 1;\n}\n\n=== USAGE EXPLANATION ===\n1. What this component does or represents:\n\u2003\u2022 The interface defines the prop types for a typography component variant designed for \"display\" text.  \n\u2003\u2022 It extends a broader set of typography properties (TypographyProps), adding or overriding a few particulars.  \n\u2003\u2022 Specifically, the \"variant\" property is constrained to the literal value \"display\", and the \"level\" pro",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export type TypographyComponentProps =\n  | TypographyNumberProps\n  | TypographyCommonProps\n  | TypographyLabelProps\n  | TypographyDisplayProps;\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2003\u2022 This code defines a union type named TypographyComponentProps. It aggregates multiple prop type definitions\u2014TypographyNumberProps, TypographyCommonProps, TypographyLabelProps, and TypographyDisplayProps\u2014into one single type.  \n\u2003\u2022 Essentially, it represents all the possible sets of properties that could be passed",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export const typographyVariants = cva(\"\", {\n  variants: {\n    variant: {\n      display: \"font-sans font-semibold leading-narrow tracking-[-0.02em]\",\n      heading: \"font-sans font-semibold leading-narrow tracking-[-0.01em]\",\n      subtitle: \"font-sans font-medium leading-narrow\",\n      label: \"font-sans font-semibold leading-narrow\",\n      body: \"font-sans font-normal leading-compact\",\n      number: \"font-sans font-semibold\",\n    },\n    level: {\n      1: \"\",\n      2: \"\",\n      3: \"\",\n      4: \"\"",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export const Typography = forwardRef<HTMLElement, PropsWithChildren<TypographyComponentProps>>(\n  (\n    { variant = \"body\", level = 2, children, as: Component = \"p\", className, ...props },\n    ref,\n  ) => {\n    return (\n      <Component\n        className={cn(typographyVariants({ variant, level, className }))}\n        ref={ref as never}\n        {...props}\n      >\n        {children}\n      </Component>\n    );\n  },\n);\n\nTypography.displayName = \"Typography\";\n\n=== USAGE EXPLANATION ===\nThis component ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Typography/Typography.tsx"
+    }
+  },
+  {
+    "content": "export interface SearchFieldProps\n  extends Omit<InputProps, \"startAdornment\" | \"startAdornmentWidth\" | \"placeholder\"> {\n  /**\n   * If true, the input will display in an error state with error styling\n   */\n  error?: boolean;\n  /**\n   * If true, the input will display in a valid state with success styling\n   */\n  isValid?: boolean;\n  /**\n   * If true, displays a paste button as an end adornment\n   * @default false\n   */\n  showPasteButton?: boolean;\n  /**\n   * Label for the paste button\n   * @def",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/SearchField/SearchField.tsx"
+    }
+  },
+  {
+    "content": "export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(\n  (\n    {\n      showPasteButton,\n      pasteButtonLabel,\n      isValid,\n      disabled,\n      type = \"search\",\n      autoComplete = \"off\",\n      spellCheck = \"false\",\n      endAdornment: endAdornmentProp,\n      endAdornmentWidth: endAdornmentWidthProp,\n      label = \"Search\",\n      ...props\n    },\n    forwardedRef,\n  ) => {\n    const inputRef = useRef<HTMLInputElement>(null);\n    const [isFocused, setIsFocused] = useState",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/SearchField/SearchField.tsx"
+    }
+  },
+  {
+    "content": "export interface SwitchProps\n  extends Omit<RadixSwitchProps, \"onCheckedChange\" | \"onChange\" | \"className\"> {\n  /**\n   * The checked state of the switch.\n   * @default false\n   */\n  checked?: boolean;\n  /**\n   * Callback function that is triggered when the checked state changes.\n   */\n  onChange?: (checked: boolean) => void;\n  /**\n   * Disables the switch when set to true.\n   * @default false\n   */\n  disabled?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. What it does:\n\u2003\u2022 This code defines a TypeScr",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Switch/Switch.tsx"
+    }
+  },
+  {
+    "content": "export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(\n  ({ checked, onChange: onCheckedChange, disabled = false, ...rest }, ref) => {\n    return (\n      <RadixSwitch.Root\n        ref={ref}\n        checked={checked}\n        onCheckedChange={onCheckedChange}\n        disabled={disabled}\n        className=\"relative inline-flex h-6 w-10 items-center rounded-full border-2 transition-all data-[state=checked]:border-gray-900 data-[state=checked]:bg-gray-900 data-[state=unchecked]:border-gray",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Switch/Switch.tsx"
+    }
+  },
+  {
+    "content": "export const OTPField = React.forwardRef<React.ElementRef<typeof OTPInput>, OTPFieldProps>(\n  ({ maxLength = 6, error, children, mode = \"digits\", pattern, ...props }, ref) => {\n    return (\n      <OTPInput\n        ref={ref}\n        {...props}\n        maxLength={maxLength}\n        inputMode={inputModeDictionary[mode]}\n        pattern={pattern || patternDictionary[mode]}\n        containerClassName=\"flex items-center gap-2 has-[:disabled]:opacity-50\"\n        render={({ slots }) => (\n          <>\n  ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/OTPField/OTPField.tsx"
+    }
+  },
+  {
+    "content": "export interface SelectOption {\n  /**\n   * The value of the option.\n   */\n  value: string;\n  /**\n   * The label to display for the option.\n   */\n  label: string;\n}\n\n=== USAGE EXPLANATION ===\n1. Purpose:\n\u2003\u2022 This TypeScript interface, named SelectOption, defines the structure for an option used in a select or dropdown component. Each option must have a string value (to be used as the option\u2019s value attribute) and a string label (the text displayed to the user).\n\n2. Usage in a Larger Application:\n\u2003",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Select/Select.tsx"
+    }
+  },
+  {
+    "content": "export interface SelectProps\n  extends Omit<RadixSelect.SelectProps, \"className\" | \"onValueChange\" | \"style\"> {\n  /**\n   * The value of the select item that should be selected by default.\n   * Use when you do not need to control the state of the select items.\n   */\n  defaultValue?: string;\n  /**\n   * The controlled value of the select.\n   * Should be used in conjunction with onChange.\n   */\n  value?: string;\n  /**\n   * Callback triggered when the selected value changes.\n   */\n  onChange?: (value",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Select/Select.tsx"
+    }
+  },
+  {
+    "content": "export const Select = forwardRef<HTMLButtonElement, SelectProps>(\n  (\n    {\n      options = [],\n      placeholder = \"Select...\",\n      value,\n      onChange,\n      open,\n      onOpenChange,\n      error = false,\n      defaultOpen = false,\n      disabled = false,\n      name,\n      defaultValue,\n      ...rest\n    },\n    ref,\n  ) => {\n    const [isOpen, setIsOpen] = useState(open ?? defaultOpen);\n\n    const handleOpenChange = (open: boolean) => {\n      setIsOpen(open);\n      onOpenChange?.(open);\n  ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/Select/Select.tsx"
+    }
+  },
+  {
+    "content": "export function TopBar({ title, startAdornment, endAdornment }: TopBarProps) {\n  const hasStartAdornment = Boolean(startAdornment);\n  const hasEndAdornment = Boolean(endAdornment);\n\n  const textAlignment = hasStartAdornment ? \"text-center\" : \"text-left\";\n  const justifyContent =\n    hasStartAdornment || hasEndAdornment ? \"justify-between\" : \"justify-start\";\n\n  return (\n    <div className={cn(\"flex items-center px-6 pt-6 pb-2 w-full h-[4.5rem]\", justifyContent)}>\n      {startAdornment && <div cla",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/TopBar/TopBar.tsx"
+    }
+  },
+  {
+    "content": "export interface BulletProps extends ComponentProps<\"div\"> {\n  children?: ReactNode;\n}\n\nconst BulletPoint = forwardRef<HTMLDivElement, BulletProps>(({ children, ...props }, ref) => {\n  const { className, ...rest } = props;\n\n  return (\n    <div\n      ref={ref}\n      className={cn(\n        \"size-9 flex justify-center items-center rounded-full bg-gray-900\",\n        className,\n      )}\n      {...rest}\n    >\n      {children}\n    </div>\n  );\n});\n\nBulletPoint.displayName = \"BulletPoint\";\n\n=== USAGE EXP",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BulletPoint/BulletPoint.tsx"
+    }
+  },
+  {
+    "content": "export const PASTE_BUTTON_WIDTH = 5;\n\nconst PasteButton = React.forwardRef<HTMLButtonElement, PasteButtonProps>(\n  ({ children, inputRef, label = \"Paste\", className, onPaste, ...props }, ref) => {\n    const handlePaste = async () => {\n      try {\n        if (inputRef && \"current\" in inputRef && inputRef.current) {\n          const text = await navigator.clipboard.readText();\n          inputRef.current.value = text;\n          onPaste?.(text);\n        }\n      } catch (error) {\n        console.error",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/PasteButton/PasteButton.tsx"
+    }
+  },
+  {
+    "content": "export function useCountryFiltering({ countries, searchText }: UseCountryFilteringProps) {\n  const richCountries = countries ? getCountryDataListByCodes(countries) : defaultCountries;\n  const filteredCountries = filterCountries(richCountries, searchText);\n\n  return filteredCountries;\n}\n\n=== USAGE EXPLANATION ===\n1. What This Component Represents:\n\u2022 The function, designed as a custom hook named useCountryFiltering, processes country data.\n\u2022 It takes an array of country codes (or identifiers) and ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/CountryDrawer/useCountryFiltering.ts"
+    }
+  },
+  {
+    "content": "export function CountryDrawer({\n  onChange,\n  value,\n  countries,\n  onAnimationEnd,\n  disabled = false,\n  children,\n  defaultValue = \"US\",\n}: CountryDrawerProps) {\n  const [searchText, setSearchText] = useState(\"\");\n  const [open, setOpen] = useState(false);\n  const searchRef = useRef<HTMLInputElement>(null);\n\n  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n    setSearchText(event.target.value);\n  };\n\n  const filteredCountries = useCountryFiltering({\n    countries,",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/CountryDrawer/CountryDrawer.tsx"
+    }
+  },
+  {
+    "content": "export function useCountryGrouping({\n  countries,\n  defaultValue = \"US\",\n}: UseCountryGroupingProps) {\n  const groupedCountries = countries.reduce<GroupedCountries>((acc, country) => {\n    const parsedCountry = parseCountry(country);\n    const firstLetter = parsedCountry.name.charAt(0).toUpperCase();\n\n    if (!acc[firstLetter]) {\n      acc[firstLetter] = [];\n    }\n\n    acc[firstLetter].push({\n      countryCode: getValidatedCountryCode(parsedCountry.iso2, defaultValue),\n      name: parsedCountry.",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/CountryDrawer/useCountryGrouping.ts"
+    }
+  },
+  {
+    "content": "export interface BottomBarProps\n  extends Omit<React.HTMLAttributes<HTMLDivElement>, \"className\">,\n    VariantProps<typeof bottomBarVariants> {\n  /**\n   * The direction of the bottom bar\n   * @default \"horizontal\"\n   */\n  direction?: \"horizontal\" | \"vertical\";\n}\n\n=== USAGE EXPLANATION ===\n1. What this component does or represents:\n\u2003\u2022 The code defines the TypeScript interface BottomBarProps for a BottomBar component. It extends basic HTML div properties (excluding a custom className) and variant-",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BottomBar/BottomBar.tsx"
+    }
+  },
+  {
+    "content": "export const BottomBar = forwardRef<HTMLDivElement, BottomBarProps>(\n  ({ children, direction, ...props }, ref) => {\n    return (\n      <div ref={ref} className={bottomBarVariants({ direction })} {...props}>\n        {children}\n      </div>\n    );\n  },\n);\n\nBottomBar.displayName = \"BottomBar\";\n\n=== USAGE EXPLANATION ===\n1. Overview:  \n\u2003\u2022 BottomBar is a reusable React UI component that renders a div element designed to serve as a bottom bar in an application.  \n\u2003\u2022 It uses forwardRef to allow parent",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BottomBar/BottomBar.tsx"
+    }
+  },
+  {
+    "content": "export interface BulletListProps extends ComponentProps<\"div\"> {\n  /**\n   * Children should be BulletListItem components, but any ReactNode is accepted for compatibility\n   */\n  children: ReactElement<BulletListItemProps>[] | ReactElement<BulletListItemProps>;\n}\n\n=== USAGE EXPLANATION ===\n1. Overview\n\u2022 This code defines a TypeScript interface named BulletListProps meant for a BulletList component in a React application.\n\u2022 It extends the default props for an HTML div element (ComponentProps<\"div\"",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BulletList/BulletList.tsx"
+    }
+  },
+  {
+    "content": "export const BulletList = forwardRef<HTMLDivElement, BulletListProps>(\n  ({ children, className, ...props }, ref) => {\n    return (\n      <div ref={ref} className={cn(\"grid gap-y-5 content-start\", className)} {...props}>\n        {children}\n      </div>\n    );\n  },\n);\n\nBulletList.displayName = \"BulletList\";\n\n=== USAGE EXPLANATION ===\nThis component defines a styled container called BulletList using React\u2019s forwardRef. Here\u2019s a breakdown:\n\n1. What it does or represents:\n\u2003\u2022 BulletList is essentiall",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/BulletList/BulletList.tsx"
+    }
+  },
+  {
+    "content": "export {\n  AlertDialog,\n  AlertDialogPortal,\n  AlertDialogTrigger,\n  AlertDialogClose,\n  AlertDialogContent,\n  AlertDialogHeader,\n  AlertDialogFooter,\n  AlertDialogTitle,\n  AlertDialogDescription,\n};\n\n=== USAGE EXPLANATION ===\nThis export block makes available a collection of Alert Dialog components that work together to create a modal dialog for important alerts or confirmations in your UI. Here\u2019s a concise breakdown:\n\n1. What It Does or Represents:\n\u2003\u2022 The set comprises multiple building blocks",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/AlertDialog.tsx"
+    }
+  },
+  {
+    "content": "export { AlertDialogContext, useAlertDialog };\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2022 This snippet exports two items\u2014a React context (AlertDialogContext) and a custom hook (useAlertDialog)\u2014that together enable a centralized way to manage and access an alert dialog's state and behavior. Essentially, they allow parts of your application to trigger or configure a shared alert dialog without direct prop drilling.\n\n2. How to Use It:\n\u2022 Wrap your component tree (or the relevant subtree) with an appr",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/use-alert-dialog.tsx"
+    }
+  },
+  {
+    "content": "export interface WithFadeFromProps {\n  /**\n   * Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up.\n   * Should go from least visible. Example `[0.2, 0.5, 0.8]`.\n   * You can also use px values, which doesn't take screen height into account.\n   */\n  snapPoints: (number | string)[];\n  /**\n   * Index of a `snapPoint` from which the overlay fade should be applied. Defaults to the last snap point.\n   */\n  fadeFromIndex: number;\n}\n\n=== USAGE EXPLANATI",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface WithoutFadeFromProps {\n  /**\n   * Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up.\n   * Should go from least visible. Example `[0.2, 0.5, 0.8]`.\n   * You can also use px values, which doesn't take screen height into account.\n   */\n  snapPoints?: (number | string)[];\n  fadeFromIndex?: never;\n}\n\ntype BaseAlertDialogProps = {\n  /** The active snap point */\n  activeSnapPoint?: number | string | null;\n  /** Callback when the active",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export type AlertDialogProps = BaseAlertDialogProps &\n  (WithFadeFromProps | WithoutFadeFromProps);\n\n/**\n * Props for the AlertDialogContent component\n */\n\n=== USAGE EXPLANATION ===\n1. Purpose and Functionality:\n\u2022 This type alias defines the properties (props) for an Alert Dialog component (specifically for its content) in a React application.\n\u2022 It combines a base set of alert dialog properties (BaseAlertDialogProps) with a union of two prop types\u2014one that includes animation-related properties (",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogContentProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> {\n  /** The content of the drawer */\n  children?: React.ReactNode;\n  /** Additional CSS classes to apply */\n  className?: string;\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n  /** Whether to close the drawer when clicking outside */\n  onCloseAutoFocus?: (event: Event) => void;\n  /** Called when the escape key is pressed */\n  onEscapeKeyDown?: (",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogHeaderProps\n  extends Omit<React.HTMLAttributes<HTMLDivElement>, \"className\"> {\n  /** Optional icon to display in the header */\n  icon?: React.ReactNode;\n  children?: React.ReactNode;\n}\n\n/**\n * Props for the AlertDialogTitle component\n */\n\n=== USAGE EXPLANATION ===\n1. Overview:\n\u2022 This code defines the TypeScript interface for an AlertDialogHeader component\u2019s props. In essence, it represents the header part of an alert dialog, allowing developers to customize its conte",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogTitleProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title> {\n  children?: React.ReactNode;\n  /** Whether to render the title without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the AlertDialogDescription component\n */\n\n=== USAGE EXPLANATION ===\n1. What It Represents and Does:\n\u2022 This interface defines the props for an AlertDialogTitle component, which is intended to serve as the heading or title for an alert dialog in a UI.\n\u2022 It e",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogDescriptionProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description> {\n  children?: React.ReactNode;\n  /** Whether to render the description without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the AlertDialogTrigger component\n */\n\n=== USAGE EXPLANATION ===\n1. What it represents:\n\u2003\u2022 The code defines a TypeScript interface named AlertDialogDescriptionProps.\n\u2003\u2022 This interface is designed for a React component (presumably AlertDial",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogTriggerProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> {\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n}\n\n/**\n * Props for the AlertDialogTrigger component\n */\n\n=== USAGE EXPLANATION ===\n1. Component Purpose:\n\u2003\u2022 The code defines a TypeScript interface named AlertDialogTriggerProps that serves as the property type for an AlertDialogTrigger component.  \n\u2003\u2022 This component is expected to be a trigger (e.",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  },
+  {
+    "content": "export interface AlertDialogCloseProps\n  extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Close> {\n  /** Whether to render the trigger without default styling */\n  asChild?: boolean;\n}\n\n=== USAGE EXPLANATION ===\n1. What it does or represents:\n\u2003\u2022 This interface defines the props for a component\u2014presumably one that acts as a close trigger within an alert dialog\u2014that reuses functionality from a DrawerPrimitive\u2019s Close component.\n\u2003\u2022 It extends the default props of DrawerPrimitive.Close ",
+    "metadata": {
+      "file_path": "/Users/bryanborck/Desktop/Zap/mini-apps-ui-kit/packages/mini-apps-ui-kit-react/src/components/AlertDialog/types.ts"
+    }
+  }
+]

@@ -26,5 +26,5 @@ COPY . /app/
 # Expose port 8080 for Cloud Run
 EXPOSE 8080
 
-# Run your script (assuming worldUI_mcp.py has a main function)
-CMD ["python", "worldUI-MCP/worldUI_mcp.py"]
+# Run the MCP builder server
+CMD ["python", "worldBuilder/mcp_builder.py"]

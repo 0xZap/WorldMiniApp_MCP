@@ -1,0 +1,14 @@
+DOCUMENT
+SOURCE: unknown
+CONTENT:
+Mini Apps | World DocsFind something...KExplore AppsDeveloper PortalHomeMini AppsWorld IDWorld ChainIntroductionWhat are Mini Apps?Quick StartInstalling MiniKitCommandsResponsesTestingApp StoreDesign StandardsGuidelinesUI KitCommandsVerifyPayWallet AuthConnect WalletSend TransactionSign MessageSign Typed DataShare ContactsSend NotificationsGet PermissionsSend Haptic FeedbackTechnical ReferenceAPI ReferenceErrorsAddress BookUsernamesStatus PagePayment MethodsQuick Actions (Sharing)Quick ActionsUNO SwapEggs Vault SmashEarn WLD PoolDNA Send & SwapSage SupportWorld ChatWorld Companies FinderOnePayPUFORBITAL-XFurther ReadingSecurityApp Store PolicyPromotionGrantsTroubleshootingWebview SpecificationsReleasesDeveloper PortalIntroductionMini Apps
+
+Mini apps enable third-party developers to create native-like applications within World App.
+Building a mini app will provide access to our rapidly growing user network and monetization opportunities via WLD and USDC.
+In addition, mini apps introduce smart contract support natively inside of World App.
+How it Works
+Mini apps are simply web applications opened via webview inside of World App. Using the MiniKit SDK, these applications can become
+native-like and interact with the World ecosystem.Quick StartInstalling MiniKit© 2025 World FoundationFollow us on TwitterFollow us on GitHubJoin our Discord server
+
+================================================================================
+
