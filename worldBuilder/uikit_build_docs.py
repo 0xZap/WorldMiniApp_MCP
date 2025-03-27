@@ -17,10 +17,6 @@ from langchain_community.vectorstores import SKLearnVectorStore
 ##############################################################################
 # 1) ENV / SETUP
 ##############################################################################
-load_dotenv()  # Loads .env with OPENAI_API_KEY if present
-
-# Get API key from environment variable (or set it manually below)
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # LLM model for generating usage explanations
 LLM_MODEL_NAME = "o3-mini-2025-01-31"  # Or any other specialized model you have access to
