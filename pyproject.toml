@@ -18,6 +18,7 @@ uvicorn = "^0.34.0"
 starlette = "^0.46.1"
 mcp = "^1.5.0"
 pandas = "^2.2.3"
+pyarrow = "^19.0.1"
 
 [tool.poetry.scripts]
 world-mcp = "worldBuilder.mcp_builder:main"
