@@ -164,7 +164,7 @@ def main():
     This function is called when the server is run as a CLI script.
     """
     # Check if running in GCP/Docker environment
-    mcp.run(transport="see")
+    mcp.run(transport="sse")
 
 if __name__ == "__main__":
     main()
