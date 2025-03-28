@@ -19,6 +19,7 @@ starlette = "^0.46.1"
 mcp = "^1.5.0"
 pandas = "^2.2.3"
 pyarrow = "^19.0.1"
+fastapi = "^0.115.12"
 
 [tool.poetry.scripts]
 world-mcp = "worldBuilder.mcp_builder:main"
