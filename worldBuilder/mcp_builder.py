@@ -2,7 +2,9 @@
 
 import os
 import asyncio
-from typing import Dict, Any
+import time
+import logging
+from typing import Dict, Any, Optional
 # Using the FastMCP from the official mcp package rather than standalone
 from mcp.server.fastmcp import FastMCP
 
@@ -15,6 +17,13 @@ from dotenv import load_dotenv
 from fastapi import HTTPException, Security
 from fastapi.security import APIKeyHeader
 from starlette.status import HTTP_401_UNAUTHORIZED
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger("world-mcp")
 
 BASE_PATH = os.path.dirname(__file__)
 
@@ -48,8 +57,27 @@ async def verify_api_key(api_key: str = Security(api_key_header)) -> Dict[str, A
         )
     return {"api_key": api_key, "user_id": user_id}
 
+# SSE event handler to properly manage connection issues
+async def on_sse_startup():
+    """Custom SSE startup handler to ensure proper initialization."""
+    logger.info("SSE transport starting up...")
+    # Give the server time to fully initialize
+    await asyncio.sleep(2)
+    logger.info("SSE transport ready to accept connections")
+
+async def on_sse_shutdown():
+    """Custom SSE shutdown handler to ensure proper cleanup."""
+    logger.info("SSE transport shutting down...")
+    # Give ongoing operations time to complete cleanly
+    await asyncio.sleep(1)
+    logger.info("SSE transport shutdown complete")
+
 # Initialize FastMCP with optimized settings
 port = int(os.environ.get("PORT", "8080"))
+
+# Configure more robust SSE settings
+sse_ping_interval = int(os.environ.get("SSE_PING_INTERVAL", "20"))  # seconds
+sse_retry_timeout = int(os.environ.get("SSE_RETRY_TIMEOUT", "3000"))  # milliseconds
         
 mcp = FastMCP(
     "World-MCP-Server",
@@ -63,7 +91,7 @@ mcp = FastMCP(
     workers=4,  # Number of worker processes
     backlog=2048,  # Connection queue size
     limit_concurrency=1000,  # Max concurrent connections
-    timeout_keep_alive=5,  # Keep-alive timeout
+    timeout_keep_alive=30,  # Increased keep-alive timeout for longer idle connections
 )
 
 ###############################################################################
@@ -107,8 +135,8 @@ async def world_uikit_query_tool(query: str) -> str:
         return formatted_context.strip()
     except Exception as e:
         # Log the error and return a user-friendly message
-        print(f"Error in UI Kit query: {str(e)}")
-        return "An error occurred while querying the UI Kit documentation."
+        logger.exception(f"Error in UI Kit query: {str(e)}")
+        return f"An error occurred while querying the UI Kit documentation: {str(e)}"
 
 
 ###############################################################################
@@ -152,8 +180,8 @@ async def world_minikit_query_tool(query: str) -> str:
         return formatted_context.strip()
     except Exception as e:
         # Log the error and return a user-friendly message
-        print(f"Error in MiniKit query: {str(e)}")
-        return "An error occurred while querying the MiniKit documentation."
+        logger.exception(f"Error in MiniKit query: {str(e)}")
+        return f"An error occurred while querying the MiniKit documentation: {str(e)}"
 
 
 ###############################################################################
@@ -184,7 +212,8 @@ async def get_all_world_uikit_docs() -> str:
         with open(doc_path, "r") as file:
             return file.read()
     except Exception as e:
-        return f"Error reading UI Kit docs: {e!s}"
+        logger.exception(f"Error reading UI Kit docs: {str(e)}")
+        return f"Error reading UI Kit docs: {str(e)}"
 
 
 ###############################################################################
@@ -215,7 +244,8 @@ async def get_all_world_minikit_docs() -> str:
         with open(doc_path, "r") as file:
             return file.read()
     except Exception as e:
-        return f"Error reading MiniKit docs: {e!s}"
+        logger.exception(f"Error reading MiniKit docs: {str(e)}")
+        return f"Error reading MiniKit docs: {str(e)}"
 
 
 ###############################################################################
@@ -234,15 +264,34 @@ def main():
     transport_mode = os.environ.get("MCP_TRANSPORT", "stdio")
     
     if transport_mode == "sse":
-        # For SSE mode, set a brief initialization delay to ensure proper setup
-        import time
-        time.sleep(1)  # Allow server to initialize before accepting requests
-        
-        # SSE mode with specific configuration
-        mcp.run(transport="sse")
+        logger.info("Starting server in SSE mode...")
+        try:
+            # Run with enhanced SSE configuration
+            mcp.run(
+                transport="sse",
+                sse_ping_interval=sse_ping_interval,  # Send ping events at this interval
+                sse_retry_timeout=sse_retry_timeout,  # Client retry timeout in ms
+                # Add optional lifespan handlers if your version supports them
+                on_startup=[on_sse_startup] if hasattr(mcp, "add_event_handler") else None,
+                on_shutdown=[on_sse_shutdown] if hasattr(mcp, "add_event_handler") else None,
+            )
+        except TypeError as e:
+            # Handle case where some parameters are not supported
+            logger.warning(f"Some SSE parameters not supported in this version: {e}")
+            logger.info("Falling back to basic SSE configuration")
+            # Fall back to basic configuration
+            mcp.run(transport="sse")
+        except Exception as e:
+            logger.exception(f"Error starting SSE server: {e}")
+            raise
     else:
         # stdio mode is simpler, good for local development
+        logger.info("Starting server in stdio mode...")
         mcp.run(transport="stdio")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        logger.exception(f"Fatal error in MCP server: {e}")
+        raise
