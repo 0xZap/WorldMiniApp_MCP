@@ -3,6 +3,7 @@
 import os
 import asyncio
 from typing import Dict, Any
+# Using the FastMCP from the official mcp package rather than standalone
 from mcp.server.fastmcp import FastMCP
 
 # For retrieving from the local vector store:
@@ -175,8 +176,13 @@ async def get_all_world_uikit_docs() -> str:
     if not os.path.exists(doc_path):
         return "UI Kit explanations file not found. Did you run uikit_build_docs.py?"
     try:
+        import aiofiles
         async with aiofiles.open(doc_path, "r") as file:
             return await file.read()
+    except ImportError:
+        # Fallback to synchronous file reading if aiofiles is not available
+        with open(doc_path, "r") as file:
+            return file.read()
     except Exception as e:
         return f"Error reading UI Kit docs: {e!s}"
 
@@ -201,8 +207,13 @@ async def get_all_world_minikit_docs() -> str:
     if not os.path.exists(doc_path):
         return "MiniKit docs not found. Did you run minikit_build_docs.py?"
     try:
+        import aiofiles
         async with aiofiles.open(doc_path, "r") as file:
             return await file.read()
+    except ImportError:
+        # Fallback to synchronous file reading if aiofiles is not available
+        with open(doc_path, "r") as file:
+            return file.read()
     except Exception as e:
         return f"Error reading MiniKit docs: {e!s}"
 
@@ -223,10 +234,12 @@ def main():
     transport_mode = os.environ.get("MCP_TRANSPORT", "stdio")
     
     if transport_mode == "sse":
-        # SSE mode needs host and port configuration
-        mcp.run(
-            transport="sse"
-        )
+        # For SSE mode, set a brief initialization delay to ensure proper setup
+        import time
+        time.sleep(1)  # Allow server to initialize before accepting requests
+        
+        # SSE mode with specific configuration
+        mcp.run(transport="sse")
     else:
         # stdio mode is simpler, good for local development
         mcp.run(transport="stdio")

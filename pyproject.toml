@@ -10,7 +10,6 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastmcp = "^0.4.1"
 langchain-openai = "^0.3.10"
 langchain-community = "^0.3.20"
 scikit-learn = "^1.6.1"
